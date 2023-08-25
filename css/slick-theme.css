@@ -125,13 +125,10 @@
 
 .slick-dots
 {
-    position: absolute;
-    bottom: -25px;
-
     justify-content: center;
     width: 100%;
     padding: 0;
-    margin: 0 auto;
+    margin: 20px auto 0;
 
     list-style: none;
 
@@ -188,14 +185,14 @@
     top: 0;
     left: 0;
 
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
 
-    content: '•';
+    content: '';
     text-align: center;
 
     opacity: .25;
-    color: var(--blue);
+    background-color: var(--blue);
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
