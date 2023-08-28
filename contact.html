@@ -37,17 +37,67 @@
             <img src="img/logo.png" alt="" />
           </a>
         </div>
+        <!-- head_search => index 비노출 -->
+        <div class="head_search">
+          <div class="input_wrap">
+            <input
+              type="search"
+              name="mainSearch"
+              id="mainSearch"
+              onclick="location.href='qna.html'"
+              placeholder="궁금한 것은 무엇이든 물어보세요!"
+            />
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
         <div class="head_contents">
           <div class="alert">
             <i class="fa-regular fa-bell"></i>
           </div>
           <div class="login">
-            <button>로그인/회원가입</button>
+            <button>프로필(마이페이지)</button>
+            <ul>
+              <li><a href="myfaq.html">활동관리</a></li>
+              <li><a href="mypage.html">개인정보 관리</a></li>
+              <li><a href="">로그아웃</a></li>
+            </ul>
           </div>
           <div class="lang">
             <p class="blin lang_btn"><a href="#none" class="active">KOR</a> | <a href="#none">ENG</a></p>
           </div>
         </div>
+      </div>
+      <div class="alert_popup">
+        <h2 class="title">알림</h2>
+        <button class="alert_popup_close"><i class="fa-solid fa-xmark"></i></button>
+        <button class="read_all">모두읽기</button>
+        <ul>
+          <li>
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <span class="date">2023.08.28</span>
+            <span class="new">NEW</span>
+          </li>
+          <li>
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <span class="date">2023.08.28</span>
+            <span class="new">NEW</span>
+          </li>
+          <li>
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <span class="date">2023.08.28</span>
+            <span class="new">NEW</span>
+          </li>
+          <li>
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <span class="date">2023.08.28</span>
+            <span class="new">NEW</span>
+          </li>
+          <li>
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <span class="date">2023.08.28</span>
+            <span class="new">NEW</span>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
@@ -86,7 +136,7 @@
                 placeholder="문의 내용을 입력하세요."
               ></textarea>
             </div>
-            <input type="button" onclick="return checkForm();" name="formSubmit" id="formSubmit" value="문의하기" />
+            <input type="submit" onclick="return checkForm();" name="formSubmit" id="formSubmit" value="문의하기" />
           </form>
         </div>
       </section>
@@ -118,15 +168,16 @@
             return false;
           }
           if (title.val() == '') {
-            title.focus();
             alert('제목을 입력하세요.');
+            title.focus();
             return false;
           }
           if (contents.val() == '') {
-            contents.focus();
             alert('내용을 입력하세요.');
+            contents.focus();
             return false;
           }
+          return true;
         }
       </script>
     </main>
