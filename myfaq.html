@@ -101,14 +101,89 @@
       </div>
     </header>
     <main>
-      <section class="notice_write">
-        <h2 class="title blin">글쓰기</h2>
-        <div class="wrap">
-          <label for="">제목</label>
-          <input type="text" placeholder="제목을 입력하세요." />
-          <label for="">내용</label>
-          <textarea name="" id="" cols="30" rows="10" placeholder="에디터 삽입 영역"></textarea>
-          <input type="submit" value="등록하기" />
+      <section class="myfaq">
+        <div class="top_banner">
+          <div class="text_box">
+            <img src="img/top_banner.png" alt="" />
+            <div>
+              <h2>질문남 <span>님의</span></h2>
+              <p>활동관리</p>
+            </div>
+          </div>
+        </div>
+        <div class="inner">
+          <ul class="tab mytab">
+            <li data-tab="tab1" class="active">질문 <span>2</span></li>
+            <li data-tab="tab2">관심질문 <span>7</span></li>
+          </ul>
+          <div class="contents">
+            <div class="list tab1 active">
+              <div class="qna_list">
+                <div class="que">
+                  <div class="left">
+                    <b class="blin">Q</b>
+                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  </div>
+                  <span class="complete">답변 보기</span>
+                </div>
+                <div class="ans">
+                  <b class="blin">A</b>
+                  <p>
+                    안녕하세요. 홍덕진 의사입니다.<br /><br />
+                    허리 통증을 유발하는 기전은 흔히들 잘 알고 있는 디스크 (추간판 탈출증) 외에도 다양합니다.<br />
+                    물리적인 추간판 탈출이 아니더라도 면역 반응에 의한 염증이 발생할 수 있고, 추간판이 아닌 근육이나
+                    인대의 문제일 수도 있습니다.<br />
+                    교과서적으로는 소염제를 복용하거나 파스를 붙여서 염증 및 통증을 줄이고, 허리 근육 강화를 통해서 허리
+                    구조물을 안정화 시키는 게 일반적으로 추천되는 방법입니다.<br />
+                    진단을 위해서는 X선 검사와 MRI 검사가 필요합니다.
+                  </p>
+                </div>
+              </div>
+              <div class="qna_list">
+                <div class="que">
+                  <div class="left">
+                    <b class="blin">Q</b>
+                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  </div>
+                  <span>답변 미등록</span>
+                </div>
+              </div>
+            </div>
+            <div class="list tab2">
+              <div class="qna_list">
+                <div class="que">
+                  <div class="left">
+                    <b class="blin">Q</b>
+                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  </div>
+                  <span class="complete"
+                    >답변 보기 <i class="fa-regular fa-bookmark" onclick="bookmark(event);"></i
+                  ></span>
+                </div>
+                <div class="ans">
+                  <b class="blin">A</b>
+                  <p>
+                    안녕하세요. 홍덕진 의사입니다.<br /><br />
+                    허리 통증을 유발하는 기전은 흔히들 잘 알고 있는 디스크 (추간판 탈출증) 외에도 다양합니다.<br />
+                    물리적인 추간판 탈출이 아니더라도 면역 반응에 의한 염증이 발생할 수 있고, 추간판이 아닌 근육이나
+                    인대의 문제일 수도 있습니다.<br />
+                    교과서적으로는 소염제를 복용하거나 파스를 붙여서 염증 및 통증을 줄이고, 허리 근육 강화를 통해서 허리
+                    구조물을 안정화 시키는 게 일반적으로 추천되는 방법입니다.<br />
+                    진단을 위해서는 X선 검사와 MRI 검사가 필요합니다.
+                  </p>
+                </div>
+              </div>
+              <div class="qna_list">
+                <div class="que">
+                  <div class="left">
+                    <b class="blin">Q</b>
+                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  </div>
+                  <span>답변 미등록 <i class="fa-regular fa-bookmark" onclick="bookmark(event);"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -183,5 +258,14 @@
       </div>
       <div class="popup_bg"></div>
     </footer>
+    <script>
+      //myfaq
+      function bookmark(event) {
+        let hideFaq = event.target;
+        if (confirm('관심 질문을 해지하시겠습니까?')) {
+          $(hideFaq).closest('.qna_list').hide();
+        }
+      }
+    </script>
   </body>
 </html>

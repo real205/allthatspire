@@ -101,14 +101,74 @@
       </div>
     </header>
     <main>
-      <section class="notice_write">
-        <h2 class="title blin">글쓰기</h2>
-        <div class="wrap">
-          <label for="">제목</label>
-          <input type="text" placeholder="제목을 입력하세요." />
-          <label for="">내용</label>
-          <textarea name="" id="" cols="30" rows="10" placeholder="에디터 삽입 영역"></textarea>
-          <input type="submit" value="등록하기" />
+      <section class="mypage">
+        <div class="top_banner">
+          <div class="text_box">
+            <img src="img/top_banner.png" alt="" />
+            <div>
+              <h2>질문남 <span>님의</span></h2>
+              <p>개인정보 관리</p>
+            </div>
+          </div>
+        </div>
+        <div class="inner">
+          <h2 class="title">개인정보</h2>
+          <form action="">
+            <div class="block">
+              <div class="w50">
+                <p>닉네임</p>
+                <input type="text" name="myNickname" id="myNickname" placeholder="닉네임을 입력하세요." />
+              </div>
+              <div class="w50">
+                <p>생년월일</p>
+                <input type="text" name="myBirth" id="myBirth" readonly value="2000.01.01" />
+              </div>
+            </div>
+            <div class="block">
+              <div class="w50">
+                <p>성별</p>
+                <div class="radio">
+                  <input type="radio" name="myGender" value="male" id="male" checked />
+                  <label for="male">남자</label>
+                  <input type="radio" name="myGender" value="female" id="female" />
+                  <label for="female">여자</label>
+                </div>
+              </div>
+              <div class="w50">
+                <p>이메일</p>
+                <input type="text" name="myEmail" id="myEmail" placeholder="admin@kconplanet.com" />
+              </div>
+            </div>
+            <div class="block">
+              <p>휴대폰번호</p>
+              <div class="number">
+                <input
+                  type="text"
+                  name="myNumber"
+                  id="myNumber"
+                  placeholder="010-0000-0000"
+                  oninput="javascript: this.value = this.value.replace(/[^0-9]/, '').replace(/^(\d{3})(\d{4})(\d{4})$/, `$1-$2-$3`);"
+                />
+                <button type="button">본인인증</button>
+              </div>
+            </div>
+            <div class="block auth">
+              <p>인증번호</p>
+              <input type="text" />
+              <button type="button">확인</button>
+            </div>
+            <div class="block">
+              <p>마케팅 수신동의</p>
+              <div class="radio">
+                <input type="radio" name="marketing" value="agree" id="agree" checked />
+                <label for="agree">동의</label>
+                <input type="radio" name="marketing" value="disagree" id="disagree" />
+                <label for="disagree">비동의</label>
+              </div>
+            </div>
+            <button class="submit" type="submit" onclick="return checkForm();">수정하기</button>
+            <button class="retired" type="button" onclick="retired();">탈퇴하기</button>
+          </form>
         </div>
       </section>
     </main>
@@ -183,5 +243,57 @@
       </div>
       <div class="popup_bg"></div>
     </footer>
+    <script>
+      //contact 유효성검사
+      function checkForm() {
+        let name = $('#myNickname');
+        let email = $('#myEmail');
+        let number = $('#myNumber');
+        let regex = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.[a-zA-Z]{2,4}$/;
+        var regPhone = /^010-?([0-9]{4})-?([0-9]{4})$/;
+
+        if (name.val() == '') {
+          alert('닉네임을 입력하세요.');
+          name.focus();
+          return false;
+        } else if (name.val().length <= 1) {
+          alert('최소 2자 이상 입력하세요.');
+          name.focus();
+          return false;
+        }
+        if (email.val() == '') {
+          alert('이메일을 입력하세요.');
+          email.focus();
+          return false;
+        } else if (regex.test(email.val()) == false) {
+          alert('이메일 형식이 아닙니다.');
+          email.focus();
+          return false;
+        }
+        if (number.val() == '') {
+          alert('휴대폰 번호를 입력하세요.');
+          number.focus();
+          return false;
+        } else if (regPhone.test(number.val()) == false) {
+          alert('휴대폰 번호 형식이 아닙니다.');
+          number.focus();
+          return false;
+        }
+      }
+
+      function retired() {
+        if (confirm('회원을 탈퇴하시겠습니까?')) {
+          if (confirm('정말 탈퇴하시겠습니까?')) {
+            //확인
+            console.log('확인');
+          } else {
+            console.log('취소');
+          }
+        } else {
+          //취소
+          console.log('취소');
+        }
+      }
+    </script>
   </body>
 </html>
