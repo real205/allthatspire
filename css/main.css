@@ -50,6 +50,9 @@ body {
   margin: 0;
   padding: 0;
 }
+input[type='text'] {
+  background-color: var(--white);
+}
 input::-ms-clear,
 input::-ms-reveal {
   display: none;
