@@ -1268,7 +1268,7 @@ main .qna .inner .qna_view_title button:hover {
   background-color: var(--blue);
 }
 .result .qna_wrap .qna_list .qna {
-  padding: 50px;
+  padding: var(--font-title);
   border: 1px solid var(--gray-opacity);
   border-radius: var(--button-acc);
 }
@@ -1327,7 +1327,7 @@ main .qna .inner .qna_view_title button:hover {
 }
 .result .qna_wrap .qna_list .ans {
   margin-bottom: 30px;
-  padding: 50px;
+  padding: var(--margin-title);
   border: 1px solid var(--gray-opacity);
   border-radius: var(--button-acc);
 }
@@ -1608,10 +1608,40 @@ main .qna .inner .qna_view_title button:hover {
     width: 90%;
   }
   main .qna .inner .qna_list .que {
+    position: relative;
     flex-direction: column;
     align-items: flex-start;
   }
   main .qna .inner .qna_list .que .title {
     display: flex;
+    align-items: center;
+    gap: 3vw;
+  }
+  main .qna .inner .qna_list .que .title p {
+    margin: 0;
+  }
+  main .qna .inner .qna_list .que span {
+    position: absolute;
+    right: 0;
+    bottom: 4vw;
+  }
+  main .qna .inner .qna_list .que:last-child {
+    padding-bottom: var(--padding-30);
+  }
+  .result .qna_wrap .qna_list .qna .que_title {
+    flex-direction: column;
+  }
+  .result .qna_wrap .qna_list .qna {
+    width: 90%;
+    margin: var(--margin-center);
+  }
+  .result .qna_wrap .qna_list button {
+    display: block;
+    width: 90%;
+    margin: 6vw auto;
+  }
+  .result .qna_wrap .qna_list .ans {
+    width: 90%;
+    margin: 0 auto 6vw;
   }
 }
