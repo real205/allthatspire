@@ -6,6 +6,7 @@ $(document).ready(function () {
   $('.alert_popup_close').click(function () {
     $('.alert_popup').removeClass('active');
   });
+
   //언어 버튼
   $('.lang_btn a').click(function () {
     $(this).siblings('a').removeClass('active');
@@ -96,5 +97,9 @@ $(document).ready(function () {
   });
   $('.close_mobile_btn').click(function () {
     $('.head_contents').removeClass('active');
+  });
+  //모바일 알람
+  $('.mobile_alert').click(function () {
+    $('.alert_popup').addClass('active');
   });
 });

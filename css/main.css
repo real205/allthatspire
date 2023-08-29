@@ -1398,6 +1398,7 @@ main .qna .inner .qna_view_title button:hover {
 
   /* HEADER */
   header .head_top {
+    position: relative;
     display: flex;
     flex-direction: column;
     border: 0;
@@ -1408,7 +1409,7 @@ main .qna .inner .qna_view_title button:hover {
     top: 20px;
   }
   header .head_top .mobile_menu_btn i {
-    font-size: var(--font-content);
+    font-size: var(--font-middle);
   }
   header .head_top .logo {
     width: 40%;
@@ -1456,14 +1457,22 @@ main .qna .inner .qna_view_title button:hover {
     display: none;
   }
   header .head_top .head_contents .alert {
+    display: none;
+  }
+  header .head_top .mobile_alert {
     position: absolute;
-    right: var(--padding-30);
-    top: var(--padding-30);
+    right: 20px;
+    top: 20px;
+    display: block;
+  }
+  header .head_top .mobile_alert i {
+    font-size: var(--font-middle);
+    line-height: 1;
   }
   header .head_top .head_contents .lang {
     position: absolute;
     right: var(--padding-30);
-    bottom: var(--padding-30);
+    top: var(--padding-30);
   }
   header .head_top .mobile_menu_btn,
   header .head_top .head_contents .close_mobile_btn,
