@@ -88,4 +88,13 @@ $(document).ready(function () {
   $('.login button').click(function () {
     $(this).siblings('ul').toggleClass('active');
   });
+
+  //모바일
+  //헤더 모바일메뉴
+  $('.mobile_menu_btn').click(function () {
+    $('.head_contents').addClass('active');
+  });
+  $('.close_mobile_btn').click(function () {
+    $('.head_contents').removeClass('active');
+  });
 });
