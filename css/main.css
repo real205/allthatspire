@@ -702,12 +702,14 @@ main .top_banner .text_box div p {
   margin-bottom: 20px;
 }
 .contact .wrap .block label {
+  display: flex;
+  gap: 6px;
   width: 20%;
   font-size: var(--font-middle);
   font-weight: 600;
 }
 .contact .wrap .block label b {
-  color: var(--blue);
+  color: var(--red);
 }
 .contact .wrap .block input,
 .contact .wrap .block textarea {
