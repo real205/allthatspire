@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- META TAG -->
+    <meta charset="utf-8" />
+    <meta name="Description" content="All That Spine" />
+    <meta name="Keywords" content="All That Spine" />
+    <meta name="author" content="All That Spine" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- FAVICON -->
+    <link rel="”shortcut" icon” href="img/favicon.ico" />
+    <!-- CDN -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- JS -->
+    <script src="js/slick.js"></script>
+    <script src="js/main.js"></script>
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- TITLE -->
+    <title>All That Spine</title>
+  </head>
+  <body>
+    <header>
+      <div class="head_top">
+        <div class="logo">
+          <a href="/">
+            <img src="img/logo.png" alt="" />
+          </a>
+        </div>
+        <!-- head_search => index 비노출 -->
+        <div class="head_search">
+          <div class="input_wrap">
+            <input type="search" name="mainSearch" id="mainSearch" placeholder="궁금한 것은 무엇이든 물어보세요!" />
+            <button onclick="location.href='qna.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <div class="head_contents">
+          <div class="alert">
+            <i class="fa-regular fa-bell"></i>
+          </div>
+          <div class="login">
+            <button>프로필(마이페이지)</button>
+            <ul>
+              <li><a href="myfaq.html">활동관리</a></li>
+              <li><a href="mypage.html">개인정보 관리</a></li>
+              <li><a href="">로그아웃</a></li>
+            </ul>
+          </div>
+          <div class="lang">
+            <p class="blin lang_btn"><a href="#none" class="active">KOR</a> | <a href="#none">ENG</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="alert_popup">
+        <h2 class="title">알림</h2>
+        <button class="alert_popup_close"><i class="fa-solid fa-xmark"></i></button>
+        <button class="read_all">모두읽기</button>
+        <ul>
+          <li>
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <span class="date">2023.08.28</span>
+            <span class="new">NEW</span>
+          </li>
+          <li>
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <span class="date">2023.08.28</span>
+            <span class="new">NEW</span>
+          </li>
+          <li>
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <span class="date">2023.08.28</span>
+            <span class="new">NEW</span>
+          </li>
+          <li>
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <span class="date">2023.08.28</span>
+            <span class="new">NEW</span>
+          </li>
+          <li>
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <span class="date">2023.08.28</span>
+            <span class="new">NEW</span>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="qna_view">
+        <div class="result">
+          <div class="qna_wrap">
+            <div class="qna_list">
+              <div class="qna">
+                <div class="que_title">
+                  <div class="title">
+                    <h2><b>[질문]</b> 목이랑 날개뼈 척추사이가 아파요</h2>
+                    <p><img src="img/no_profile.png" alt="" />질문여 <span>2023.08.29 19:10</span></p>
+                  </div>
+                  <div class="icon">
+                    <span class="bookmark"><i class="fa-regular fa-bookmark"></i> 북마크</span>
+                    <span class="siren"><img src="img/siren.png" alt="" /> 신고</span>
+                  </div>
+                </div>
+                <p class="que_contents">
+                  어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것
+                  같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘
+                  아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을
+                  해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
+                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
+                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
+                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만
+                  느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을
+                  잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데
+                  오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러
+                  스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
+                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
+                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
+                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만
+                  느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을
+                  잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데
+                  오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러
+                  스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
+                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
+                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
+                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만
+                  느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을
+                  잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데
+                  오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러
+                  스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
+                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
+                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
+                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다
+                </p>
+              </div>
+              <button class="answer_qna">답변하기</button>
+              <div class="ans">
+                <div class="profile">
+                  <div class="profile_box">
+                    <div class="img">
+                      <img src="img/no_profile.png" alt="" />
+                    </div>
+                    <div class="text_box">
+                      <h2>김선생님<span>OO종합병원</span></h2>
+                      <p>2023.08.29 19:10</p>
+                    </div>
+                  </div>
+                  <span class="siren"><img src="img/siren.png" alt="" /> 신고</span>
+                </div>
+                <p class="que_contents">
+                  어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것
+                  같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘
+                  아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을
+                  해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
+                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
+                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
+                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만
+                  느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을
+                  잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데
+                  오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러
+                  스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
+                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
+                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
+                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만
+                  느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을
+                  잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데
+                  오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러
+                  스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
+                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
+                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
+                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만
+                  느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을
+                  잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데
+                  오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러
+                  스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
+                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
+                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
+                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다
+                </p>
+              </div>
+              <div class="ans">
+                <div class="profile">
+                  <div class="profile_box">
+                    <div class="img">
+                      <img src="img/no_profile.png" alt="" />
+                    </div>
+                    <div class="text_box">
+                      <h2>김선생님<span>OO종합병원</span></h2>
+                      <p>2023.08.29 19:10</p>
+                    </div>
+                  </div>
+                  <span class="siren"><img src="img/siren.png" alt="" /> 신고</span>
+                </div>
+                <p class="que_contents">
+                  어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것
+                  같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘
+                  아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을
+                  해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
+                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
+                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
+                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만
+                  느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘
+                  오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러
+                  스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다
+                </p>
+              </div>
+              <div class="ans">
+                <div class="profile">
+                  <div class="profile_box">
+                    <div class="img">
+                      <img src="img/no_profile.png" alt="" />
+                    </div>
+                    <div class="text_box">
+                      <h2>김선생님<span>OO종합병원</span></h2>
+                      <p>2023.08.29 19:10</p>
+                    </div>
+                  </div>
+                  <span class="siren"><img src="img/siren.png" alt="" /> 신고</span>
+                </div>
+                <p class="que_contents">
+                  어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것
+                  같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘
+                  아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을
+                  해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
+                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
+                  나아지지는 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것
+                  같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다
+                </p>
+              </div>
+            </div>
+            <div class="qna_view_title">
+              <button class="qna_btn">질문하기</button>
+            </div>
+            <p class="login_text">답변이 등록되지 않았습니다.</p>
+          </div>
+          <div class="view_paging">
+            <button><i class="fa-solid fa-chevron-left"></i> 이전글</button>
+            <button class="return" onclick="location.href='qna.html'">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <button>다음글 <i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="inner">
+        <div class="contents">
+          <div class="flogo">
+            <img src="img/flogo.png" alt="" />
+          </div>
+          <nav>
+            <a href="service.html">서비스 소개</a>
+            <a href="qna.html">전문가 답변</a>
+            <a href="faq.html">자주묻는 질문</a>
+            <a href="notice.html">공지사항</a>
+            <a href="contact.html">문의하기</a>
+            <a href="#none" class="term">이용약관</a>
+            <a href="#none" class="privacy">개인정보 처리방침</a>
+          </nav>
+          <address>
+            <p>ALL THAT SPIRE</p>
+            <p>대표 : 김스파</p>
+            <p>사업자 등록번호 : 123-12-12345</p>
+            <p><i class="fa-solid fa-location-dot"></i> 주소 : 경상북도 포항시 북구 포스코대로 256</p>
+          </address>
+          <p class="copy blin">© ALL THAT SPIRE. All Rights Reserved.</p>
+        </div>
+        <div class="sns">
+          <ul>
+            <li>
+              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="popup_term">
+        <h2>이용약관</h2>
+
+        <p>
+          이용약관이란 특정 서비스의 이용조건과 절차 등에 관한 사항을 규정하고 이를 명시한 문서를 말한다. 이용약관은
+          서비스 이용자에게 공시함으로써 효력이 발생하며, 영업상 중요 사유가 있을 시 변경할 수 있다. <br /><br />
+
+          이용약관에는 이용계약의 체결, 서비스 이용, 이용자의 의무 등에 관한 조항을 상세히 명시해야 한다. 또 이용 요금
+          납부, 계약 해지 등의 사항을 구체적으로 기재하도록 한다.<br /><br />
+
+          그 밖에 면책조항을 기재하여 차후 발생할 수 있는 고객과의 갈등 상황을 사전에 방지하도록 한다.<br />
+          [네이버 지식백과] 이용약관 [利用約款, access terms] (예스폼 서식사전)<br />
+        </p>
+        <button>닫기</button>
+      </div>
+      <div class="popup_Privacy">
+        <h2>개인정보 처리방침</h2>
+
+        <p>
+          앞으로 개인정보 동의를 받을 때 국민이 실질적으로 선택이 가능하도록 개선될 전망이다. <br /><br />
+
+          개인정보보호위원회는 이와 같은 내용의 ‘개인정보 보호법’ 시행령 개정안을 오는 19일부터 다음 달 28일까지
+          입법예고한다고 18일 밝혔다.<br />
+          이번 시행령 개정안은 지난 3월 14일 공포한 개인정보 보호법 전면 개정에 따른 후속 조치다.<br /><br />
+
+          이에 정보주체인 국민의 권리를 실질적으로 보장하고 공공분야에서의 안전조치를 강화하면서, 온라인과 오프라인으로
+          구분해 이원화되어 있는 개인정보 보호 기준을 일원화한다. <br />
+          한편 개인정보위는 내년 3월 15일 이후 시행 예정인 개인정보 전송요구권 관련 규정, 자동화된 결정에 대한
+          정보주체의 권리, 공공기관 개인정보 보호수준 평가 등에 관한 사항은 다양한 의견 수렴을 거친 뒤 법 시행 시기에
+          맞추어 하반기 중 추가로 입법예고할 예정이다.<br />
+        </p>
+        <button>닫기</button>
+      </div>
+      <div class="popup_bg"></div>
+    </footer>
+  </body>
+</html>
