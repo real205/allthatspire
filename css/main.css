@@ -1397,6 +1397,7 @@ main .qna .inner .qna_view_title button:hover {
   header .head_top {
     display: flex;
     flex-direction: column;
+    border: 0;
   }
   header .head_top .mobile_menu_btn {
     position: absolute;
