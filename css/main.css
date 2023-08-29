@@ -1418,6 +1418,9 @@ main .qna .inner .qna_view_title button:hover {
   header .head_search {
     width: 100%;
   }
+  header .head_search .input_wrap {
+    padding: 3vw 0;
+  }
   header .head_search .input_wrap button {
     right: 0;
   }
