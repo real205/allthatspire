@@ -190,11 +190,14 @@ header .head_top .head_contents .login ul li:last-child {
 header .head_top .head_contents .login ul li a {
   display: inline-block;
   width: 100%;
+  font-size: var(--font-copy);
+  font-weight: 700;
   padding: var(--button-padding);
 }
 header .head_top .head_contents .login ul li a:hover {
   color: var(--white);
   background-color: var(--blue);
+  border-color: var(--blue);
 }
 header .head_top .head_contents .login ul li:first-child a {
   border-radius: 10px 10px 0 0;
@@ -245,6 +248,8 @@ header .alert_popup .title {
 header .alert_popup button {
   position: absolute;
   top: var(--margin-title);
+  height: 29px;
+  line-height: 1;
   border: 0;
   cursor: pointer;
 }
@@ -255,9 +260,10 @@ header .alert_popup .alert_popup_close {
 header .alert_popup .read_all {
   right: var(--margin-title);
   color: var(--white);
-  padding: 5px 10px;
+  font-size: var(--font-copy);
+  padding: 0 15px;
   background-color: var(--blue);
-  border-radius: var(--button-square);
+  border-radius: var(--button-acc);
 }
 header .alert_popup ul li {
   position: relative;
@@ -273,7 +279,7 @@ header .alert_popup ul li:last-child {
 header .alert_popup ul li p a {
   display: block;
   font-size: var(--font-content);
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 5px;
 }
 header .alert_popup ul li p a:hover {
@@ -282,17 +288,16 @@ header .alert_popup ul li p a:hover {
 }
 header .alert_popup ul li .date {
   color: var(--gray);
+  font-size: var(--font-copy);
+  font-weight: 600;
 }
 header .alert_popup ul li .new {
   position: absolute;
   right: 0;
-  bottom: 30px;
+  top: 0;
   color: var(--blue);
   font-size: var(--font-icon);
   font-weight: 800;
-}
-header .alert_popup ul li:last-child .new {
-  bottom: 0;
 }
 
 /* FOOTER */
