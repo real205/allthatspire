@@ -11,7 +11,7 @@
   /* color */
   --black: #333;
   --gray: #a9afb3;
-  --gray-opacity: #ececec;
+  --gray-opacity: #e3e3e3;
   --blue: #2553e5;
   --red: #ec4352;
   --white: #fff;
@@ -25,7 +25,10 @@
   --margin-center: 0 auto;
   --margin-title: 50px;
   /* padding */
-  --padding-100: 100px 0;
+  --padding-10: 10px;
+  --padding-30: 30px;
+  --padding-100: 100px;
+  --padding-100-0: 100px 0;
   /* button */
   --button-acc: 30px;
   --button-square: 10px;
@@ -34,6 +37,7 @@
 * {
   color: var(--black);
   font-family: 'Pretendard', sans-serif;
+  font-size: var(--font-content);
   box-sizing: border-box;
 }
 .hidden {
@@ -96,6 +100,7 @@ header .head_top {
   justify-content: space-between;
   width: var(--size-100);
   padding: 0 20px;
+  border-bottom: 1px solid var(--gray-opacity);
 }
 header .head_top .logo img {
   width: 200px;
@@ -142,8 +147,10 @@ header .head_top .head_contents {
   gap: 20px;
 }
 header .head_top .head_contents .alert {
-  font-size: var(--font-middle);
   cursor: pointer;
+}
+header .head_top .head_contents .alert i {
+  font-size: var(--font-middle);
 }
 header .head_top .head_contents .alert i:hover {
   color: var(--blue);
@@ -153,7 +160,8 @@ header .head_top .head_contents .login {
 }
 header .head_top .head_contents .login button {
   color: var(--white);
-  font-size: var(--font-content);
+  font-size: var(--font-copy);
+  font-weight: 700;
   padding: var(--button-padding);
   background-color: var(--blue);
   border: 0;
@@ -253,8 +261,8 @@ header .alert_popup .read_all {
 }
 header .alert_popup ul li {
   position: relative;
-  margin-bottom: var(--button-acc);
-  padding-bottom: var(--button-acc);
+  margin-bottom: var(--padding-30);
+  padding-bottom: var(--padding-30);
   border-bottom: 1px solid var(--gray-opacity);
 }
 header .alert_popup ul li:last-child {
@@ -310,8 +318,8 @@ footer .inner .contents nav a {
   display: inline-block;
   color: var(--white);
   font-size: var(--font-copy);
-  margin-right: 10px;
-  padding-right: 10px;
+  margin-right: var(--padding-10);
+  padding-right: var(--padding-10);
   border-right: 1px solid var(--white);
 }
 footer .inner .contents nav a:hover {
@@ -325,8 +333,8 @@ footer .inner .contents address p {
   font-size: var(--font-copy);
   font-style: normal;
   line-height: 1;
-  margin-right: 10px;
-  padding-right: 10px;
+  margin-right: var(--padding-10);
+  padding-right: var(--padding-10);
   border-right: 1px solid var(--white);
 }
 footer .inner .contents address p i {
@@ -341,7 +349,7 @@ footer .inner .contents .copy {
   color: var(--gray);
   font-size: var(--font-copy);
   font-weight: 500;
-  margin-top: var(--button-acc);
+  margin-top: var(--padding-30);
 }
 footer .inner .sns ul {
   display: flex;
@@ -406,38 +414,97 @@ footer .inner .sns ul li a i {
   z-index: 4;
 }
 
+/* PAGING */
+.paging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: var(--margin-title);
+}
+.paging button {
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.paging ul {
+  display: flex;
+  gap: 15px;
+  margin: 0 10px;
+}
+.paging ul li a {
+  font-size: var(--font-content);
+  font-weight: 700;
+}
+.paging ul li a:hover {
+  color: var(--blue);
+}
+.view_paging {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: var(--padding-30);
+}
+.view_paging button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-middle);
+  font-weight: 600;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.view_paging button i {
+  font-size: var(--font-content);
+}
+.view_paging button:hover,
+.view_paging button:hover i {
+  color: var(--blue);
+  font-weight: 700;
+}
+.view_paging button.return i {
+  font-size: var(--font-middle);
+  padding: var(--padding-10);
+  transition: 300ms;
+}
+.view_paging button.return:hover i {
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: var(--button-square);
+  transition: 300ms;
+}
+
 /* MAIN */
 /* SEARCH */
 main .search {
   display: flex;
-  flex-direction: column;
   width: var(--size-1024);
   margin: var(--margin-center);
-  padding: var(--padding-100);
+  padding: var(--padding-100-0);
 }
-main .search .seach_wrap {
-  display: flex;
-}
-main .search .seach_wrap .title {
+main .search .title {
   width: 300px;
   color: var(--blue);
   font-size: var(--font-title);
   text-align: center;
 }
-main .search .seach_wrap .input_wrap {
+main .search .input_wrap {
   position: relative;
   width: calc(100% - 300px);
-  padding: 10px;
+  padding: var(--padding-10);
   border: 3px solid var(--blue);
   border-radius: var(--button-square);
 }
-main .search .seach_wrap .input_wrap input {
+main .search .input_wrap input {
   width: var(--size-100);
   height: 40px;
   border: 0;
   outline: none;
 }
-main .search .seach_wrap .input_wrap button {
+main .search .input_wrap button {
   position: absolute;
   right: 20px;
   height: 40px;
@@ -445,17 +512,12 @@ main .search .seach_wrap .input_wrap button {
   border: 0;
   cursor: pointer;
 }
-main .search .seach_wrap .input_wrap button i {
+main .search .input_wrap button i {
   color: var(--gray);
   font-size: var(--font-content);
 }
 main .search .result_wrap {
   margin-top: 50px;
-}
-main .search .result_wrap .login_text {
-  font-size: var(--font-middle);
-  font-weight: 700;
-  text-align: center;
 }
 
 /* SLIDER */
@@ -470,10 +532,10 @@ main .slider img {
   border-radius: var(--button-acc);
 }
 
-/* QNA */
+/* FAQ */
 main .faq {
   width: 100%;
-  padding: var(--padding-100);
+  padding: var(--padding-100-0);
 }
 main .faq .inner {
   width: var(--size-1024);
@@ -489,16 +551,18 @@ main .faq .inner .tab {
   margin: 30px 0;
 }
 main .faq .inner .tab li {
-  color: var(--gray);
+  color: var(--white);
+  font-size: var(--font-copy);
+  font-weight: 700;
   padding: var(--button-padding);
   border-radius: var(--button-acc);
-  border: 2px solid var(--gray);
+  border: 0;
+  background-color: var(--gray);
   cursor: pointer;
 }
+main .faq .inner .tab li:hover,
 main .faq .inner .tab li.active {
   color: var(--white);
-  font-weight: 600;
-  border: 1px solid var(--blue);
   background-color: var(--blue);
 }
 main .faq .inner .contents .list {
@@ -538,7 +602,7 @@ main .faq .inner .contents .qna_list .que p {
 }
 main .faq .inner .contents .qna_list .ans {
   display: none;
-  margin-bottom: var(--button-acc);
+  margin-bottom: var(--padding-30);
 }
 main .faq .inner .contents .qna_list .ans.active {
   display: flex;
@@ -556,7 +620,7 @@ main .faq .inner .contents .qna_list .ans p {
 
 /* PARTNERS */
 main .partners {
-  padding: var(--padding-100);
+  padding: var(--padding-100-0);
   background-color: var(--gray-opacity);
 }
 main .partners .inner {
@@ -592,7 +656,7 @@ main .top_banner .text_box {
   align-items: center;
   width: var(--size-1024);
   margin: var(--margin-center);
-  padding-top: 10px;
+  padding-top: var(--padding-10);
 }
 main .top_banner .text_box img {
 }
@@ -677,7 +741,7 @@ main .top_banner .text_box div p {
   width: var(--size-1024);
   min-height: 500px;
   margin: var(--margin-center);
-  padding: var(--margin-title);
+  padding: var(--padding-100-0);
 }
 .notice .inner .write_btn {
   position: absolute;
@@ -696,7 +760,7 @@ main .top_banner .text_box div p {
   background-color: var(--blue);
 }
 .notice table {
-  width: var(--size-1024);
+  width: var(--size-100);
   margin: var(--margin-center);
   border-top: 2px solid var(--blue);
   border-bottom: 1px solid var(--black);
@@ -739,35 +803,10 @@ main .top_banner .text_box div p {
 .notice table tbody tr td:last-child {
   text-align: center;
 }
-.notice .paging {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-top: var(--margin-title);
-}
-.notice .paging button {
-  border: 0;
-  outline: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-.notice .paging ul {
-  display: flex;
-  gap: 15px;
-  margin: 0 10px;
-}
-.notice .paging ul li a {
-  font-size: var(--font-content);
-}
-.notice .paging ul li a:hover {
-  color: var(--blue);
-  font-weight: 700;
-}
 
 /* NOTICE VIEW */
 .notice_view {
-  padding: var(--padding-100);
+  padding: var(--padding-100-0);
 }
 .notice_view .title {
   font-size: var(--font-title);
@@ -812,46 +851,10 @@ main .top_banner .text_box div p {
   font-size: var(--font-content);
   line-height: 1.5;
 }
-.notice_view .wrap .view_paging {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: var(--button-acc);
-}
-.notice_view .wrap .view_paging button {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: var(--font-middle);
-  font-weight: 600;
-  border: 0;
-  outline: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-.notice_view .wrap .view_paging button i {
-  font-size: var(--font-content);
-}
-.notice_view .wrap .view_paging button:hover,
-.notice_view .wrap .view_paging button:hover i {
-  color: var(--blue);
-  font-weight: 700;
-}
-.notice_view .wrap .view_paging button.return i {
-  font-size: var(--font-middle);
-  padding: 10px;
-  transition: 300ms;
-}
-.notice_view .wrap .view_paging button.return:hover i {
-  color: var(--white);
-  background-color: var(--blue);
-  border-radius: var(--button-square);
-  transition: 300ms;
-}
 
 /* NOTICE WRITE */
 .notice_write {
-  padding: var(--padding-100);
+  padding: var(--padding-100-0);
 }
 .notice_write .title {
   font-size: var(--font-title);
@@ -881,7 +884,7 @@ main .top_banner .text_box div p {
 .notice_write .wrap input[type='submit'] {
   color: var(--white);
   font-size: var(--font-content);
-  margin-top: var(--button-acc);
+  margin-top: var(--padding-30);
   padding: 15px 0;
   outline: none;
   background-color: var(--gray);
@@ -937,6 +940,12 @@ main .top_banner .text_box div p {
 .myfaq .inner .contents .list.active {
   display: block;
 }
+.myfaq .inner .contents .qna_list {
+  border-bottom: 1px solid var(--gray-opacity);
+}
+.myfaq .inner .contents .qna_list:last-child {
+  border: 0;
+}
 .myfaq .inner .contents .qna_list .que {
   position: relative;
   display: flex;
@@ -977,7 +986,7 @@ main .top_banner .text_box div p {
 }
 .myfaq .inner .contents .qna_list .ans {
   display: none;
-  margin-bottom: var(--button-acc);
+  margin-bottom: var(--padding-30);
 }
 .myfaq .inner .contents .qna_list .ans.active {
   display: flex;
@@ -997,7 +1006,7 @@ main .top_banner .text_box div p {
 .mypage .inner {
   width: var(--size-700);
   margin: var(--margin-center);
-  padding: var(--padding-100);
+  padding: var(--padding-100-0);
 }
 .mypage .inner form {
   position: relative;
@@ -1104,4 +1113,234 @@ e .inner .auth p,
 .mypage .inner .retired:hover {
   color: var(--white);
   background-color: var(--red);
+}
+
+/* QNA */
+main .qna .inner {
+  width: var(--size-1024);
+  margin: var(--margin-center);
+  padding-bottom: var(--padding-100);
+}
+.qna .inner .login_text {
+  font-size: var(--font-middle);
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: var(--padding-100);
+}
+main .qna .inner .qna_list .que {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--padding-30);
+  padding-bottom: var(--padding-30);
+  border-bottom: 1px solid var(--gray-opacity);
+  cursor: pointer;
+}
+main .qna .inner .qna_list .que:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+main .qna .inner .qna_list .que:hover .title p {
+  font-weight: 700;
+}
+main .qna .inner .qna_list .que .title b {
+  color: var(--blue);
+  font-size: var(--font-middle);
+  font-weight: 900;
+}
+main .qna .inner .qna_list .que .title p {
+  display: inline-block;
+  font-size: var(--font-content);
+  font-weight: 600;
+  margin: 10px 0 0 10px;
+}
+main .qna .inner .qna_list .que span {
+  color: var(--gray);
+  font-size: var(--font-copy);
+  font-weight: 600;
+}
+main .qna .inner .qna_view_title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: var(--padding-30);
+}
+main .qna .inner .qna_view_title button {
+  color: var(--white);
+  font-size: var(--font-copy);
+  font-weight: 700;
+  padding: var(--button-padding);
+  border-radius: var(--button-acc);
+  border: 0;
+  background-color: var(--gray);
+  outline: none;
+  cursor: pointer;
+}
+main .qna .inner .qna_view_title button:hover {
+  background-color: var(--blue);
+}
+
+/* QNA VIEW */
+.qna_view .search {
+  padding: 100px 0 0;
+}
+.result {
+  width: var(--size-1024);
+  margin: var(--margin-center);
+  padding: var(--padding-100-0);
+}
+.result .login_text {
+  font-size: var(--font-middle);
+  font-weight: 700;
+  text-align: center;
+  padding: var(--padding-100-0);
+}
+.result .qna_view_title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.result .qna_view_title .title {
+  font-size: var(--font-content);
+  font-weight: 800;
+}
+.result .qna_view_title .title > b {
+  color: var(--red);
+}
+.result .qna_view_title button {
+  color: var(--white);
+  font-size: var(--font-copy);
+  font-weight: 700;
+  padding: var(--button-padding);
+  border-radius: var(--button-acc);
+  border: 0;
+  background-color: var(--gray);
+  outline: none;
+  cursor: pointer;
+}
+.result .qna_view_title button:hover {
+  background-color: var(--blue);
+}
+.result .qna_wrap {
+  padding-top: 20px;
+}
+.result .qna_wrap .qna_list button {
+  width: 100%;
+  color: var(--white);
+  font-size: var(--font-copy);
+  font-weight: 700;
+  margin: 30px 0;
+  padding: 15px 0;
+  outline: none;
+  border: 0;
+  background-color: var(--gray);
+  border-radius: var(--button-square);
+  cursor: pointer;
+}
+.result .qna_wrap .qna_list button:hover {
+  background-color: var(--blue);
+}
+.result .qna_wrap .qna_list .qna {
+  padding: 50px;
+  border: 1px solid var(--gray-opacity);
+  border-radius: var(--button-acc);
+}
+.result .qna_wrap .qna_list .qna .que_title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--gray-opacity);
+}
+.result .qna_wrap .qna_list .qna .que_title .title b {
+  display: inline-block;
+  font-size: var(--font-middle);
+  margin-right: 6px;
+}
+.result .qna_wrap .qna_list .qna .que_title .title h2 {
+  font-size: var(--font-middle);
+  margin-bottom: 20px;
+}
+.result .qna_wrap .qna_list .qna .que_title .title p {
+  font-size: var(--font-content);
+  font-weight: 700;
+}
+.result .qna_wrap .qna_list .qna .que_title .title p span {
+  display: inline-block;
+  color: var(--gray);
+  font-size: var(--font-copy);
+  font-weight: 400;
+  margin-left: 5px;
+}
+.result .qna_wrap .qna_list .qna .que_title .title p img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 100%;
+}
+.result .qna_wrap .qna_list .qna .que_title .icon {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.result .qna_wrap .qna_list .qna .que_title .icon span {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  font-size: var(--font-copy);
+  font-weight: 700;
+  cursor: pointer;
+}
+.result .qna_wrap .qna_list .qna .que_contents,
+.result .qna_wrap .qna_list .ans .que_contents {
+  font-size: var(--font-content);
+  line-height: 1.5;
+}
+.result .qna_wrap .qna_list .ans {
+  margin-bottom: 30px;
+  padding: 50px;
+  border: 1px solid var(--gray-opacity);
+  border-radius: var(--button-acc);
+}
+.result .qna_wrap .qna_list .ans .profile {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--gray-opacity);
+}
+.result .qna_wrap .qna_list .ans .profile .profile_box {
+  display: flex;
+  gap: 10px;
+}
+.result .qna_wrap .qna_list .ans .profile .profile_box .img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.result .qna_wrap .qna_list .ans .profile .profile_box .text_box h2 {
+  font-size: var(--font-content);
+  font-weight: 800;
+}
+.result .qna_wrap .qna_list .ans .profile .profile_box .text_box h2 span {
+  display: inline-block;
+  font-size: var(--font-content);
+  font-weight: 500;
+  margin: 0 0 10px 6px;
+}
+.result .qna_wrap .qna_list .ans .profile .profile_box .text_box p {
+  color: var(--gray);
+  font-size: var(--font-copy);
+}
+.result .qna_wrap .qna_list .ans .profile .siren {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  font-size: var(--font-copy);
+  font-weight: 700;
+  cursor: pointer;
 }
