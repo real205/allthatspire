@@ -1092,17 +1092,16 @@ e .inner .auth p,
 .mypage .inner .submit {
   display: block;
   width: 150px;
-  color: var(--gray);
+  color: var(--white);
   margin: 50px auto 0;
   padding: var(--button-padding);
-  border: 1px solid var(--gray);
+  background-color: var(--gray);
+  border: 0;
   border-radius: var(--button-acc);
   cursor: pointer;
 }
 .mypage .inner .submit:hover {
-  color: var(--white);
   background-color: var(--blue);
-  border: 1px solid var(--blue);
 }
 .mypage .inner .retired {
   position: absolute;
