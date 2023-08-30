@@ -528,7 +528,7 @@ main .search .input_wrap {
   position: relative;
   width: calc(100% - 300px);
   padding: var(--padding-10);
-  border: 3px solid var(--blue);
+  border: 5px solid var(--blue);
   border-radius: var(--button-square);
 }
 main .search .input_wrap input {
@@ -715,6 +715,7 @@ main .top_banner .text_box div p {
 
 /* CONTACT */
 .contact .title {
+  color: var(--blue);
   font-size: var(--font-title);
   text-align: center;
   margin-bottom: var(--margin-title);
@@ -770,6 +771,7 @@ main .top_banner .text_box div p {
 
 /* NOTICE LIST */
 .notice .title {
+  color: var(--blue);
   font-size: var(--font-title);
   text-align: center;
   margin-bottom: var(--margin-title);
@@ -856,6 +858,7 @@ main .top_banner .text_box div p {
   padding: var(--padding-100-0);
 }
 .notice_view .title {
+  color: var(--blue);
   font-size: var(--font-title);
   text-align: center;
   margin-bottom: var(--margin-title);
@@ -1198,14 +1201,15 @@ main .qna .inner {
   border-top: 0px solid transparent;
   content: '';
   position: absolute;
-  top: -30px;
+  top: -29px;
   left: 20%;
 }
 .qna .inner .chat_wrap .chat span {
-  display: inline-block;
+  display: block;
   font-size: var(--font-copy);
   font-weight: 800;
-  margin-left: var(--padding-10);
+  text-align: right;
+  margin-top: var(--padding-10);
 }
 .qna .inner .recom_wrap {
   display: flex;
@@ -1743,6 +1747,7 @@ main .qna .inner .qna_view_title button:hover {
   .result .qna_wrap .qna_list .ans {
     width: 90%;
     margin: 0 auto 6vw;
+    padding: var(--padding-30);
   }
   .result {
     padding: 0;
@@ -1767,6 +1772,12 @@ main .qna .inner .qna_view_title button:hover {
   .result .qna_wrap .qna_list .ans .profile .profile_box .text_box h2 span {
     display: block;
     margin: 1vw 0 3vw 0;
+  }
+  .qna .inner .chat_wrap .chat,
+  .qna .inner .recom {
+    width: auto;
+    max-width: 90%;
+    padding: var(--padding-10);
   }
 
   /* FAQ */
