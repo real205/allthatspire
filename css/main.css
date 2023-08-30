@@ -661,25 +661,34 @@ main .partners {
 }
 main .partners .inner {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: var(--size-1024);
   margin: var(--margin-center);
 }
 main .partners .inner .title {
-  width: 30%;
   font-size: var(--font-title);
+  margin-bottom: var(--padding-30);
 }
 main .partners .inner ul {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  width: 70%;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--padding-10);
 }
 main .partners .inner ul li {
-  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(25% - 10px);
+  height: 100px;
+  overflow: hidden;
 }
 main .partners .inner ul li img {
-  width: var(--size-100);
+  width: 100%;
+  height: auto;
 }
 
 /* SUSB PAGE */
@@ -1700,13 +1709,14 @@ main .qna .inner .qna_view_title button:hover {
   main .faq .inner .contents .qna_list .que i {
     top: 13px;
   }
-
-  main .partners .inner {
-    flex-direction: column;
-  }
   main .partners .inner ul {
-    justify-content: flex-start;
-    margin-left: var(--padding-30);
+    gap: var(--padding-10);
+    width: 90%;
+    margin: 3vw auto;
+  }
+  main .partners .inner ul li {
+    height: 40px;
+    display: flex;
   }
   main .partners .inner .title {
     margin-bottom: var(--padding-30);
