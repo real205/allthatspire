@@ -38,6 +38,7 @@
   color: var(--black);
   font-family: 'Pretendard', sans-serif;
   font-size: var(--font-content);
+  font-weight: 600;
   box-sizing: border-box;
 }
 .hidden {
@@ -50,7 +51,8 @@ body {
   margin: 0;
   padding: 0;
 }
-input[type='text'] {
+input {
+  border-radius: var(--button-square);
   background-color: var(--white);
 }
 input::-ms-clear,
@@ -122,14 +124,13 @@ header .head_search .input_wrap input {
   height: 40px;
   color: var(--black);
   font-size: var(--font-content);
-  font-weight: 600;
+
   border: 0;
   outline: none;
 }
 header .head_search .input_wrap input::placeholder {
   color: var(--gray);
   font-size: var(--font-content);
-  font-weight: 600;
 }
 header .head_search .input_wrap button {
   position: absolute;
@@ -149,6 +150,7 @@ header .head_top .head_contents {
   align-items: center;
   gap: 20px;
 }
+header .head_top .mobile_alert,
 header .head_top .mobile_menu_btn,
 header .head_top .head_contents .close_mobile_btn,
 header .head_top .head_contents .mobile_menu {
@@ -301,7 +303,6 @@ header .alert_popup ul li p a:hover {
 header .alert_popup ul li .date {
   color: var(--gray);
   font-size: var(--font-copy);
-  font-weight: 600;
 }
 header .alert_popup ul li .new {
   position: absolute;
@@ -470,7 +471,7 @@ footer .inner .sns ul li a i {
   align-items: center;
   gap: 10px;
   font-size: var(--font-middle);
-  font-weight: 600;
+
   border: 0;
   outline: none;
   background-color: transparent;
@@ -593,6 +594,7 @@ main .faq .inner .contents .list.active {
 main .faq .inner .contents .qna_list .que {
   position: relative;
   display: flex;
+  align-items: baseline;
   margin: 20px 0;
   cursor: pointer;
 }
@@ -616,8 +618,8 @@ main .faq .inner .contents .qna_list .que b {
 main .faq .inner .contents .qna_list .que p {
   display: inline-block;
   font-size: var(--font-content);
-  font-weight: 600;
-  margin: 10px 0 0 10px;
+
+  margin-left: var(--padding-10);
 }
 main .faq .inner .contents .qna_list .ans {
   display: none;
@@ -625,6 +627,7 @@ main .faq .inner .contents .qna_list .ans {
 }
 main .faq .inner .contents .qna_list .ans.active {
   display: flex;
+  align-items: baseline;
 }
 main .faq .inner .contents .qna_list .ans b {
   color: var(--gray);
@@ -635,7 +638,7 @@ main .faq .inner .contents .qna_list .ans p {
   display: inline-block;
   font-size: var(--font-content);
   line-height: 1.5;
-  margin: 10px 0 0 10px;
+  margin-left: var(--padding-10);
 }
 
 /* PARTNERS */
@@ -721,7 +724,6 @@ main .top_banner .text_box div p {
   gap: 6px;
   width: 20%;
   font-size: var(--font-middle);
-  font-weight: 600;
 }
 .contact .wrap .block label b {
   color: var(--red);
@@ -729,7 +731,8 @@ main .top_banner .text_box div p {
 .contact .wrap .block input,
 .contact .wrap .block textarea {
   width: 80%;
-  padding: 10px 5px;
+  padding: 10px;
+  border: 1px solid var(--gray);
 }
 .contact .wrap .block input::placeholder,
 .contact .wrap .block textarea::placeholder {
@@ -795,12 +798,12 @@ main .top_banner .text_box div p {
 .notice table thead tr th {
   font-size: var(--font-content);
   font-weight: 700;
-  padding: 20px;
+  padding: 20px 0;
   border-bottom: 1px solid var(--black);
 }
 .notice table tbody tr td {
   padding: 20px 5px;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray-opacity);
 }
 .notice table tbody tr td a {
   width: 100%;
@@ -818,6 +821,7 @@ main .top_banner .text_box div p {
 }
 .notice table tbody tr td.date {
   color: var(--gray);
+  font-size: var(--font-copy);
 }
 .notice table tbody tr:last-child td {
   border-bottom: 0;
@@ -863,7 +867,6 @@ main .top_banner .text_box div p {
 .notice_view .wrap .con_title span {
   color: var(--gray);
   font-size: var(--font-content);
-  font-weight: 600;
 }
 .notice_view .wrap .con_cont {
   padding: 20px 10px;
@@ -893,14 +896,16 @@ main .top_banner .text_box div p {
 }
 .notice_write .wrap label {
   font-size: var(--font-content);
-  font-weight: 600;
 }
 .notice_write .wrap textarea,
 .notice_write .wrap input {
-  padding: 10px 5px;
+  padding: 10px;
+  border: 1px solid var(--gray);
+  outline: none;
 }
 .notice_write .wrap textarea::placeholder,
 .notice_write .wrap input::placeholder {
+  color: var(--gray);
   font-size: var(--font-content);
 }
 .notice_write .wrap input[type='submit'] {
@@ -946,7 +951,7 @@ main .top_banner .text_box div p {
 }
 .myfaq .inner .tab li.active {
   color: var(--white);
-  font-weight: 600;
+
   border: 1px solid var(--blue);
   background-color: var(--blue);
 }
@@ -1003,7 +1008,7 @@ main .top_banner .text_box div p {
 .myfaq .inner .contents .qna_list .que p {
   display: inline-block;
   font-size: var(--font-content);
-  font-weight: 600;
+
   margin: 10px 0 0 10px;
 }
 .myfaq .inner .contents .qna_list .ans {
@@ -1164,8 +1169,8 @@ main .qna .inner .qna_list .que:last-child {
 }
 main .qna .inner .qna_list .que .title {
   display: flex;
-  align-items: flex-end;
-  gap: 6px;
+  align-items: baseline;
+  gap: 10px;
 }
 main .qna .inner .qna_list .que .title b {
   color: var(--blue);
@@ -1175,7 +1180,7 @@ main .qna .inner .qna_list .que .title b {
 main .qna .inner .qna_list .que .title p {
   display: inline-block;
   font-size: var(--font-content);
-  font-weight: 600;
+
   margin: 10px 0 0 10px;
 }
 main .qna .inner .qna_list .que:hover .title p {
@@ -1184,7 +1189,6 @@ main .qna .inner .qna_list .que:hover .title p {
 main .qna .inner .qna_list .que span {
   color: var(--gray);
   font-size: var(--font-copy);
-  font-weight: 600;
 }
 main .qna .inner .qna_view_title {
   display: flex;
@@ -1297,7 +1301,6 @@ main .qna .inner .qna_view_title button:hover {
   display: inline-block;
   color: var(--gray);
   font-size: var(--font-copy);
-  font-weight: 400;
   margin-left: 5px;
 }
 .result .qna_wrap .qna_list .qna .que_title .title p img {
@@ -1379,7 +1382,7 @@ main .qna .inner .qna_view_title button:hover {
     --size-1024: 100%;
     /* font size */
     --font-title: 2rem;
-    --font-middle: 1.5rem;
+    --font-middle: 1.3rem;
     --font-content: 1rem;
     --font-copy: 0.8rem;
     --font-icon: 0.6rem;
@@ -1388,12 +1391,12 @@ main .qna .inner .qna_view_title button:hover {
     /* padding */
     --padding-10: 3vw;
     --padding-30: 8vw;
-    --padding-100: 15vw;
-    --padding-100-0: 15vw 0;
+    --padding-100: 10vw;
+    --padding-100-0: 10vw 0;
     /* button */
     --button-acc: 4vw;
     --button-square: 10px;
-    --button-padding: 2vw 5vw;
+    --button-padding: 3vw 5vw;
   }
 
   /* HEADER */
@@ -1577,12 +1580,21 @@ main .qna .inner .qna_view_title button:hover {
     margin: var(--margin-center);
   }
   main .faq {
+  }
+  main .faq .inner {
     width: 90%;
-    margin: var(--margin-center);
   }
   main .faq .inner .tab {
-    gap: 2vw;
-    margin: 5vw 0;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 5vw 0;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  main .faq .inner .tab li {
+    display: inline-block;
+    margin-right: 2vw;
   }
   main .faq .inner .contents .qna_list .que p {
     width: 80%;
@@ -1612,11 +1624,6 @@ main .qna .inner .qna_view_title button:hover {
     flex-direction: column;
     align-items: flex-start;
   }
-  main .qna .inner .qna_list .que .title {
-    display: flex;
-    align-items: center;
-    gap: 3vw;
-  }
   main .qna .inner .qna_list .que .title p {
     margin: 0;
   }
@@ -1643,5 +1650,73 @@ main .qna .inner .qna_view_title button:hover {
   .result .qna_wrap .qna_list .ans {
     width: 90%;
     margin: 0 auto 6vw;
+  }
+  .result {
+    padding: 0;
+  }
+  .result .qna_view_title {
+    margin-right: 5%;
+  }
+  .result .qna_wrap .qna_list .qna .que_title .title h2,
+  .result .qna_wrap .qna_list .qna .que_title .title p {
+    margin-bottom: var(--padding-10);
+  }
+  .result .qna_wrap .qna_list .ans .profile {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .result .qna_wrap .qna_list .ans .profile .profile_box {
+    margin-bottom: var(--padding-10);
+  }
+  .result .qna_wrap .qna_list .ans .profile .siren {
+    justify-content: flex-end;
+  }
+  .result .qna_wrap .qna_list .ans .profile .profile_box .text_box h2 span {
+    display: block;
+    margin: 1vw 0 3vw 0;
+  }
+
+  /* FAQ */
+  main .faq .inner .contents .qna_list .ans p {
+    margin: 0 0 0 3vw;
+  }
+
+  /* NOTICE */
+  .notice .inner {
+    width: 90%;
+    margin: var(--margin-center);
+  }
+  .notice table thead tr th {
+    font-size: var(--font-copy);
+  }
+  .notice table tbody tr td {
+    font-size: var(--font-copy);
+  }
+  .notice .inner .btn_wrap {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .notice .inner .write_btn {
+    position: unset;
+    margin-top: var(--padding-10);
+  }
+  .notice_write,
+  .notice_view {
+    width: 90%;
+    margin: var(--margin-center);
+    overflow: hidden;
+  }
+
+  /* CONTACT */
+  .contact .wrap {
+    width: 90%;
+    margin: var(--margin-center);
+  }
+  .contact .wrap .block label {
+    width: 25%;
+  }
+  .contact .wrap .block input,
+  .contact .wrap .block textarea {
+    width: 75%;
   }
 }
