@@ -1384,6 +1384,7 @@ main .qna .inner .qna_view_title button:hover {
 }
 .result .qna_wrap .qna_list .qna .que_title .title h2 {
   font-size: var(--font-middle);
+  line-height: 1.5;
   margin-bottom: 20px;
 }
 .result .qna_wrap .qna_list .qna .que_title .title p {
