@@ -13,7 +13,7 @@
   --gray: #9b9b9b;
   --gray-opacity: #e8e8e8;
   --blue: #30475e;
-  --blue-opacity: #d1e6fb;
+  --blue-opacity: #dce9f7;
   --red: #f05454;
   --white: #fff;
   /* font size */
@@ -325,7 +325,7 @@ header .alert_popup ul li .new {
 
 /* FOOTER */
 footer {
-  background-color: var(--black);
+  background-color: var(--blue);
 }
 footer .inner {
   display: flex;
@@ -1182,8 +1182,9 @@ main .qna .inner {
 .qna .inner .chat_wrap .chat {
   position: relative;
   width: 70%;
+  color: var(--blue);
   font-size: var(--font-content);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   margin-bottom: var(--padding-30);
   padding: var(--padding-30);
@@ -1205,6 +1206,40 @@ main .qna .inner {
   font-size: var(--font-copy);
   font-weight: 800;
   margin-left: var(--padding-10);
+}
+.qna .inner .recom_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: var(--padding-100);
+}
+.qna .inner .recom_wrap .title {
+  font-size: var(--font-content);
+  margin-bottom: var(--padding-10);
+}
+.qna .inner .recom_wrap .title img {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: var(--padding-10);
+  border: 1px solid var(--gray-opacity);
+  border-radius: var(--button-acc);
+}
+.qna .inner .recom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: auto;
+  max-width: 70%;
+  color: var(--blue);
+  font-size: var(--font-content);
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: var(--padding-10);
+  padding: var(--padding-30);
+  border-radius: var(--button-square);
+  background-color: var(--blue-opacity);
 }
 main .qna .inner .qna_list .que {
   display: flex;
@@ -1348,6 +1383,8 @@ main .qna .inner .qna_view_title button:hover {
   margin-bottom: 20px;
 }
 .result .qna_wrap .qna_list .qna .que_title .title p {
+  display: flex;
+  align-items: baseline;
   font-size: var(--font-content);
   font-weight: 700;
 }
@@ -1359,10 +1396,11 @@ main .qna .inner .qna_view_title button:hover {
 }
 .result .qna_wrap .qna_list .qna .que_title .title p img {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   margin-right: 5px;
-  border-radius: 100%;
+  border: 1px solid var(--gray-opacity);
+  border-radius: var(--button-acc);
 }
 .result .qna_wrap .qna_list .qna .que_title .icon {
   display: flex;
@@ -1403,7 +1441,8 @@ main .qna .inner .qna_view_title button:hover {
 .result .qna_wrap .qna_list .ans .profile .profile_box .img img {
   width: 50px;
   height: 50px;
-  border-radius: 100%;
+  border: 1px solid var(--gray-opacity);
+  border-radius: var(--button-acc);
 }
 .result .qna_wrap .qna_list .ans .profile .profile_box .text_box h2 {
   font-size: var(--font-content);
