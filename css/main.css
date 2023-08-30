@@ -9,11 +9,12 @@
   --size-700: 700px;
   --size-1024: 1024px;
   /* color */
-  --black: #333;
-  --gray: #a9afb3;
-  --gray-opacity: #e3e3e3;
-  --blue: #2553e5;
-  --red: #ec4352;
+  --black: #121212;
+  --gray: #9b9b9b;
+  --gray-opacity: #e8e8e8;
+  --blue: #30475e;
+  --blue-opacity: #d1e6fb;
+  --red: #f05454;
   --white: #fff;
   /* font size */
   --font-title: 45px;
@@ -51,7 +52,8 @@ body {
   margin: 0;
   padding: 0;
 }
-input {
+input,
+textarea {
   border-radius: var(--button-square);
   background-color: var(--white);
 }
@@ -82,6 +84,13 @@ a {
   text-decoration: none;
   list-style: none;
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
 button {
   background-color: transparent;
 }
@@ -104,7 +113,7 @@ header .head_top {
   align-items: center;
   justify-content: space-between;
   width: var(--size-100);
-  padding: 0 20px;
+  padding: 0 40px;
   border-bottom: 1px solid var(--gray-opacity);
 }
 header .head_top .logo img {
@@ -230,6 +239,7 @@ header .head_top .head_contents .lang p {
 }
 header .head_top .head_contents .lang p a {
   color: var(--gray);
+  font-weight: 900;
 }
 header .head_top .head_contents .lang p a:hover,
 header .head_top .head_contents .lang p a.active {
@@ -417,7 +427,7 @@ footer .inner .sns ul li a i {
   background-color: var(--gray);
   outline: none;
   border: 0;
-  border-radius: var(--button-acc);
+  border-radius: var(--button-square);
   cursor: pointer;
 }
 .popup_term button:hover,
@@ -511,6 +521,7 @@ main .search .title {
   width: 300px;
   color: var(--blue);
   font-size: var(--font-title);
+  font-weight: 800;
   text-align: center;
 }
 main .search .input_wrap {
@@ -574,8 +585,7 @@ main .faq .inner .tab {
 }
 main .faq .inner .tab li {
   color: var(--white);
-  font-size: var(--font-copy);
-  font-weight: 700;
+  font-size: var(--font-content);
   padding: var(--button-padding);
   border-radius: var(--button-acc);
   border: 0;
@@ -585,6 +595,7 @@ main .faq .inner .tab li {
 main .faq .inner .tab li:hover,
 main .faq .inner .tab li.active {
   color: var(--white);
+  font-weight: 700;
   background-color: var(--blue);
 }
 main .faq .inner .contents .list {
@@ -749,7 +760,7 @@ main .top_banner .text_box div p {
   padding: 15px 0;
   background-color: var(--gray);
   border: 0;
-  border-radius: var(--button-acc);
+  border-radius: var(--button-square);
   outline: none;
   cursor: pointer;
 }
@@ -1163,6 +1174,38 @@ main .qna .inner {
   text-align: center;
   padding-bottom: var(--padding-100);
 }
+.qna .inner .chat_wrap {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: var(--padding-100);
+}
+.qna .inner .chat_wrap .chat {
+  position: relative;
+  width: 70%;
+  font-size: var(--font-content);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: var(--padding-30);
+  padding: var(--padding-30);
+  border-radius: var(--button-square);
+  background-color: var(--blue-opacity);
+}
+.qna .inner .chat_wrap .chat:after {
+  border-bottom: 30px solid var(--blue-opacity);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 0px solid transparent;
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 20%;
+}
+.qna .inner .chat_wrap .chat span {
+  display: inline-block;
+  font-size: var(--font-copy);
+  font-weight: 800;
+  margin-left: var(--padding-10);
+}
 main .qna .inner .qna_list .que {
   display: flex;
   align-items: center;
@@ -1210,6 +1253,7 @@ main .qna .inner .qna_view_title button {
   color: var(--white);
   font-size: var(--font-copy);
   font-weight: 700;
+  margin-top: var(--padding-30);
   padding: var(--button-padding);
   border-radius: var(--button-acc);
   border: 0;
