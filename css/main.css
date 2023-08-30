@@ -1180,7 +1180,7 @@ main .qna .inner {
 .qna .inner .chat_wrap {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: var(--padding-100);
+  margin-bottom: var(--padding-30);
 }
 .qna .inner .chat_wrap .chat {
   position: relative;
