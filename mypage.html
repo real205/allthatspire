@@ -131,55 +131,59 @@
           <h2 class="title">개인정보</h2>
           <form action="">
             <div class="block">
-              <div class="w50">
-                <p>닉네임</p>
-                <input type="text" name="myNickname" id="myNickname" placeholder="닉네임을 입력하세요." />
-              </div>
-              <div class="w50">
-                <p>생년월일</p>
-                <input type="text" name="myBirth" id="myBirth" readonly value="2000.01.01" />
+              <p>닉네임</p>
+              <input type="text" name="myNickname" id="myNickname" placeholder="닉네임을 입력하세요." />
+            </div>
+            <div class="block">
+              <p>생년월일</p>
+              <input type="text" name="myBirth" id="myBirth" readonly value="2000.01.01" />
+            </div>
+            <div class="block">
+              <p>이메일</p>
+              <input type="text" name="myEmail" id="myEmail" placeholder="admin@kconplanet.com" />
+            </div>
+            <div class="block">
+              <p>성별</p>
+              <div class="radio">
+                <input type="radio" name="myGender" value="male" id="male" checked />
+                <label for="male">남자</label>
+                <input type="radio" name="myGender" value="female" id="female" />
+                <label for="female">여자</label>
               </div>
             </div>
             <div class="block">
-              <div class="w50">
-                <p>성별</p>
-                <div class="radio">
-                  <input type="radio" name="myGender" value="male" id="male" checked />
-                  <label for="male">남자</label>
-                  <input type="radio" name="myGender" value="female" id="female" />
-                  <label for="female">여자</label>
+              <div class="w100">
+                <p>휴대폰번호</p>
+                <div class="number">
+                  <input
+                    type="text"
+                    name="myNumber"
+                    id="myNumber"
+                    placeholder="010-0000-0000"
+                    oninput="javascript: this.value = this.value.replace(/[^0-9]/, '').replace(/^(\d{3})(\d{4})(\d{4})$/, `$1-$2-$3`);"
+                  />
+                  <button type="button">본인인증</button>
                 </div>
-              </div>
-              <div class="w50">
-                <p>이메일</p>
-                <input type="text" name="myEmail" id="myEmail" placeholder="admin@kconplanet.com" />
-              </div>
-            </div>
-            <div class="block">
-              <p>휴대폰번호</p>
-              <div class="number">
-                <input
-                  type="text"
-                  name="myNumber"
-                  id="myNumber"
-                  placeholder="010-0000-0000"
-                  oninput="javascript: this.value = this.value.replace(/[^0-9]/, '').replace(/^(\d{3})(\d{4})(\d{4})$/, `$1-$2-$3`);"
-                />
-                <button type="button">본인인증</button>
               </div>
             </div>
             <div class="block auth">
-              <p>인증번호</p>
-              <input type="text" />
-              <button type="button">확인</button>
+              <div class="w100">
+                <p>인증번호</p>
+                <div class="confirm">
+                  <input type="text" />
+                  <button type="button">확인</button>
+                </div>
+              </div>
             </div>
             <div class="block">
-              <p>마케팅 수신동의</p>
-              <div class="radio">
-                <input type="radio" name="marketing" value="agree" id="agree" checked />
-                <label for="agree">동의</label>
-                <input type="radio" name="marketing" value="disagree" id="disagree" />
-                <label for="disagree">비동의</label>
+              <div class="w100">
+                <p>마케팅 수신동의</p>
+                <div class="radio">
+                  <input type="radio" name="marketing" value="agree" id="agree" checked />
+                  <label for="agree">동의</label>
+                  <input type="radio" name="marketing" value="disagree" id="disagree" />
+                  <label for="disagree">비동의</label>
+                </div>
               </div>
             </div>
             <button class="submit" type="submit" onclick="return checkForm();">수정하기</button>

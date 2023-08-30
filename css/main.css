@@ -608,6 +608,7 @@ main .faq .inner .contents .qna_list .que {
   position: relative;
   display: flex;
   align-items: baseline;
+  gap: 10px;
   margin: 20px 0;
   cursor: pointer;
 }
@@ -631,8 +632,6 @@ main .faq .inner .contents .qna_list .que b {
 main .faq .inner .contents .qna_list .que p {
   display: inline-block;
   font-size: var(--font-content);
-
-  margin-left: var(--padding-10);
 }
 main .faq .inner .contents .qna_list .ans {
   display: none;
@@ -1014,6 +1013,12 @@ main .top_banner .text_box div p {
   margin: 20px 0;
   cursor: pointer;
 }
+.myfaq .inner .contents .qna_list .que .left {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  width: 70%;
+}
 .myfaq .inner .contents .qna_list .que span {
   display: flex;
   align-items: center;
@@ -1041,8 +1046,6 @@ main .top_banner .text_box div p {
 .myfaq .inner .contents .qna_list .que p {
   display: inline-block;
   font-size: var(--font-content);
-
-  margin: 10px 0 0 10px;
 }
 .myfaq .inner .contents .qna_list .ans {
   display: none;
@@ -1084,13 +1087,15 @@ main .top_banner .text_box div p {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: var(--padding-10);
 }
-.mypage .inner .block .w50 {
+.mypage .inner .block .w100 {
+  width: 100%;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  width: 48%;
 }
 .mypage .inner .block p {
   width: 20%;
@@ -1099,9 +1104,8 @@ main .top_banner .text_box div p {
 }
 .mypage .inner .block input[type='text'] {
   width: 80%;
-  height: 30px;
   font-size: var(--font-copy);
-  padding: 5px 10px;
+  padding: var(--padding-10);
   border: 1px solid var(--gray);
 }
 .mypage .inner .block input[type='text']::placeholder {
@@ -1110,10 +1114,11 @@ main .top_banner .text_box div p {
 }
 .mypage .inner .block button {
   width: 100px;
-  height: 30px;
   color: var(--gray);
   font-size: var(--font-copy);
+  padding: var(--padding-10);
   border: 1px solid var(--gray);
+  border-radius: var(--button-square);
   cursor: pointer;
 }
 .mypage .inner .block button:hover {
@@ -1121,6 +1126,7 @@ main .top_banner .text_box div p {
   background-color: var(--blue);
   border: 1px solid var(--blue);
 }
+.mypage .inner .block .confirm,
 .mypage .inner .block .number {
   display: flex;
   justify-content: space-between;
@@ -1135,14 +1141,26 @@ main .top_banner .text_box div p {
   width: 100px;
   cursor: pointer;
 }
-e .inner .auth p,
-.mypage .inner .auth input {
-  width: auto !important;
-}
 .mypage .inner .block .radio {
   display: flex;
   align-items: center;
+  gap: 3px;
   width: 80%;
+}
+.mypage .inner .block .radio label {
+  margin-right: 7px;
+}
+.mypage .inner .block .radio input {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 1px solid var(--blue);
+}
+.mypage .inner .block .radio input:checked {
+  border: 3px solid var(--white);
+  outline: 1px solid var(--blue);
+  background-color: var(--blue);
 }
 .mypage .inner .submit {
   display: block;
@@ -1839,5 +1857,38 @@ main .qna .inner .qna_view_title button:hover {
   .contact .wrap .block input,
   .contact .wrap .block textarea {
     width: 75%;
+  }
+
+  /* MYPAGE */
+  .mypage .inner {
+    width: 90%;
+    margin: var(--margin-center);
+  }
+  .mypage .inner .block {
+    flex-direction: column;
+    margin-bottom: var(--padding-30);
+  }
+  .mypage .inner .block p {
+    width: 100%;
+    margin-bottom: var(--padding-10);
+  }
+  .mypage .inner .block .radio,
+  .mypage .inner .block .confirm,
+  .mypage .inner .block input[type='text'],
+  .mypage .inner .block .number {
+    width: 100%;
+  }
+  .mypage .inner .block .confirm input[type='text'],
+  .mypage .inner .block .number input {
+    width: 70%;
+  }
+  .mypage .inner .block button {
+    width: 27%;
+  }
+
+  /* MYFAQ */
+  .myfaq .inner {
+    width: 90%;
+    margin: var(--margin-center);
   }
 }
