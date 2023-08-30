@@ -352,7 +352,7 @@ footer .inner .contents nav a {
   border-right: 1px solid var(--white);
 }
 footer .inner .contents nav a:hover {
-  color: var(--blue);
+  color: var(--gray);
 }
 footer .inner .contents address {
   display: flex;
