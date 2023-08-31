@@ -168,10 +168,10 @@ header .head_top .head_contents .alert {
   cursor: pointer;
 }
 header .head_top .head_contents .alert:hover {
-  animation: animate 1s linear;
+  animation: alert 300ms ease-in Alternate;
   animation-iteration-count: 2;
 }
-@keyframes animate {
+@keyframes alert {
   0% {
     transform: rotate(0);
   }
