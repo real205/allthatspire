@@ -773,6 +773,7 @@ main .top_banner .text_box {
   padding-top: var(--padding-10);
 }
 main .top_banner .text_box img {
+  height: 120px;
 }
 main .top_banner .text_box div {
   margin-left: var(--margin-title);
@@ -1486,6 +1487,7 @@ main .qna .inner .qna_view_title button:hover {
 .result .qna_wrap .qna_list .qna .que_title .title p {
   display: flex;
   align-items: baseline;
+  gap: 6px;
   font-size: var(--font-content);
   font-weight: 700;
 }
