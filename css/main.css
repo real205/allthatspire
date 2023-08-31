@@ -28,7 +28,9 @@
   /* padding */
   --padding-10: 10px;
   --padding-30: 30px;
+  --padding-50: 50px;
   --padding-100: 100px;
+  --padding-50-0: 50px 0;
   --padding-100-0: 100px 0;
   /* button */
   --button-acc: 30px;
@@ -358,7 +360,7 @@ footer .inner {
   align-items: center;
   width: var(--size-1024);
   margin: var(--margin-center);
-  padding: 50px 0;
+  padding: var(--padding-50-0);
 }
 footer .inner .contents {
   display: flex;
@@ -424,7 +426,7 @@ footer .inner .sns ul li a i {
   left: 50%;
   width: 50%;
   height: 70%;
-  padding: 50px;
+  padding: var(--padding-50);
   transform: translate(-50%, -50%);
   background-color: var(--white);
   border: 1px solid var(--gray);
@@ -447,7 +449,7 @@ footer .inner .sns ul li a i {
   width: var(--size-100);
   color: var(--white);
   font-size: var(--font-content);
-  margin-top: 50px;
+  margin-top: var(--padding-50);
   padding: var(--button-padding);
   background-color: var(--gray);
   outline: none;
@@ -540,7 +542,7 @@ main .search {
   display: flex;
   width: var(--size-1024);
   margin: var(--margin-center);
-  padding: 50px 0;
+  padding: var(--padding-50-0);
 }
 main .search .title {
   width: 300px;
@@ -585,7 +587,7 @@ main .search .input_wrap button i {
   font-size: var(--font-content);
 }
 main .search .result_wrap {
-  margin-top: 50px;
+  margin-top: var(--padding-50);
 }
 
 /* SLIDER */
@@ -704,7 +706,7 @@ main .faq .inner .contents .qna_list .ans {
 main .faq .inner .contents .qna_list .ans.active {
   display: flex;
   margin-bottom: var(--padding-30);
-  padding-bottom: var(--padding-30);
+  padding-bottom: var(--padding-50);
   border-bottom: 1px solid var(--gray-opacity);
 }
 main .faq .inner .contents .qna_list .ans b {
@@ -833,7 +835,7 @@ main .top_banner .text_box div p {
   width: var(--size-100);
   color: var(--white);
   font-size: var(--font-content);
-  margin-top: 50px;
+  margin-top: var(--padding-50);
   padding: 15px 0;
   background-color: var(--gray);
   border: 0;
@@ -1539,8 +1541,8 @@ main .qna .inner .qna_view_title button:hover {
   gap: 10px;
 }
 .result .qna_wrap .qna_list .ans .profile .profile_box .img img {
-  width: 50px;
-  height: 50px;
+  width: var(--padding-50);
+  height: var(--padding-50);
   border: 1px solid var(--gray-opacity);
   border-radius: var(--button-acc);
 }
