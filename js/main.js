@@ -24,6 +24,17 @@ $(document).ready(function () {
     adaptiveHeight: true,
   });
 
+  //search 마우스오버
+  $('.input_wrap').mouseover(function () {
+    $(this).addClass('active');
+    $(this).siblings('.title').addClass('active');
+  });
+
+  $('.input_wrap').mouseout(function () {
+    $(this).removeClass('active');
+    $(this).siblings('.title').removeClass('active');
+  });
+
   //faq 탭
   $('ul.tab').on('click', 'li', function () {
     var tab_id = $(this).attr('data-tab');

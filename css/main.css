@@ -133,7 +133,6 @@ header .head_search .input_wrap input {
   height: 40px;
   color: var(--black);
   font-size: var(--font-content);
-
   border: 0;
   outline: none;
 }
@@ -168,6 +167,27 @@ header .head_top .head_contents .mobile_menu {
 header .head_top .head_contents .alert {
   cursor: pointer;
 }
+header .head_top .head_contents .alert:hover {
+  animation: animate 1s linear;
+  animation-iteration-count: 2;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 header .head_top .head_contents .close_mobile_btn i,
 header .head_top .head_contents .alert i {
   font-size: var(--font-middle);
@@ -187,6 +207,11 @@ header .head_top .head_contents .login button {
   border: 0;
   border-radius: var(--button-acc);
   cursor: pointer;
+}
+header .head_top .head_contents .login button:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
 }
 header .head_top .head_contents .login ul {
   display: none;
@@ -515,7 +540,7 @@ main .search {
   display: flex;
   width: var(--size-1024);
   margin: var(--margin-center);
-  padding: var(--padding-100-0);
+  padding: 50px 0;
 }
 main .search .title {
   width: 300px;
@@ -523,6 +548,11 @@ main .search .title {
   font-size: var(--font-title);
   font-weight: 800;
   text-align: center;
+  transition: 300ms;
+}
+main .search .title.active {
+  color: var(--red);
+  transition: 300ms;
 }
 main .search .input_wrap {
   position: relative;
@@ -530,6 +560,11 @@ main .search .input_wrap {
   padding: var(--padding-10);
   border: 5px solid var(--blue);
   border-radius: var(--button-square);
+  transition: 300ms;
+}
+main .search .input_wrap.active {
+  border-color: var(--red);
+  transition: 300ms;
 }
 main .search .input_wrap input {
   width: var(--size-100);
@@ -554,15 +589,11 @@ main .search .result_wrap {
 }
 
 /* SLIDER */
-main .slider {
-  width: 95%;
-  height: 300px;
-  margin: var(--margin-center);
-}
 main .slider img {
-  width: var(--size-100);
-  height: 300px;
-  border-radius: var(--button-acc);
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 500px;
 }
 
 /* FAQ */
@@ -574,9 +605,37 @@ main .faq .inner {
   width: var(--size-1024);
   margin: var(--margin-center);
 }
-main .faq .inner .title {
+main .faq .inner .text_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .faq .inner .text_box .title {
   font-size: var(--font-middle);
   font-weight: 800;
+}
+main .faq .inner .text_box a {
+  color: var(--blue);
+  font-weight: 800;
+  font-size: var(--font-copy);
+  padding-right: 10px;
+  transition: 300ms;
+}
+main .faq .inner .text_box a i {
+  display: inline-block;
+  font-size: var(--font-copy);
+  margin-left: 5px;
+}
+main .faq .inner .text_box a:hover {
+  color: var(--red);
+  padding-right: 0;
+  text-decoration: underline;
+  text-decoration-line: 3px;
+  text-decoration-thickness: 3px;
+  transition: 300ms;
+}
+main .faq .inner .text_box a:hover i {
+  color: var(--red);
 }
 main .faq .inner .tab {
   display: flex;
@@ -1530,7 +1589,7 @@ main .qna .inner .qna_view_title button:hover {
     /* button */
     --button-acc: 4vw;
     --button-square: 10px;
-    --button-padding: 3vw 5vw;
+    --button-padding: 2vw 5vw;
   }
 
   /* HEADER */
@@ -1751,9 +1810,9 @@ main .qna .inner .qna_view_title button:hover {
     margin: 3vw auto;
   }
   main .partners .inner ul li {
+    display: flex;
     width: 22%;
     height: 40px;
-    display: flex;
   }
   main .partners .inner .title {
     margin-bottom: var(--padding-30);
