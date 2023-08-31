@@ -1538,6 +1538,7 @@ main .qna .inner .qna_view_title button:hover {
     position: relative;
     display: flex;
     flex-direction: column;
+    padding: 0 3vw;
     border: 0;
   }
   header .head_top .mobile_menu_btn {
@@ -1706,7 +1707,7 @@ main .qna .inner .qna_view_title button:hover {
   /* MAIN */
   main .search {
     flex-direction: column;
-    padding: 10vw 0;
+    padding: 6vw 0;
   }
   main .search .title {
     display: none;
@@ -1719,6 +1720,7 @@ main .qna .inner .qna_view_title button:hover {
   main .search .input_wrap {
     width: 90%;
     margin: var(--margin-center);
+    padding: 0 3vw;
   }
   main .faq {
   }
