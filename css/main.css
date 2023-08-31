@@ -639,19 +639,14 @@ main .faq .inner .contents .qna_list .que p {
   font-size: var(--font-content);
 }
 main .faq .inner .contents .qna_list .ans {
-  display: flex;
+  display: none;
   align-items: baseline;
-  height: 0;
-  opacity: 0;
-  transition: 300ms;
 }
 main .faq .inner .contents .qna_list .ans.active {
-  height: auto;
+  display: flex;
   margin-bottom: var(--padding-30);
   padding-bottom: var(--padding-30);
   border-bottom: 1px solid var(--gray-opacity);
-  opacity: 1;
-  transition: 300ms;
 }
 main .faq .inner .contents .qna_list .ans b {
   color: var(--gray);
@@ -698,8 +693,10 @@ main .partners .inner ul li {
   overflow: hidden;
 }
 main .partners .inner ul li img {
-  width: 100%;
+  width: auto;
   height: auto;
+  max-width: 100%;
+  max-height: 100px;
 }
 
 /* SUSB PAGE */
@@ -1565,10 +1562,17 @@ main .qna .inner .qna_view_title button:hover {
   header .head_search .input_wrap button {
     right: 0;
   }
+  header .head_top .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   header .head_top .logo img {
     display: block;
+    max-width: 100%;
+    max-height: 60px;
     width: auto;
-    height: 60px;
+    height: auto;
     margin: var(--margin-center);
   }
   header .head_top .head_contents {
@@ -1724,7 +1728,7 @@ main .qna .inner .qna_view_title button:hover {
   main .faq .inner .tab {
     display: block;
     width: 100%;
-    margin: 0;
+    margin: 5vw 0;
     padding: 5vw 0;
     overflow: auto;
     white-space: nowrap;
@@ -1745,6 +1749,7 @@ main .qna .inner .qna_view_title button:hover {
     margin: 3vw auto;
   }
   main .partners .inner ul li {
+    width: 22%;
     height: 40px;
     display: flex;
   }
@@ -1819,8 +1824,19 @@ main .qna .inner .qna_view_title button:hover {
   }
 
   /* FAQ */
+  main .faq .inner .contents .qna_list .que {
+    margin-bottom: var(--padding-10);
+    padding-bottom: var(--padding-10);
+  }
+  main .faq .inner .contents .qna_list:first-child .que {
+    padding-top: var(--padding-10);
+  }
   main .faq .inner .contents .qna_list .ans p {
     margin: 0 0 0 3vw;
+  }
+  main .faq .inner .contents .qna_list .ans.active {
+    margin-bottom: var(--padding-10);
+    padding: 6vw 0 10vw;
   }
 
   /* NOTICE */
