@@ -108,7 +108,7 @@ header {
   position: sticky;
   top: 0;
   background-color: var(--white);
-  z-index: 9;
+  z-index: 3;
 }
 header .head_top {
   display: flex;
@@ -1146,6 +1146,7 @@ main .top_banner .text_box div p {
   position: relative;
 }
 .mypage .inner .title {
+  color: var(--blue);
   font-size: var(--font-title);
   margin: var(--margin-center);
   text-align: center;
@@ -1754,6 +1755,11 @@ main .qna .inner .qna_view_title button:hover {
     width: 90%;
   }
 
+  /* PAGING */
+  .view_paging {
+    width: 90%;
+    margin: 6vw auto;
+  }
   /* SUB PAGE */
   main .top_banner {
     height: auto;
