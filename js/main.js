@@ -30,6 +30,7 @@ $(document).ready(function () {
     $('.qna_list').removeClass('active');
     if ($('ul.tab').hasClass('mytab') == false) {
       $('.qna_list .ans').removeClass('active');
+      $('.qna_list:first-child .que').addClass('active');
       $('.qna_list:first-child .ans').addClass('active');
     } else {
       $('.qna_list .ans').removeClass('active');
@@ -42,6 +43,8 @@ $(document).ready(function () {
 
   //faq 내부
   $('.qna_list .que').click(function () {
+    $(this).parent('.qna_list').siblings().children('.que').removeClass('active');
+    $(this).addClass('active');
     $(this).parent('.qna_list').siblings().children('.ans').removeClass('active');
     $(this).siblings('.ans').addClass('active');
   });
