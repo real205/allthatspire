@@ -35,7 +35,7 @@
         <div class="mobile_menu_btn"><i class="fa-solid fa-bars"></i></div>
         <div class="logo">
           <a href="index.html">
-            <img src="img/logo.png" alt="" />
+            <img src="img/logo.svg" alt="" />
           </a>
         </div>
         <div class="mobile_alert">
@@ -53,7 +53,7 @@
             <i class="fa-regular fa-bell"></i>
           </div>
           <div class="login">
-            <button>프로필(마이페이지)</button>
+            <button class="login">ifree 로그인 | 회원가입</button>
             <ul>
               <li><a href="myfaq.html">활동관리</a></li>
               <li><a href="mypage.html">개인정보 관리</a></li>
@@ -61,7 +61,14 @@
             </ul>
           </div>
           <div class="lang">
-            <p class="blin lang_btn"><a href="#none" class="active">KOR</a> | <a href="#none">ENG</a></p>
+            <div class="lang_btn on">
+              <p>KOR</p>
+              <img src="/img/language_on.svg" alt="" />
+            </div>
+            <div class="lang_btn off">
+              <p>ENG</p>
+              <img src="/img/language_off.svg" alt="" />
+            </div>
           </div>
           <div class="close_mobile_btn">
             <i class="fa-solid fa-xmark"></i>
@@ -86,64 +93,75 @@
       <div class="alert_popup">
         <h2 class="title">알림</h2>
         <button class="alert_popup_close"><i class="fa-solid fa-xmark"></i></button>
-        <button class="read_all">모두읽기</button>
+        <div class="read_all">
+          <button>모두읽음</button>
+          <button>읽은 알림 삭제</button>
+        </div>
         <ul>
-          <li>
+          <li class="new">
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
           </li>
           <li>
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
           </li>
           <li>
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
-          </li>
-          <li>
-            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
-          </li>
-          <li>
-            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
           </li>
         </ul>
       </div>
     </header>
     <main>
       <section class="myfaq">
-        <div class="top_banner">
-          <div class="text_box">
-            <img src="img/top_banner.png" alt="" />
-            <div>
-              <h2>질문남 <span>님의</span></h2>
-              <p>활동관리</p>
-            </div>
-          </div>
-        </div>
         <div class="inner">
-          <ul class="tab mytab">
-            <li data-tab="tab1" class="active">질문 <span>2</span></li>
-            <li data-tab="tab2">관심질문 <span>7</span></li>
-          </ul>
+          <div class="title">
+            <h2><b>OOO님</b>의 활동관리</h2>
+            <ul class="tab mytab">
+              <li data-tab="tab1" class="active">질문 <span>(2)</span></li>
+              <li data-tab="tab2">관심질문 <span>(7)</span></li>
+            </ul>
+          </div>
           <div class="contents">
             <div class="list tab1 active">
               <div class="qna_list">
                 <div class="que">
                   <div class="left">
-                    <b class="blin">Q</b>
-                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                    <b><img src="/img/question.svg" alt="" /></b>
+                    <p>
+                      tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?
+                      <span>2023.08.21 19:10</span>
+                    </p>
                   </div>
-                  <span class="complete">답변 보기</span>
+                  <div class="right">
+                    <p class="show_ans">답변 보기</p>
+                    <i class="fa-solid fa-angle-down arrows"></i>
+                  </div>
                 </div>
                 <div class="ans">
-                  <b class="blin">A</b>
+                  <b><img src="/img/answer.svg" alt="" /></b>
                   <p>
                     안녕하세요. 홍덕진 의사입니다.<br /><br />
                     허리 통증을 유발하는 기전은 흔히들 잘 알고 있는 디스크 (추간판 탈출증) 외에도 다양합니다.<br />
@@ -158,10 +176,29 @@
               <div class="qna_list">
                 <div class="que">
                   <div class="left">
-                    <b class="blin">Q</b>
-                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                    <b><img src="/img/question_02.svg" alt="" /></b>
+                    <p>
+                      tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?<span
+                        >2023.08.21 19:10</span
+                      >
+                    </p>
                   </div>
-                  <span>답변 미등록</span>
+                  <div class="right">
+                    <p class="show_ans no">답변 미등록</p>
+                    <i class="fa-solid fa-angle-down arrows"></i>
+                  </div>
+                </div>
+                <div class="ans">
+                  <b><img src="/img/answer.svg" alt="" /></b>
+                  <p>
+                    안녕하세요. 홍덕진 의사입니다.<br /><br />
+                    허리 통증을 유발하는 기전은 흔히들 잘 알고 있는 디스크 (추간판 탈출증) 외에도 다양합니다.<br />
+                    물리적인 추간판 탈출이 아니더라도 면역 반응에 의한 염증이 발생할 수 있고, 추간판이 아닌 근육이나
+                    인대의 문제일 수도 있습니다.<br />
+                    교과서적으로는 소염제를 복용하거나 파스를 붙여서 염증 및 통증을 줄이고, 허리 근육 강화를 통해서 허리
+                    구조물을 안정화 시키는 게 일반적으로 추천되는 방법입니다.<br />
+                    진단을 위해서는 X선 검사와 MRI 검사가 필요합니다.
+                  </p>
                 </div>
               </div>
             </div>
@@ -169,15 +206,21 @@
               <div class="qna_list">
                 <div class="que">
                   <div class="left">
-                    <b class="blin">Q</b>
-                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                    <b><img src="/img/question.svg" alt="" /></b>
+                    <p>
+                      tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?<span
+                        >2023.08.21 19:10</span
+                      >
+                    </p>
                   </div>
-                  <span class="complete"
-                    >답변 보기 <i class="fa-regular fa-bookmark" onclick="bookmark(event);"></i
-                  ></span>
+                  <div class="right">
+                    <p class="show_ans">답변 보기</p>
+                    <i class="fa-solid fa-angle-down arrows"></i>
+                    <img src="img/bookmark.svg" class="bookmark" onclick="bookmark(event);" alt="" />
+                  </div>
                 </div>
                 <div class="ans">
-                  <b class="blin">A</b>
+                  <b><img src="/img/answer.svg" alt="" /></b>
                   <p>
                     안녕하세요. 홍덕진 의사입니다.<br /><br />
                     허리 통증을 유발하는 기전은 흔히들 잘 알고 있는 디스크 (추간판 탈출증) 외에도 다양합니다.<br />
@@ -192,52 +235,78 @@
               <div class="qna_list">
                 <div class="que">
                   <div class="left">
-                    <b class="blin">Q</b>
-                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                    <b><img src="/img/question_02.svg" alt="" /></b>
+                    <p>
+                      tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?<span
+                        >2023.08.21 19:10</span
+                      >
+                    </p>
                   </div>
-                  <span>답변 미등록 <i class="fa-regular fa-bookmark" onclick="bookmark(event);"></i></span>
+                  <div class="right">
+                    <p class="show_ans no">답변 미등록</p>
+                    <i class="fa-solid fa-angle-down arrows"></i>
+                    <img src="img/bookmark.svg" class="bookmark" onclick="bookmark(event);" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+          <button class="more_btn">더보기</button>
+          <div class="contents empty">
+            <p>등록한 질문이 없습니다.</p>
           </div>
         </div>
       </section>
     </main>
     <footer>
+      <div class="f_top">
+        <ul>
+          <li><a href="service.html">서비스 소개</a></li>
+          <li>
+            <a href="faq.html"><span class="mo">FAQ</span><span class="pc">자주묻는 질문 (FAQ)</span></a>
+          </li>
+          <li><a href="notice.html">공지사항</a></li>
+          <li><a href="#none" class="term">이용약관</a></li>
+          <li>
+            <a href="#none" class="privacy">개인정보 <span class="br"></span>처리방침</a>
+          </li>
+        </ul>
+      </div>
       <div class="inner">
         <div class="contents">
           <div class="flogo">
-            <img src="img/flogo.png" alt="" />
+            <img src="img/logo.svg" alt="" />
           </div>
-          <nav>
-            <a href="service.html">서비스 소개</a>
-            <a href="qna.html">전문가 답변</a>
-            <a href="faq.html">자주묻는 질문</a>
-            <a href="notice.html">공지사항</a>
-            <a href="contact.html">문의하기</a>
-            <a href="#none" class="term">이용약관</a>
-            <a href="#none" class="privacy">개인정보 처리방침</a>
-          </nav>
           <address>
-            <p>ALL THAT SPIRE</p>
-            <p>대표 : 김스파</p>
-            <p>사업자 등록번호 : 123-12-12345</p>
-            <p><i class="fa-solid fa-location-dot"></i> 주소 : 경상북도 포항시 북구 포스코대로 256</p>
+            <div>
+              <p>ALL THAT SPIRE</p>
+              <p>대표 : 김스파</p>
+            </div>
+            <div>
+              <p>사업자 등록번호 : 123-12-12345</p>
+              <p><i class="fa-solid fa-location-dot"></i> 주소 : 경상북도 포항시 북구 포스코대로 256</p>
+            </div>
+            <div class="contact">
+              <a href="contact.html">Contact All That Spine <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div class="tel">
+              <p><i class="fa-solid fa-phone"></i> 82-11-2222-3333</p>
+            </div>
           </address>
-          <p class="copy blin">© ALL THAT SPIRE. All Rights Reserved.</p>
         </div>
         <div class="sns">
           <ul>
             <li>
-              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li>
               <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </li>
             <li>
-              <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             </li>
           </ul>
+          <p class="copy">© ALL THAT SPIRE. All Rights Reserved.</p>
         </div>
       </div>
       <div class="popup_term">

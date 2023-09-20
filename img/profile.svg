@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+  <g id="profile_basic" transform="translate(0.09 0.089)">
+    <g id="타원_279" data-name="타원 279" transform="translate(-0.09 -0.089)" fill="#fff" stroke="#36b0ff" stroke-width="1">
+      <circle cx="22.5" cy="22.5" r="22.5" stroke="none"/>
+      <circle cx="22.5" cy="22.5" r="22" fill="none"/>
+    </g>
+    <path id="합치기_13" data-name="합치기 13" d="M3.428,24A3.429,3.429,0,0,1,0,20.571a9.432,9.432,0,0,1,6.992-9.111,6.045,6.045,0,1,1,5.016,0A9.433,9.433,0,0,1,19,20.571,3.429,3.429,0,0,1,15.572,24Z" transform="translate(12.91 10.911)" fill="#80cdff"/>
+  </g>
+</svg>

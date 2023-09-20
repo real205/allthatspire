@@ -35,7 +35,7 @@
         <div class="mobile_menu_btn"><i class="fa-solid fa-bars"></i></div>
         <div class="logo">
           <a href="index.html">
-            <img src="img/logo.png" alt="" />
+            <img src="img/logo.svg" alt="" />
           </a>
         </div>
         <div class="mobile_alert">
@@ -53,7 +53,7 @@
             <i class="fa-regular fa-bell"></i>
           </div>
           <div class="login">
-            <button>프로필(마이페이지)</button>
+            <button class="login">ifree 로그인 | 회원가입</button>
             <ul>
               <li><a href="myfaq.html">활동관리</a></li>
               <li><a href="mypage.html">개인정보 관리</a></li>
@@ -61,7 +61,14 @@
             </ul>
           </div>
           <div class="lang">
-            <p class="blin lang_btn"><a href="#none" class="active">KOR</a> | <a href="#none">ENG</a></p>
+            <div class="lang_btn on">
+              <p>KOR</p>
+              <img src="/img/language_on.svg" alt="" />
+            </div>
+            <div class="lang_btn off">
+              <p>ENG</p>
+              <img src="/img/language_off.svg" alt="" />
+            </div>
           </div>
           <div class="close_mobile_btn">
             <i class="fa-solid fa-xmark"></i>
@@ -86,39 +93,50 @@
       <div class="alert_popup">
         <h2 class="title">알림</h2>
         <button class="alert_popup_close"><i class="fa-solid fa-xmark"></i></button>
-        <button class="read_all">모두읽기</button>
+        <div class="read_all">
+          <button>모두읽음</button>
+          <button>읽은 알림 삭제</button>
+        </div>
         <ul>
-          <li>
+          <li class="new">
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
           </li>
           <li>
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
           </li>
           <li>
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
-          </li>
-          <li>
-            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
-          </li>
-          <li>
-            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
           </li>
         </ul>
       </div>
     </header>
     <main>
       <section class="notice_view">
-        <h2 class="title blin">NOTICE</h2>
+        <h2 class="title blin">공지사항</h2>
         <div class="wrap">
           <div class="con_title">
             <p>원전 오염수 방류 시작하자 ‘실감’…수산물·건어물 매출 급등</p>
@@ -145,55 +163,72 @@
               품귀현상까지는 아직 빚어지지 않고 있다. 유통업계 한 관계자는 “소비자들의 불안 심리가 수산물과 건어물 매출
               급등으로 확인되는 듯하다. 이 같은 현상이 얼마만큼 지속될 지 예의주시하면서 대응책을 마련하고 있다”며
               “일본산 수산물은 취급하지 않고 있고, 방사능 검사도 철저히 하면서 안전 확보에 만전을 기할 것”이라고 말했다.
-              문수정 기자 thursday@kmib.co.kr [출처] - 국민일보 [원본링크] -
-              https://news.kmib.co.kr/article/view.asp?arcid=0018601347&code=61141111&sid1=eco&cp=nv2
+              문수정 기자 thursday@kmib.co.kr [출처] - 국민일보
             </p>
           </div>
           <div class="view_paging">
-            <button><i class="fa-solid fa-chevron-left"></i> 이전글</button>
-            <button class="return" onclick="location.href='notice.html'">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-            <button>다음글 <i class="fa-solid fa-chevron-right"></i></button>
+            <div class="prev">
+              <p><span>이전</span> <span>서버점검 안내</span></p>
+              <p class="date">2023.08.10</p>
+            </div>
+            <div class="next">
+              <p><span>다음</span> <span>서버점검 안내</span></p>
+              <p class="date">2023.08.10</p>
+            </div>
+            <button onclick="location.href='notice.html'">목록</button>
           </div>
         </div>
       </section>
     </main>
     <footer>
+      <div class="f_top">
+        <ul>
+          <li><a href="service.html">서비스 소개</a></li>
+          <li>
+            <a href="faq.html"><span class="mo">FAQ</span><span class="pc">자주묻는 질문 (FAQ)</span></a>
+          </li>
+          <li><a href="notice.html">공지사항</a></li>
+          <li><a href="#none" class="term">이용약관</a></li>
+          <li>
+            <a href="#none" class="privacy">개인정보 <span class="br"></span>처리방침</a>
+          </li>
+        </ul>
+      </div>
       <div class="inner">
         <div class="contents">
           <div class="flogo">
-            <img src="img/flogo.png" alt="" />
+            <img src="img/logo.svg" alt="" />
           </div>
-          <nav>
-            <a href="service.html">서비스 소개</a>
-            <a href="qna.html">전문가 답변</a>
-            <a href="faq.html">자주묻는 질문</a>
-            <a href="notice.html">공지사항</a>
-            <a href="contact.html">문의하기</a>
-            <a href="#none" class="term">이용약관</a>
-            <a href="#none" class="privacy">개인정보 처리방침</a>
-          </nav>
           <address>
-            <p>ALL THAT SPIRE</p>
-            <p>대표 : 김스파</p>
-            <p>사업자 등록번호 : 123-12-12345</p>
-            <p><i class="fa-solid fa-location-dot"></i> 주소 : 경상북도 포항시 북구 포스코대로 256</p>
+            <div>
+              <p>ALL THAT SPIRE</p>
+              <p>대표 : 김스파</p>
+            </div>
+            <div>
+              <p>사업자 등록번호 : 123-12-12345</p>
+              <p><i class="fa-solid fa-location-dot"></i> 주소 : 경상북도 포항시 북구 포스코대로 256</p>
+            </div>
+            <div class="contact">
+              <a href="contact.html">Contact All That Spine <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div class="tel">
+              <p><i class="fa-solid fa-phone"></i> 82-11-2222-3333</p>
+            </div>
           </address>
-          <p class="copy blin">© ALL THAT SPIRE. All Rights Reserved.</p>
         </div>
         <div class="sns">
           <ul>
             <li>
-              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li>
               <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </li>
             <li>
-              <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             </li>
           </ul>
+          <p class="copy">© ALL THAT SPIRE. All Rights Reserved.</p>
         </div>
       </div>
       <div class="popup_term">

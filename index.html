@@ -8,7 +8,8 @@
     <meta name="author" content="All That Spine" />
     <meta name="viewport" content="width=device-width" />
     <!-- FAVICON -->
-    <link rel="”shortcut" icon” href="img/favicon.ico" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <!-- CDN -->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <!-- CSS -->
@@ -35,7 +36,7 @@
         <div class="mobile_menu_btn"><i class="fa-solid fa-bars"></i></div>
         <div class="logo">
           <a href="index.html">
-            <img src="img/logo.png" alt="" />
+            <img src="img/logo.svg" alt="" />
           </a>
         </div>
         <div class="mobile_alert">
@@ -53,7 +54,7 @@
             <i class="fa-regular fa-bell"></i>
           </div>
           <div class="login">
-            <button>프로필(마이페이지)</button>
+            <button class="login">ifree 로그인 | 회원가입</button>
             <ul>
               <li><a href="myfaq.html">활동관리</a></li>
               <li><a href="mypage.html">개인정보 관리</a></li>
@@ -61,7 +62,14 @@
             </ul>
           </div>
           <div class="lang">
-            <p class="blin lang_btn"><a href="#none" class="active">KOR</a> | <a href="#none">ENG</a></p>
+            <div class="lang_btn on">
+              <p>KOR</p>
+              <img src="/img/language_on.svg" alt="" />
+            </div>
+            <div class="lang_btn off">
+              <p>ENG</p>
+              <img src="/img/language_off.svg" alt="" />
+            </div>
           </div>
           <div class="close_mobile_btn">
             <i class="fa-solid fa-xmark"></i>
@@ -86,32 +94,43 @@
       <div class="alert_popup">
         <h2 class="title">알림</h2>
         <button class="alert_popup_close"><i class="fa-solid fa-xmark"></i></button>
-        <button class="read_all">모두읽기</button>
+        <div class="read_all">
+          <button>모두읽음</button>
+          <button>읽은 알림 삭제</button>
+        </div>
         <ul>
-          <li>
+          <li class="new">
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
           </li>
           <li>
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
           </li>
           <li>
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
-          </li>
-          <li>
-            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
-          </li>
-          <li>
-            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
           </li>
         </ul>
       </div>
@@ -123,9 +142,11 @@
     </style>
     <main>
       <section class="search">
-        <h2 class="title blin">All That Spine</h2>
+        <div class="main_logo">
+          <img src="/img/main_logo.svg" alt="" />
+        </div>
         <div class="input_wrap">
-          <input type="search" name="" id="" />
+          <input type="search" name="" id="" placeholder="궁금한 것은 무엇이든 물어보세요." />
           <button onclick="location.href='qna.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
       </section>
@@ -136,25 +157,28 @@
       <section class="faq">
         <div class="inner">
           <div class="text_box">
+            <img src="/img/qna_icon.svg" alt="" />
             <h2 class="title">자주하는 질문</h2>
-            <a href="faq.html">더보기 <i class="fa-solid fa-angle-right"></i></a>
+            <!-- <a href="faq.html">더보기 <i class="fa-solid fa-angle-right"></i></a> -->
           </div>
           <ul class="tab">
-            <li data-tab="tab1" class="active">척추1</li>
-            <li data-tab="tab2">척추2</li>
-            <li data-tab="tab3">척추3</li>
-            <li data-tab="tab4">척추4</li>
+            <li data-tab="tab1" class="active">자주하는 질문 첫번째 그리고 두번째</li>
+            <li data-tab="tab2">자주하는 질문 두번째 챕터</li>
+            <li data-tab="tab3">척추</li>
+            <li data-tab="tab4">케이컨 플래닛 와글와글</li>
           </ul>
           <div class="contents">
             <div class="list tab1 active">
               <div class="qna_list">
                 <div class="que active">
-                  <b class="blin">Q</b>
-                  <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  <div>
+                    <b><img src="/img/question.svg" alt="" /></b>
+                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  </div>
                   <i class="fa-solid fa-angle-down"></i>
                 </div>
                 <div class="ans active">
-                  <b class="blin">A</b>
+                  <b><img src="/img/answer.svg" alt="" /></b>
                   <p>
                     안녕하세요. 홍덕진 의사입니다.<br /><br />
                     허리 통증을 유발하는 기전은 흔히들 잘 알고 있는 디스크 (추간판 탈출증) 외에도 다양합니다.<br />
@@ -168,12 +192,14 @@
               </div>
               <div class="qna_list">
                 <div class="que">
-                  <b class="blin">Q</b>
-                  <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  <div>
+                    <b><img src="/img/question.svg" alt="" /></b>
+                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  </div>
                   <i class="fa-solid fa-angle-down"></i>
                 </div>
                 <div class="ans">
-                  <b class="blin">A</b>
+                  <b><img src="/img/answer.svg" alt="" /></b>
                   <p>
                     안녕하세요. 홍덕진 의사입니다.<br /><br />
                     허리 통증을 유발하는 기전은 흔히들 잘 알고 있는 디스크 (추간판 탈출증) 외에도 다양합니다.<br />
@@ -189,12 +215,14 @@
             <div class="list tab2">
               <div class="qna_list">
                 <div class="que">
-                  <b class="blin">Q</b>
-                  <p>tab2 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  <div>
+                    <b><img src="/img/question.svg" alt="" /></b>
+                    <p>tab2 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  </div>
                   <i class="fa-solid fa-angle-down"></i>
                 </div>
                 <div class="ans">
-                  <b class="blin">A</b>
+                  <b><img src="/img/answer.svg" alt="" /></b>
                   <p>
                     안녕하세요. 홍덕진 의사입니다.<br /><br />
                     허리 통증을 유발하는 기전은 흔히들 잘 알고 있는 디스크 (추간판 탈출증) 외에도 다양합니다.<br />
@@ -208,12 +236,14 @@
               </div>
               <div class="qna_list">
                 <div class="que">
-                  <b class="blin">Q</b>
-                  <p>tab2 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  <div>
+                    <b><img src="/img/question.svg" alt="" /></b>
+                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  </div>
                   <i class="fa-solid fa-angle-down"></i>
                 </div>
                 <div class="ans">
-                  <b class="blin">A</b>
+                  <b><img src="/img/answer.svg" alt="" /></b>
                   <p>
                     안녕하세요. 홍덕진 의사입니다.<br /><br />
                     허리 통증을 유발하는 기전은 흔히들 잘 알고 있는 디스크 (추간판 탈출증) 외에도 다양합니다.<br />
@@ -229,12 +259,14 @@
             <div class="list tab3">
               <div class="qna_list">
                 <div class="que">
-                  <b class="blin">Q</b>
-                  <p>tab3 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  <div>
+                    <b><img src="/img/question.svg" alt="" /></b>
+                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  </div>
                   <i class="fa-solid fa-angle-down"></i>
                 </div>
                 <div class="ans">
-                  <b class="blin">A</b>
+                  <b><img src="/img/answer.svg" alt="" /></b>
                   <p>
                     안녕하세요. 홍덕진 의사입니다.<br /><br />
                     허리 통증을 유발하는 기전은 흔히들 잘 알고 있는 디스크 (추간판 탈출증) 외에도 다양합니다.<br />
@@ -248,12 +280,14 @@
               </div>
               <div class="qna_list">
                 <div class="que">
-                  <b class="blin">Q</b>
-                  <p>tab3 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  <div>
+                    <b><img src="/img/question.svg" alt="" /></b>
+                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  </div>
                   <i class="fa-solid fa-angle-down"></i>
                 </div>
                 <div class="ans">
-                  <b class="blin">A</b>
+                  <b><img src="/img/answer.svg" alt="" /></b>
                   <p>
                     안녕하세요. 홍덕진 의사입니다.<br /><br />
                     허리 통증을 유발하는 기전은 흔히들 잘 알고 있는 디스크 (추간판 탈출증) 외에도 다양합니다.<br />
@@ -269,12 +303,14 @@
             <div class="list tab4">
               <div class="qna_list">
                 <div class="que">
-                  <b class="blin">Q</b>
-                  <p>tab4 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  <div>
+                    <b><img src="/img/question.svg" alt="" /></b>
+                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  </div>
                   <i class="fa-solid fa-angle-down"></i>
                 </div>
                 <div class="ans">
-                  <b class="blin">A</b>
+                  <b><img src="/img/answer.svg" alt="" /></b>
                   <p>
                     안녕하세요. 홍덕진 의사입니다.<br /><br />
                     허리 통증을 유발하는 기전은 흔히들 잘 알고 있는 디스크 (추간판 탈출증) 외에도 다양합니다.<br />
@@ -288,12 +324,14 @@
               </div>
               <div class="qna_list">
                 <div class="que">
-                  <b class="blin">Q</b>
-                  <p>tab4 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  <div>
+                    <b><img src="/img/question.svg" alt="" /></b>
+                    <p>tab1 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  </div>
                   <i class="fa-solid fa-angle-down"></i>
                 </div>
                 <div class="ans">
-                  <b class="blin">A</b>
+                  <b><img src="/img/answer.svg" alt="" /></b>
                   <p>
                     안녕하세요. 홍덕진 의사입니다.<br /><br />
                     허리 통증을 유발하는 기전은 흔히들 잘 알고 있는 디스크 (추간판 탈출증) 외에도 다양합니다.<br />
@@ -311,7 +349,7 @@
       </section>
       <section class="partners">
         <div class="inner">
-          <h2 class="title blin">Our Partners</h2>
+          <h2 class="title">Our Partners</h2>
           <ul>
             <li><img src="img/partner01.png" alt="" /></li>
             <li><img src="img/partner02.png" alt="" /></li>
@@ -330,40 +368,54 @@
       </section>
     </main>
     <footer>
+      <div class="f_top">
+        <ul>
+          <li><a href="service.html">서비스 소개</a></li>
+          <li>
+            <a href="faq.html"><span class="mo">FAQ</span><span class="pc">자주묻는 질문 (FAQ)</span></a>
+          </li>
+          <li><a href="notice.html">공지사항</a></li>
+          <li><a href="#none" class="term">이용약관</a></li>
+          <li>
+            <a href="#none" class="privacy">개인정보 <span class="br"></span>처리방침</a>
+          </li>
+        </ul>
+      </div>
       <div class="inner">
         <div class="contents">
           <div class="flogo">
-            <img src="img/flogo.png" alt="" />
+            <img src="img/logo.svg" alt="" />
           </div>
-          <nav>
-            <a href="service.html">서비스 소개</a>
-            <a href="qna.html">전문가 답변</a>
-            <a href="faq.html">자주묻는 질문</a>
-            <a href="notice.html">공지사항</a>
-            <a href="contact.html">문의하기</a>
-            <a href="#none" class="term">이용약관</a>
-            <a href="#none" class="privacy">개인정보 처리방침</a>
-          </nav>
           <address>
-            <p>ALL THAT SPIRE</p>
-            <p>대표 : 김스파</p>
-            <p>사업자 등록번호 : 123-12-12345</p>
-            <p><i class="fa-solid fa-location-dot"></i> 주소 : 경상북도 포항시 북구 포스코대로 256</p>
+            <div>
+              <p>ALL THAT SPIRE</p>
+              <p>대표 : 김스파</p>
+            </div>
+            <div>
+              <p>사업자 등록번호 : 123-12-12345</p>
+              <p><i class="fa-solid fa-location-dot"></i> 주소 : 경상북도 포항시 북구 포스코대로 256</p>
+            </div>
+            <div class="contact">
+              <a href="contact.html">Contact All That Spine <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div class="tel">
+              <p><i class="fa-solid fa-phone"></i> 82-11-2222-3333</p>
+            </div>
           </address>
-          <p class="copy blin">© ALL THAT SPIRE. All Rights Reserved.</p>
         </div>
         <div class="sns">
           <ul>
             <li>
-              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li>
               <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </li>
             <li>
-              <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             </li>
           </ul>
+          <p class="copy">© ALL THAT SPIRE. All Rights Reserved.</p>
         </div>
       </div>
       <div class="popup_term">
