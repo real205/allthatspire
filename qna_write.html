@@ -134,76 +134,47 @@
         </ul>
       </div>
     </header>
+    <style>
+      .head_search {
+        display: none;
+      }
+    </style>
     <main>
-      <section class="mypage">
-        <div class="inner">
-          <h2 class="title blin"><b>OOO님</b>의 개인정보관리</h2>
-          <form action="">
-            <div class="block">
-              <p>닉네임</p>
-              <div class="number">
-                <input type="text" name="myNickname" id="myNickname" placeholder="닉네임을 입력하세요." />
-                <button type="button" class="nick_check">중복체크</button>
-              </div>
+      <section class="qna_write">
+        <h2 class="title">질문하기</h2>
+        <form action="">
+          <div class="block">
+            <label for="">제목</label>
+            <input type="text" placeholder="제목을 입력하세요." />
+          </div>
+          <div class="block">
+            <label for="">내용</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <h3 class="title">기본정보</h3>
+          <div class="block">
+            <label for="">생년월일</label>
+            <input type="text" />
+          </div>
+          <div class="block w100">
+            <p>성별</p>
+            <div class="inner">
+              <label><input type="radio" name="gender" checked /> 남자</label>
+              <label><input type="radio" name="gender" /> 여자</label>
             </div>
-            <div class="block">
-              <p>생년월일</p>
-              <input type="text" name="myBirth" id="myBirth" readonly value="2000.01.01" />
-            </div>
-            <div class="block">
-              <p>이메일</p>
-              <input type="text" name="myEmail" id="myEmail" placeholder="admin@kconplanet.com" />
-            </div>
-            <div class="block">
-              <p>성별</p>
-              <div class="radio">
-                <input type="radio" name="myGender" value="male" id="male" checked />
-                <label for="male">남자</label>
-                <input type="radio" name="myGender" value="female" id="female" />
-                <label for="female">여자</label>
-              </div>
-            </div>
-            <div class="block">
-              <div class="w100">
-                <p>휴대폰번호</p>
-                <div class="number">
-                  <input
-                    type="text"
-                    name="myNumber"
-                    id="myNumber"
-                    placeholder="010-0000-0000"
-                    oninput="javascript: this.value = this.value.replace(/[^0-9]/, '').replace(/^(\d{3})(\d{4})(\d{4})$/, `$1-$2-$3`);"
-                  />
-                  <button type="button">본인인증</button>
-                </div>
-              </div>
-            </div>
-            <div class="block">
-              <div class="w100">
-                <p>인증번호</p>
-                <div class="number">
-                  <input type="text" />
-                  <button type="button">확인</button>
-                </div>
-              </div>
-            </div>
-            <div class="block">
-              <div class="w100">
-                <p>마케팅정보 수신동의</p>
-                <div class="radio">
-                  <input type="radio" name="marketing" value="agree" id="agree" checked />
-                  <label for="agree">동의</label>
-                  <input type="radio" name="marketing" value="disagree" id="disagree" />
-                  <label for="disagree">비동의</label>
-                </div>
-              </div>
-            </div>
-            <div class="block submit">
-              <button type="submit" onclick="return checkForm();">수정하기</button>
-              <button type="button" onclick="retired();" class="retired">탈퇴하기</button>
-            </div>
-          </form>
-        </div>
+          </div>
+          <div class="block">
+            <label for="">기저질환</label>
+            <input type="text" />
+          </div>
+          <div class="block">
+            <label for="">복용중인 약</label>
+            <input type="text" />
+          </div>
+          <div class="submit">
+            <input type="submit" value="등록하기" />
+          </div>
+        </form>
       </section>
     </main>
     <footer>
@@ -293,54 +264,19 @@
       <div class="popup_bg"></div>
     </footer>
     <script>
-      //contact 유효성검사
       function checkForm() {
-        let name = $('#myNickname');
-        let email = $('#myEmail');
-        let number = $('#myNumber');
-        let regex = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.[a-zA-Z]{2,4}$/;
-        var regPhone = /^010-?([0-9]{4})-?([0-9]{4})$/;
-
-        if (name.val() == '') {
-          alert('닉네임을 입력하세요.');
-          name.focus();
+        let search = $('#search_qna');
+        if (search.val() == 0) {
+          alert('검색어를 입력하세요.');
+          search.focus();
           return false;
-        } else if (name.val().length <= 1) {
-          alert('최소 2자 이상 입력하세요.');
-          name.focus();
+        } else if (search.val() <= 1) {
+          alert('검색어를 두자 이상 입력하세요.');
+          search.focus();
           return false;
-        }
-        if (email.val() == '') {
-          alert('이메일을 입력하세요.');
-          email.focus();
-          return false;
-        } else if (regex.test(email.val()) == false) {
-          alert('이메일 형식이 아닙니다.');
-          email.focus();
-          return false;
-        }
-        if (number.val() == '') {
-          alert('휴대폰 번호를 입력하세요.');
-          number.focus();
-          return false;
-        } else if (regPhone.test(number.val()) == false) {
-          alert('휴대폰 번호 형식이 아닙니다.');
-          number.focus();
-          return false;
-        }
-      }
-
-      function retired() {
-        if (confirm('회원을 탈퇴하시겠습니까? 탈퇴시 계정은 삭제되며 복구되지 않습니다.')) {
-          if (confirm('정말 탈퇴하시겠습니까?')) {
-            //확인
-            console.log('확인');
-          } else {
-            console.log('취소');
-          }
         } else {
-          //취소
-          console.log('취소');
+          alert('문장형 또는 2개 이상의 키워드를 입력하면 좋은 답변을 받을 수 있어요.');
+          return true;
         }
       }
     </script>

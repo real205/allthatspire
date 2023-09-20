@@ -35,7 +35,7 @@
         <div class="mobile_menu_btn"><i class="fa-solid fa-bars"></i></div>
         <div class="logo">
           <a href="index.html">
-            <img src="img/logo.png" alt="" />
+            <img src="img/logo.svg" alt="" />
           </a>
         </div>
         <div class="mobile_alert">
@@ -53,7 +53,7 @@
             <i class="fa-regular fa-bell"></i>
           </div>
           <div class="login">
-            <button>프로필(마이페이지)</button>
+            <button class="login">ifree 로그인 | 회원가입</button>
             <ul>
               <li><a href="myfaq.html">활동관리</a></li>
               <li><a href="mypage.html">개인정보 관리</a></li>
@@ -61,7 +61,14 @@
             </ul>
           </div>
           <div class="lang">
-            <p class="blin lang_btn"><a href="#none" class="active">KOR</a> | <a href="#none">ENG</a></p>
+            <div class="lang_btn on">
+              <p>KOR</p>
+              <img src="/img/language_on.svg" alt="" />
+            </div>
+            <div class="lang_btn off">
+              <p>ENG</p>
+              <img src="/img/language_off.svg" alt="" />
+            </div>
           </div>
           <div class="close_mobile_btn">
             <i class="fa-solid fa-xmark"></i>
@@ -86,91 +93,90 @@
       <div class="alert_popup">
         <h2 class="title">알림</h2>
         <button class="alert_popup_close"><i class="fa-solid fa-xmark"></i></button>
-        <button class="read_all">모두읽기</button>
+        <div class="read_all">
+          <button>모두읽음</button>
+          <button>읽은 알림 삭제</button>
+        </div>
         <ul>
-          <li>
+          <li class="new">
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
           </li>
           <li>
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
           </li>
           <li>
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
-          </li>
-          <li>
-            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
-          </li>
-          <li>
-            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
           </li>
         </ul>
       </div>
     </header>
     <main>
       <section class="notice">
-        <div class="top_banner">
-          <div class="text_box">
-            <img src="img/top_banner.png" alt="" />
-            <div>
-              <h2>공지사항</h2>
-              <p>ALL THAT SPINE의 정보 한눈에 보기!</p>
-            </div>
-          </div>
-        </div>
         <div class="inner">
-          <h2 class="title blin">NOTICE</h2>
+          <h2 class="title blin">공지사항</h2>
           <table>
-            <thead>
+            <!-- <thead>
               <tr>
                 <th>제목</th>
                 <th>등록일</th>
               </tr>
-            </thead>
+            </thead> -->
             <tbody>
               <tr>
-                <td><a href="notice_view.html">화성 자원순환시설서 불 서해안고속도로 한 때 출입 통제</a></td>
+                <td><a href="notice_view.html" class="new">[공지] 서버점검 안내</a></td>
                 <td class="date">2023.08.25</td>
               </tr>
               <tr>
-                <td><a href="notice_view.html">화성 자원순환시설서 불 서해안고속도로 한 때 출입 통제</a></td>
+                <td><a href="notice_view.html" class="new">[공지] 이벤트 안내</a></td>
                 <td class="date">2023.08.25</td>
               </tr>
               <tr>
-                <td><a href="notice_view.html">화성 자원순환시설서 불 서해안고속도로 한 때 출입 통제</a></td>
+                <td><a href="notice_view.html" class="new">[공지] 패널티 정책</a></td>
                 <td class="date">2023.08.25</td>
               </tr>
               <tr>
-                <td><a href="notice_view.html">화성 자원순환시설서 불 서해안고속도로 한 때 출입 통제</a></td>
+                <td><a href="notice_view.html">[공지] 화성 자원순환시설서 불 서해안고속도로 한 때 출입 통제</a></td>
                 <td class="date">2023.08.25</td>
               </tr>
               <tr>
-                <td><a href="notice_view.html">화성 자원순환시설서 불 서해안고속도로 한 때 출입 통제</a></td>
+                <td><a href="notice_view.html">[공지] 화성 자원순환시설서 불 서해안고속도로 한 때 출입 통제</a></td>
                 <td class="date">2023.08.25</td>
               </tr>
               <tr>
-                <td><a href="notice_view.html">화성 자원순환시설서 불 서해안고속도로 한 때 출입 통제</a></td>
+                <td><a href="notice_view.html">[공지] 화성 자원순환시설서 불 서해안고속도로 한 때 출입 통제</a></td>
                 <td class="date">2023.08.25</td>
               </tr>
             </tbody>
           </table>
-          <div class="btn_wrap">
-            <button class="write_btn" onclick="location.href='notice_write.html'">글작성</button>
-          </div>
           <div class="paging">
             <button class="start"><i class="fa-solid fa-angles-left"></i></button>
             <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
             <ul>
-              <li><a href="#">1</a></li>
+              <li><a href="#" class="on">1</a></li>
               <li><a href="#">2</a></li>
               <li><a href="#">3</a></li>
               <li><a href="#">4</a></li>
@@ -183,40 +189,54 @@
       </section>
     </main>
     <footer>
+      <div class="f_top">
+        <ul>
+          <li><a href="service.html">서비스 소개</a></li>
+          <li>
+            <a href="faq.html"><span class="mo">FAQ</span><span class="pc">자주묻는 질문 (FAQ)</span></a>
+          </li>
+          <li><a href="notice.html">공지사항</a></li>
+          <li><a href="#none" class="term">이용약관</a></li>
+          <li>
+            <a href="#none" class="privacy">개인정보 <span class="br"></span>처리방침</a>
+          </li>
+        </ul>
+      </div>
       <div class="inner">
         <div class="contents">
           <div class="flogo">
-            <img src="img/flogo.png" alt="" />
+            <img src="img/logo.svg" alt="" />
           </div>
-          <nav>
-            <a href="service.html">서비스 소개</a>
-            <a href="qna.html">전문가 답변</a>
-            <a href="faq.html">자주묻는 질문</a>
-            <a href="notice.html">공지사항</a>
-            <a href="contact.html">문의하기</a>
-            <a href="#none" class="term">이용약관</a>
-            <a href="#none" class="privacy">개인정보 처리방침</a>
-          </nav>
           <address>
-            <p>ALL THAT SPIRE</p>
-            <p>대표 : 김스파</p>
-            <p>사업자 등록번호 : 123-12-12345</p>
-            <p><i class="fa-solid fa-location-dot"></i> 주소 : 경상북도 포항시 북구 포스코대로 256</p>
+            <div>
+              <p>ALL THAT SPIRE</p>
+              <p>대표 : 김스파</p>
+            </div>
+            <div>
+              <p>사업자 등록번호 : 123-12-12345</p>
+              <p><i class="fa-solid fa-location-dot"></i> 주소 : 경상북도 포항시 북구 포스코대로 256</p>
+            </div>
+            <div class="contact">
+              <a href="contact.html">Contact All That Spine <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div class="tel">
+              <p><i class="fa-solid fa-phone"></i> 82-11-2222-3333</p>
+            </div>
           </address>
-          <p class="copy blin">© ALL THAT SPIRE. All Rights Reserved.</p>
         </div>
         <div class="sns">
           <ul>
             <li>
-              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li>
               <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </li>
             <li>
-              <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             </li>
           </ul>
+          <p class="copy">© ALL THAT SPIRE. All Rights Reserved.</p>
         </div>
       </div>
       <div class="popup_term">

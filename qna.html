@@ -35,7 +35,7 @@
         <div class="mobile_menu_btn"><i class="fa-solid fa-bars"></i></div>
         <div class="logo">
           <a href="index.html">
-            <img src="img/logo.png" alt="" />
+            <img src="img/logo.svg" alt="" />
           </a>
         </div>
         <div class="mobile_alert">
@@ -53,7 +53,7 @@
             <i class="fa-regular fa-bell"></i>
           </div>
           <div class="login">
-            <button>프로필(마이페이지)</button>
+            <button class="login">ifree 로그인 | 회원가입</button>
             <ul>
               <li><a href="myfaq.html">활동관리</a></li>
               <li><a href="mypage.html">개인정보 관리</a></li>
@@ -61,7 +61,14 @@
             </ul>
           </div>
           <div class="lang">
-            <p class="blin lang_btn"><a href="#none" class="active">KOR</a> | <a href="#none">ENG</a></p>
+            <div class="lang_btn on">
+              <p>KOR</p>
+              <img src="/img/language_on.svg" alt="" />
+            </div>
+            <div class="lang_btn off">
+              <p>ENG</p>
+              <img src="/img/language_off.svg" alt="" />
+            </div>
           </div>
           <div class="close_mobile_btn">
             <i class="fa-solid fa-xmark"></i>
@@ -86,32 +93,43 @@
       <div class="alert_popup">
         <h2 class="title">알림</h2>
         <button class="alert_popup_close"><i class="fa-solid fa-xmark"></i></button>
-        <button class="read_all">모두읽기</button>
+        <div class="read_all">
+          <button>모두읽음</button>
+          <button>읽은 알림 삭제</button>
+        </div>
         <ul>
-          <li>
+          <li class="new">
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
           </li>
           <li>
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
           </li>
           <li>
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
-          </li>
-          <li>
-            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
-          </li>
-          <li>
-            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
           </li>
         </ul>
       </div>
@@ -123,18 +141,11 @@
     </style>
     <main>
       <section class="qna">
-        <div class="top_banner">
-          <div class="text_box">
-            <img src="img/top_banner.png" alt="" />
-            <div>
-              <h2>전문가 답변</h2>
-              <p>전문가에게 직접 문의하세요!</p>
-            </div>
-          </div>
-        </div>
         <div class="inner">
           <div class="search">
-            <h2 class="title blin">All That Spine</h2>
+            <div class="main_logo">
+              <img src="/img/main_logo.svg" alt="" />
+            </div>
             <div class="input_wrap">
               <form action="">
                 <input type="search" name="search_qna" id="search_qna" />
@@ -142,98 +153,163 @@
               </form>
             </div>
           </div>
+
+          <!-- 로그인 -->
           <p class="login_text">로그인을 하면 AI 답변을 받을 수 있어요.</p>
+          <div class="serch_login">
+            <button>로그인</button>
+            <button>회원가입</button>
+          </div>
+
+          <!-- 찾은 질문 -->
+          <div class="find_que">
+            <h2 class="title">*올댓스파인에서 찾은 질문</h2>
+            <div class="chat">
+              <h2>목이랑 날개뼈 척추 사이가 아파요</h2>
+              <p>
+                목이랑 날개뼈 척추 사이가 아파요. 어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
+                너무 아픕니다. 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만
+                느껴집니다...
+              </p>
+              <p class="date">2023.09.21</p>
+            </div>
+            <div class="chat">
+              <h2>목이랑 날개뼈 척추 사이가 아파요</h2>
+              <p>
+                목이랑 날개뼈 척추 사이가 아파요. 어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
+                너무 아픕니다. 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만
+                느껴집니다...
+              </p>
+              <p class="date">2023.09.21</p>
+            </div>
+            <div class="more">
+              <button class="more_btn">더보기</button>
+            </div>
+          </div>
+
+          <!-- ai 챗봇 -->
           <div class="chat_wrap">
+            <h2 class="title">* AI 챗봇</h2>
             <p class="chat">
               척추 통증은 다양한 원인으로 인해 발생할 수 있습니다. 만약 급격한 외상이나 사고로 인해 통증이 발생하였다면,
               즉시 응급 조치를 취해야 합니다. 하지만 만약 만성적인 통증이라면, 일상생활에서 자세나 움직임을 조절하거나,
               스트레칭, 운동, 마사지 등의 방법으로 완화시킬 수 있습니다. 그러나 만약 통증이 심하거나, 발생 원인을
-              파악하기 어렵다면 전문의료기관을 방문하여 진단 및 치료를 받는 것이 좋습니다. <span>- AI 챗봇..</span>
+              파악하기 어렵다면 전문의료기관을 방문하여 진단 및 치료를 받는 것이 좋습니다.
             </p>
           </div>
+
+          <!-- 추천 질문 -->
           <div class="recom_wrap">
-            <h2 class="title"><img src="img/no_profile.png" alt="" />추천 질문</h2>
+            <h2 class="title">* 추천 질문</h2>
             <p class="recom">목이랑 날개뼈 척추 사이가 아파요?</p>
             <p class="recom">척추 아래쪽 허리가 아파요 어떤 영양제가 좋을까요?</p>
             <p class="recom">척추 통증은 다양한 원인으로 인해 발생할 수 있습니다?</p>
+            <div class="btn"><button class="qna_btn" onclick="location.href='qna_write.html'">질문하기</button></div>
           </div>
+
+          <!-- 질문 목록 -->
           <div class="qna_list">
+            <div class="qna_view_title">
+              <h2>* 질문 목록</h2>
+              <button class="qna_btn" onclick="location.href='qna_write.html'">질문하기</button>
+            </div>
             <div class="que" onclick="location.href='qna_view.html'">
               <div class="title">
-                <b class="blin">Q</b>
-                <p>tab3 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                <b><img src="/img/question_02.svg" alt="" /></b>
+                <div>
+                  <p>tab3 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  <span>2023.08.29</span>
+                </div>
               </div>
-              <span>2023.08.29</span>
+              <span>답변미등록</span>
             </div>
             <div class="que">
               <div class="title">
-                <b class="blin">Q</b>
-                <p>tab3 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                <b><img src="/img/question.svg" alt="" /></b>
+                <div>
+                  <p>tab3 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  <span>2023.08.29</span>
+                </div>
               </div>
-              <span>2023.08.29</span>
+              <span>답변보기</span>
             </div>
             <div class="que">
               <div class="title">
-                <b class="blin">Q</b>
-                <p>tab3 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                <b><img src="/img/question.svg" alt="" /></b>
+                <div>
+                  <p>tab3 허리 뼈 소리나게 돌리고난 후 다음날 너무 아파요. 어떤치료를 받아야할까요?</p>
+                  <span>2023.08.29</span>
+                </div>
               </div>
-              <span>2023.08.29</span>
+              <span>답변보기</span>
             </div>
-          </div>
-          <div class="qna_view_title">
-            <button class="qna_btn">질문하기</button>
-          </div>
-          <div class="paging">
-            <button class="start"><i class="fa-solid fa-angles-left"></i></button>
-            <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
-            <ul>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-            </ul>
-            <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
-            <button class="end"><i class="fa-solid fa-angles-right"></i></button>
+
+            <div class="paging">
+              <button class="start"><i class="fa-solid fa-angles-left"></i></button>
+              <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+              <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+              </ul>
+              <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+              <button class="end"><i class="fa-solid fa-angles-right"></i></button>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <footer>
+      <div class="f_top">
+        <ul>
+          <li><a href="service.html">서비스 소개</a></li>
+          <li>
+            <a href="faq.html"><span class="mo">FAQ</span><span class="pc">자주묻는 질문 (FAQ)</span></a>
+          </li>
+          <li><a href="notice.html">공지사항</a></li>
+          <li><a href="#none" class="term">이용약관</a></li>
+          <li>
+            <a href="#none" class="privacy">개인정보 <span class="br"></span>처리방침</a>
+          </li>
+        </ul>
+      </div>
       <div class="inner">
         <div class="contents">
           <div class="flogo">
-            <img src="img/flogo.png" alt="" />
+            <img src="img/logo.svg" alt="" />
           </div>
-          <nav>
-            <a href="service.html">서비스 소개</a>
-            <a href="qna.html">전문가 답변</a>
-            <a href="faq.html">자주묻는 질문</a>
-            <a href="notice.html">공지사항</a>
-            <a href="contact.html">문의하기</a>
-            <a href="#none" class="term">이용약관</a>
-            <a href="#none" class="privacy">개인정보 처리방침</a>
-          </nav>
           <address>
-            <p>ALL THAT SPIRE</p>
-            <p>대표 : 김스파</p>
-            <p>사업자 등록번호 : 123-12-12345</p>
-            <p><i class="fa-solid fa-location-dot"></i> 주소 : 경상북도 포항시 북구 포스코대로 256</p>
+            <div>
+              <p>ALL THAT SPIRE</p>
+              <p>대표 : 김스파</p>
+            </div>
+            <div>
+              <p>사업자 등록번호 : 123-12-12345</p>
+              <p><i class="fa-solid fa-location-dot"></i> 주소 : 경상북도 포항시 북구 포스코대로 256</p>
+            </div>
+            <div class="contact">
+              <a href="contact.html">Contact All That Spine <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div class="tel">
+              <p><i class="fa-solid fa-phone"></i> 82-11-2222-3333</p>
+            </div>
           </address>
-          <p class="copy blin">© ALL THAT SPIRE. All Rights Reserved.</p>
         </div>
         <div class="sns">
           <ul>
             <li>
-              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li>
               <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </li>
             <li>
-              <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             </li>
           </ul>
+          <p class="copy">© ALL THAT SPIRE. All Rights Reserved.</p>
         </div>
       </div>
       <div class="popup_term">

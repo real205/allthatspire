@@ -35,7 +35,7 @@
         <div class="mobile_menu_btn"><i class="fa-solid fa-bars"></i></div>
         <div class="logo">
           <a href="index.html">
-            <img src="img/logo.png" alt="" />
+            <img src="img/logo.svg" alt="" />
           </a>
         </div>
         <div class="mobile_alert">
@@ -53,7 +53,7 @@
             <i class="fa-regular fa-bell"></i>
           </div>
           <div class="login">
-            <button>프로필(마이페이지)</button>
+            <button class="login">ifree 로그인 | 회원가입</button>
             <ul>
               <li><a href="myfaq.html">활동관리</a></li>
               <li><a href="mypage.html">개인정보 관리</a></li>
@@ -61,7 +61,14 @@
             </ul>
           </div>
           <div class="lang">
-            <p class="blin lang_btn"><a href="#none" class="active">KOR</a> | <a href="#none">ENG</a></p>
+            <div class="lang_btn on">
+              <p>KOR</p>
+              <img src="/img/language_on.svg" alt="" />
+            </div>
+            <div class="lang_btn off">
+              <p>ENG</p>
+              <img src="/img/language_off.svg" alt="" />
+            </div>
           </div>
           <div class="close_mobile_btn">
             <i class="fa-solid fa-xmark"></i>
@@ -86,32 +93,43 @@
       <div class="alert_popup">
         <h2 class="title">알림</h2>
         <button class="alert_popup_close"><i class="fa-solid fa-xmark"></i></button>
-        <button class="read_all">모두읽기</button>
+        <div class="read_all">
+          <button>모두읽음</button>
+          <button>읽은 알림 삭제</button>
+        </div>
         <ul>
-          <li>
+          <li class="new">
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
           </li>
           <li>
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
           </li>
           <li>
             <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
-          </li>
-          <li>
-            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
-          </li>
-          <li>
-            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
-            <span class="date">2023.08.28</span>
-            <span class="new">NEW</span>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
           </li>
         </ul>
       </div>
@@ -120,17 +138,81 @@
       <section class="qna_view">
         <div class="result">
           <div class="qna_wrap">
+            <div class="qna_view_title">
+              <button class="qna_btn login_confirm">질문하기</button>
+            </div>
             <div class="qna_list">
               <div class="qna">
                 <div class="que_title">
                   <div class="title">
-                    <h2><b>[질문]</b> 목이랑 날개뼈 척추사이가 아파요</h2>
-                    <p><img src="img/no_profile.png" alt="" />질문여 <span>2023.08.29 19:10</span></p>
+                    <img src="/img/question.svg" alt="" />
+                    <div>
+                      <h2><b>[질문]</b> 목이랑 날개뼈 척추사이가 아파요</h2>
+                      <p>질문여 <span>2023.08.29 19:10</span></p>
+                    </div>
                   </div>
                   <div class="icon">
-                    <span class="bookmark"><i class="fa-regular fa-bookmark"></i> 북마크</span>
-                    <span class="siren"><img src="img/siren.png" alt="" /> 신고</span>
+                    <span class="bookmark member_bookmark"><img src="img/qna_bookmark.svg" alt="" /></span>
+                    <span class="siren member_siren"><img src="img/siren.svg" alt="" /></span>
                   </div>
+                  <div class="report">
+                    <h2>신고하기</h2>
+                    <ul>
+                      <li>
+                        <label
+                          ><input type="radio" name="report" value="" checked />전문적인 의학 지식에 대한 문의가
+                          아니에요.</label
+                        >
+                      </li>
+                      <li>
+                        <label
+                          ><input type="radio" name="report" value="" />불쾌하거나 선정적인 내용이 담긴 문의에요.</label
+                        >
+                      </li>
+                      <li>
+                        <label
+                          ><input type="radio" name="report" value="" />본인 또는 타인의 개인 정보가 노출된
+                          문의에요.</label
+                        >
+                      </li>
+                      <li>
+                        <label><input type="radio" name="report" value="" />광고나 홍보 목적의 문의에요.</label>
+                      </li>
+                      <li>
+                        <label
+                          ><input type="radio" name="report" value="" />기타 의학과 전혀 관련이 없는 질문이에요.</label
+                        >
+                      </li>
+                    </ul>
+                    <div class="btn">
+                      <button type="button" class="report_cancel">취소</button>
+                      <button type="submit" class="report_submit">신고확인</button>
+                    </div>
+                  </div>
+                </div>
+                <p class="que_contents">
+                  어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것
+                  같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘
+                  아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을
+                  해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
+                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
+                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
+                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만
+                  느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을
+                </p>
+              </div>
+              <div class="ans">
+                <div class="profile">
+                  <div class="profile_box">
+                    <div class="img">
+                      <img src="img/profile.svg" alt="" />
+                    </div>
+                    <div class="text_box">
+                      <h2>김선생님<span>OO종합병원</span></h2>
+                      <p>2023.08.29 19:10</p>
+                    </div>
+                  </div>
+                  <span class="siren login_confirm"><img src="img/siren.svg" alt="" /></span>
                 </div>
                 <p class="que_contents">
                   어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것
@@ -163,63 +245,18 @@
                   너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다
                 </p>
               </div>
-              <button class="answer_qna">답변하기</button>
               <div class="ans">
                 <div class="profile">
                   <div class="profile_box">
                     <div class="img">
-                      <img src="img/no_profile.png" alt="" />
+                      <img src="img/profile.svg" alt="" />
                     </div>
                     <div class="text_box">
                       <h2>김선생님<span>OO종합병원</span></h2>
                       <p>2023.08.29 19:10</p>
                     </div>
                   </div>
-                  <span class="siren"><img src="img/siren.png" alt="" /> 신고</span>
-                </div>
-                <p class="que_contents">
-                  어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것
-                  같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘
-                  아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을
-                  해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
-                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
-                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
-                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만
-                  느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을
-                  잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데
-                  오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러
-                  스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
-                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
-                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
-                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만
-                  느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을
-                  잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데
-                  오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러
-                  스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
-                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
-                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
-                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만
-                  느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을
-                  잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데
-                  오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러
-                  스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑
-                  날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데
-                  나아지지는 않고 고통만 느껴집니다어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이
-                  너무 아픕니다 잠을 잘못 잔 것 같기는 한데 여러 스트레칭을 해보았는데 나아지지는 않고 고통만 느껴집니다
-                </p>
-              </div>
-              <div class="ans">
-                <div class="profile">
-                  <div class="profile_box">
-                    <div class="img">
-                      <img src="img/no_profile.png" alt="" />
-                    </div>
-                    <div class="text_box">
-                      <h2>김선생님<span>OO종합병원</span></h2>
-                      <p>2023.08.29 19:10</p>
-                    </div>
-                  </div>
-                  <span class="siren"><img src="img/siren.png" alt="" /> 신고</span>
+                  <span class="siren login_confirm"><img src="img/siren.svg" alt="" /></span>
                 </div>
                 <p class="que_contents">
                   어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것
@@ -238,14 +275,14 @@
                 <div class="profile">
                   <div class="profile_box">
                     <div class="img">
-                      <img src="img/no_profile.png" alt="" />
+                      <img src="img/profile.svg" alt="" />
                     </div>
                     <div class="text_box">
                       <h2>김선생님<span>OO종합병원</span></h2>
                       <p>2023.08.29 19:10</p>
                     </div>
                   </div>
-                  <span class="siren"><img src="img/siren.png" alt="" /> 신고</span>
+                  <span class="siren login_confirm"><img src="img/siren.svg" alt="" /></span>
                 </div>
                 <p class="que_contents">
                   어제까지 괜찮았는데 오늘 아침부터 목이랑 날개뼈과 척추사이? 쪽 근육이 너무 아픕니다 잠을 잘못 잔 것
@@ -258,56 +295,71 @@
                 </p>
               </div>
             </div>
-            <div class="qna_view_title">
-              <button class="qna_btn">질문하기</button>
-            </div>
             <p class="login_text">답변이 등록되지 않았습니다.</p>
           </div>
           <div class="view_paging">
-            <button><i class="fa-solid fa-chevron-left"></i> 이전글</button>
-            <button class="return" onclick="location.href='qna.html'">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-            <button>다음글 <i class="fa-solid fa-chevron-right"></i></button>
+            <div class="prev">
+              <p><span>이전</span> <span>서버점검 안내</span></p>
+              <p class="date">2023.08.10</p>
+            </div>
+            <div class="next">
+              <p><span>다음</span> <span>서버점검 안내</span></p>
+              <p class="date">2023.08.10</p>
+            </div>
+            <button onclick="location.href='qna.html'">목록</button>
           </div>
         </div>
       </section>
     </main>
     <footer>
+      <div class="f_top">
+        <ul>
+          <li><a href="service.html">서비스 소개</a></li>
+          <li>
+            <a href="faq.html"><span class="mo">FAQ</span><span class="pc">자주묻는 질문 (FAQ)</span></a>
+          </li>
+          <li><a href="notice.html">공지사항</a></li>
+          <li><a href="#none" class="term">이용약관</a></li>
+          <li>
+            <a href="#none" class="privacy">개인정보 <span class="br"></span>처리방침</a>
+          </li>
+        </ul>
+      </div>
       <div class="inner">
         <div class="contents">
           <div class="flogo">
-            <img src="img/flogo.png" alt="" />
+            <img src="img/logo.svg" alt="" />
           </div>
-          <nav>
-            <a href="service.html">서비스 소개</a>
-            <a href="qna.html">전문가 답변</a>
-            <a href="faq.html">자주묻는 질문</a>
-            <a href="notice.html">공지사항</a>
-            <a href="contact.html">문의하기</a>
-            <a href="#none" class="term">이용약관</a>
-            <a href="#none" class="privacy">개인정보 처리방침</a>
-          </nav>
           <address>
-            <p>ALL THAT SPIRE</p>
-            <p>대표 : 김스파</p>
-            <p>사업자 등록번호 : 123-12-12345</p>
-            <p><i class="fa-solid fa-location-dot"></i> 주소 : 경상북도 포항시 북구 포스코대로 256</p>
+            <div>
+              <p>ALL THAT SPIRE</p>
+              <p>대표 : 김스파</p>
+            </div>
+            <div>
+              <p>사업자 등록번호 : 123-12-12345</p>
+              <p><i class="fa-solid fa-location-dot"></i> 주소 : 경상북도 포항시 북구 포스코대로 256</p>
+            </div>
+            <div class="contact">
+              <a href="contact.html">Contact All That Spine <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div class="tel">
+              <p><i class="fa-solid fa-phone"></i> 82-11-2222-3333</p>
+            </div>
           </address>
-          <p class="copy blin">© ALL THAT SPIRE. All Rights Reserved.</p>
         </div>
         <div class="sns">
           <ul>
             <li>
-              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li>
               <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </li>
             <li>
-              <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
             </li>
           </ul>
+          <p class="copy">© ALL THAT SPIRE. All Rights Reserved.</p>
         </div>
       </div>
       <div class="popup_term">
@@ -346,9 +398,42 @@
       <div class="popup_bg"></div>
     </footer>
     <script>
-      $('.bookmark').click(function () {
-        //alert('관심 질문이 추가되었습니다.');
-        alert('이 기능은 회원만 이용할 수 있습니다.\n로그인 후 이용 해 주시기 바랍니다.');
+      $(function () {
+        //로그인 얼럿
+        $('.login_confirm').click(function () {
+          if (confirm('이 기능은 회원만 이용할 수 있습니다. 로그인을 하시겠습니까?')) {
+            location.href = '/';
+          }
+        });
+        //마우스 오버 아이콘 변경
+        $('.member_bookmark').click(function () {
+          let result = confirm('내 질문에 추가하시겠습니까?');
+          if (result) {
+            $(this).children('img').attr('src', 'img/bookmark.svg');
+          }
+        });
+
+        $('.member_siren').hover(
+          function () {
+            $(this).children('img').attr('src', 'img/siren_red.svg');
+          },
+          function () {
+            $(this).children('img').attr('src', 'img/siren.svg');
+          }
+        );
+        $('.member_siren').click(function () {
+          $('.report').show();
+        });
+        $('.report_cancel').click(function () {
+          $('.report').hide();
+        });
+        $('.report_submit').click(function () {
+          let result = confirm('해당 건을 신고하시겠습니까?');
+          if (result) {
+            alert('신고가 완료되었습니다.');
+            $('.report').hide();
+          }
+        });
       });
     </script>
   </body>
