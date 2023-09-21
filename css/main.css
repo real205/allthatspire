@@ -1028,26 +1028,35 @@ main .partners .inner ul li img {
   height: var(--size-button-h);
   line-height: var(--size-button-h);
 }
-.contact .wrap .block input,
 .contact .wrap .block textarea {
-  width: var(--size-100);
+  height: 250px;
+  color: var(--gray-opacity-10);
+  font-size: var(--font-medium);
+  padding: var(--padding-10);
+  border: 1px solid var(--gray-opacity-10);
+}
+.contact .wrap .block input {
+  height: var(--size-input-h);
+  color: var(--gray-opacity-10);
+  line-height: var(--size-input-h);
+  font-size: var(--font-medium);
   padding: var(--padding-0-10);
-  border: 1px solid var(--gray);
+  border: 1px solid var(--gray-opacity-10);
 }
 .contact .wrap .block input::placeholder,
 .contact .wrap .block textarea::placeholder {
   color: var(--gray);
-  font-size: var(--font-small);
+  font-size: var(--font-medium);
 }
 .contact .wrap #formSubmit {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 350px;
-  height: var(--size-button-h);
-  line-height: var(--size-button-h);
+  height: var(--size-input-h);
+  line-height: var(--size-input-h);
   color: var(--white);
-  font-size: var(--font-small);
+  font-size: var(--font-medium);
   margin: 50px auto 0;
   padding: 0;
   background-color: var(--blue);
@@ -1491,7 +1500,7 @@ main .partners .inner ul li img {
 .mypage .inner .block p {
   width: 15%;
   color: var(--blue);
-  font-size: var(--font-small);
+  font-size: var(--font-medium);
   font-weight: 700;
 }
 .mypage .inner .block input[type='text'] {
@@ -1499,21 +1508,20 @@ main .partners .inner ul li img {
   height: var(--size-input-h);
   line-height: var(--size-input-h);
   color: var(--gray-opacity-10);
-  font-size: var(--font-copy);
+  font-size: var(--font-medium);
   padding: var(--padding-0-10);
   border: 1px solid var(--gray-opacity-10);
 }
 .mypage .inner .block input[type='text']::placeholder {
   color: var(--gray-opacity-10);
-  color: var(--gray-opacity-10);
-  font-size: var(--font-copy);
+  font-size: var(--font-medium);
 }
 .mypage .inner .block button {
   width: 200px;
   height: var(--size-input-h);
   line-height: var(--size-input-h);
   color: var(--gray-opacity-10);
-  font-size: var(--font-copy);
+  font-size: var(--font-medium);
   border: 1px solid var(--gray-opacity-10);
   cursor: pointer;
 }
@@ -1525,7 +1533,7 @@ main .partners .inner ul li img {
 .mypage .inner .block button:hover {
   color: var(--white);
   background-color: var(--sky-blue);
-  border: 1px solid var(--sky-blue);
+  border-color: var(--sky-blue);
 }
 .mypage .inner .block button.nick_check:hover {
   color: var(--sky-blue);
@@ -1549,6 +1557,7 @@ main .partners .inner ul li img {
   padding-left: 2%;
 }
 .mypage .inner .block .radio label {
+  font-size: var(--font-medium);
   margin-right: 7px;
 }
 .mypage .inner .block .radio input {
@@ -1560,25 +1569,12 @@ main .partners .inner ul li img {
   border-radius: 50%;
 }
 .mypage .inner .block .radio input:checked {
-  /* border: 3px solid var(--white);
-  outline: 1px solid var(--blue); */
   background-color: var(--blue);
 }
 .mypage .inner .submit {
   justify-content: center;
   gap: var(--padding-30);
   margin-top: 100px;
-}
-.mypage .inner .submit button,
-.mypage .inner .block input[type='reset'] {
-  width: 300px;
-  height: var(--size-input-h);
-  line-height: var(--size-input-h);
-  color: var(--gray-opacity-10);
-  font-size: var(--font-medium);
-  font-weight: 700;
-  border: 1px solid var(--gray-opacity-10);
-  cursor: pointer;
 }
 .mypage .inner .block input[type='reset']:hover {
   color: var(--white);
@@ -1717,7 +1713,7 @@ main .qna .inner .find_que .more .more_btn:hover {
   width: 100%;
   color: var(--blue);
   font-size: var(--font-large);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.5;
   margin-bottom: var(--padding-10);
   padding: 25px 0 25px 50px;
@@ -1732,7 +1728,7 @@ main .qna .inner .find_que .more .more_btn:hover {
   width: var(--size-button-w);
   height: var(--size-button-h);
   color: var(--white);
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   font-weight: 700;
   border: 0;
   background-color: var(--sky-blue);
@@ -1793,7 +1789,7 @@ main .qna .inner .qna_view_title button {
   width: var(--size-button-w);
   height: var(--size-button-h);
   color: var(--white);
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   font-weight: 700;
   border: 0;
   background-color: var(--sky-blue);
@@ -1913,7 +1909,7 @@ main .qna .inner .qna_view_title button:hover {
 }
 .result .qna_wrap .qna_list .qna .que_contents,
 .result .qna_wrap .qna_list .ans .que_contents {
-  font-size: var(--font-small);
+  font-size: var(--font-medium);
   line-height: 1.5;
   padding: 30px 100px;
 }
@@ -2062,14 +2058,15 @@ main .qna .inner .qna_view_title button:hover {
   height: var(--size-input-h);
   line-height: var(--size-input-h);
   color: var(--gray-opacity-10);
-  font-size: var(--font-copy);
-  padding: var(--padding-10);
+  font-size: var(--font-medium);
+  padding: var(--padding-0-10);
   border: 1px solid var(--gray-opacity-10);
 }
 .qna_write .block textarea {
   width: 100%;
+  height: 250px;
   color: var(--gray-opacity-10);
-  font-size: var(--font-copy);
+  font-size: var(--font-medium);
   padding: var(--padding-10);
   border: 1px solid var(--gray-opacity-10);
 }
@@ -2434,6 +2431,7 @@ main .qna .inner .qna_view_title button:hover {
   }
   main .search .input_wrap button {
     right: var(--padding-10);
+    padding: 0;
   }
   main .search .input_wrap {
     width: 90%;
@@ -2506,8 +2504,6 @@ main .qna .inner .qna_view_title button:hover {
   main .qna .inner .qna_list .que .title p {
     margin: 0;
   }
-  main .qna .inner .qna_list .que span {
-  }
   main .qna .inner .qna_list .que > span {
     position: absolute;
     right: 4vw;
@@ -2543,8 +2539,6 @@ main .qna .inner .qna_view_title button:hover {
   .result .qna_view_title button {
     width: auto;
     padding: 0 5vw;
-  }
-  .result .qna_wrap .qna_list .qna .que_title .title b {
   }
   .result .qna_wrap .qna_list .qna .que_title .title h2 {
     margin-bottom: 1vw;
@@ -2772,10 +2766,6 @@ main .qna .inner .qna_view_title button:hover {
   }
   .qna_write .submit input[type='submit'] {
     width: var(--size-100);
-    height: 40px;
-  }
-  .qna_write .block input[type='text'] {
-    height: 40px;
   }
 }
 @media all and (max-width: 480px) {
