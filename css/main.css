@@ -2358,8 +2358,12 @@ main .qna .inner .qna_view_title button:hover {
     line-height: 4vh;
     padding: 0 5vw;
   }
-  footer .inner .contents address a i {
+  footer .inner .contents address p i {
     font-size: var(--font-large);
+    margin-right: 5px;
+  }
+  footer .inner .contents address a i {
+    font-size: var(--font-medium);
   }
   footer .inner .sns ul {
     margin-top: var(--padding-30);
