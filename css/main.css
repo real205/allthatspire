@@ -519,7 +519,7 @@ footer .inner .contents address a {
   font-style: normal;
   padding: 5px 30px 5px 15px;
   border: 1px solid var(--white);
-  background: url('/img/arrow_s.svg') no-repeat 93% center;
+  background: url('../img/arrow_s.svg') no-repeat 93% center;
 }
 footer .inner .contents address a:hover {
   color: var(--white);
