@@ -517,8 +517,13 @@ footer .inner .contents address a {
   color: var(--white);
   font-size: var(--font-copy);
   font-style: normal;
-  padding: 5px 15px;
+  padding: 5px 30px 5px 15px;
   border: 1px solid var(--white);
+  background: url('/img/arrow_s.svg') no-repeat 93% center;
+}
+footer .inner .contents address a:hover {
+  color: var(--white);
+  background-color: var(--sky-blue);
 }
 footer .inner .contents address a i {
   display: inline-block;
@@ -2353,10 +2358,10 @@ main .qna .inner .qna_view_title button:hover {
   }
   footer .inner .contents address a {
     display: inline-block;
-    height: 4vh;
+    height: 5vh;
     font-size: var(--font-large);
-    line-height: 4vh;
-    padding: 0 5vw;
+    line-height: 4.5vh;
+    padding: 0 10vw 0 5vw;
   }
   footer .inner .contents address a i {
     font-size: var(--font-medium);
