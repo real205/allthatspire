@@ -2371,6 +2371,10 @@ main .qna .inner .qna_view_title button:hover {
   .popup_Privacy {
     width: 90%;
   }
+  .popup_term p,
+  .popup_Privacy p {
+    font-size: var(--font-large);
+  }
   /* PAGING */
   .view_paging {
     width: 90%;
