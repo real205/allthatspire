@@ -2137,7 +2137,7 @@ main .qna .inner .qna_view_title button:hover {
     top: 20px;
   }
   header .head_top .mobile_menu_btn i {
-    font-size: var(--font-x-large);
+    font-size: var(--font-xx-large);
   }
   header .head_top .logo {
     width: 40%;
@@ -2199,7 +2199,7 @@ main .qna .inner .qna_view_title button:hover {
     display: block;
   }
   header .head_top .mobile_alert i {
-    font-size: var(--font-x-large);
+    font-size: var(--font-xx-large);
     line-height: 1;
   }
   header .head_top .mobile_alert i:after {
@@ -2219,7 +2219,7 @@ main .qna .inner .qna_view_title button:hover {
     padding: 5px;
     background-color: var(--sky-blue);
     border-radius: 100%;
-    transform: scale(0.5);
+    transform: scale(0.7);
   }
   header .head_top .head_contents .lang {
     position: absolute;
