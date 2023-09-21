@@ -2106,10 +2106,14 @@ main .qna .inner .qna_view_title button:hover {
   }
 
   /* HEADER */
+  header {
+    height: auto;
+  }
   header .head_top {
     position: relative;
     display: flex;
     flex-direction: column;
+    height: auto;
     padding: 0 3vw;
     border: 0;
   }
