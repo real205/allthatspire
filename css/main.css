@@ -2308,7 +2308,8 @@ main .qna .inner .qna_view_title button:hover {
     padding: 0 3vw;
   }
   footer .f_top ul li a {
-    transform: scale(0.9);
+    font-size: var(--font-medium);
+    transform: scale(1);
   }
   footer .f_top ul li a .pc {
     display: none;
@@ -2351,6 +2352,7 @@ main .qna .inner .qna_view_title button:hover {
   footer .inner .contents address a {
     display: inline-block;
     height: 4vh;
+    font-size: var(--font-large);
     line-height: 4vh;
     padding: 0 5vw;
   }
