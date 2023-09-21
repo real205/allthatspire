@@ -665,6 +665,7 @@ footer .inner .sns .copy {
 }
 .paging ul {
   display: flex;
+  align-items: center;
   gap: 15px;
   margin: 0 10px;
 }
@@ -2356,6 +2357,9 @@ main .qna .inner .qna_view_title button:hover {
     line-height: 4vh;
     padding: 0 5vw;
   }
+  footer .inner .contents address a i {
+    font-size: var(--font-x-large);
+  }
   footer .inner .sns ul {
     margin-top: var(--padding-30);
   }
@@ -2378,6 +2382,9 @@ main .qna .inner .qna_view_title button:hover {
   .view_paging {
     width: 90%;
     margin: 10vw auto;
+  }
+  .paging ul li a {
+    font-size: var(--font-medium);
   }
 
   /* MAIN */
@@ -2614,6 +2621,9 @@ main .qna .inner .qna_view_title button:hover {
 
   .notice table tbody td:first-child {
     width: 75%;
+  }
+  .notice table tbody tr td.date {
+    font-size: var(--font-medium);
   }
   .notice table tbody td:last-child {
     width: 25%;
