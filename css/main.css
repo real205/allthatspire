@@ -2289,6 +2289,7 @@ main .qna .inner .qna_view_title button:hover {
     transform: translate(0, 0);
   }
   header .alert_popup .read_all button {
+    font-size: var(--font-small);
     margin-left: var(--padding-30);
     transform: scale(1);
   }
