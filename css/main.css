@@ -753,7 +753,6 @@ main .search .title {
 main .search .input_wrap {
   position: relative;
   width: var(--size-100);
-  padding: 10px 30px;
   border: 5px solid var(--sky-blue);
   transition: 300ms;
 }
@@ -763,7 +762,8 @@ main .search .input_wrap input {
   color: var(--blue);
   font-size: var(--font-large);
   font-weight: 500;
-  border: 0;
+  padding: 10px 30px;
+  border: 0 !important;
   outline: none;
 }
 main .search .input_wrap input::placeholder {
@@ -1378,12 +1378,12 @@ main .partners .inner ul li img {
 .myfaq .inner .contents .qna_list .que p {
   display: inline-block;
   color: var(--blue);
-  font-size: var(--font-x-large);
+  font-size: var(--font-large);
   font-weight: 500;
 }
 .myfaq .inner .contents .qna_list .ans {
   display: none;
-  padding: var(--padding-30-0);
+  padding: var(--padding-30);
   border-top: 1px solid var(--gray);
 }
 .myfaq .inner .contents .qna_list .ans.active {
@@ -1933,7 +1933,7 @@ main .qna .inner .qna_view_title button:hover {
   background: var(--white);
 }
 .report h2 {
-  font-size: var(--font-x-large);
+  font-size: 30px;
   text-align: center;
   padding: var(--padding-50-0);
 }
@@ -2386,7 +2386,6 @@ main .qna .inner .qna_view_title button:hover {
   }
   main .faq .inner .contents .qna_list .que p {
     width: 70%;
-    font-size: var(--font-large);
   }
   main .faq .inner .contents .qna_list .que i {
     top: 13px;
@@ -2499,6 +2498,12 @@ main .qna .inner .qna_view_title button:hover {
   .qna .inner .recom_wrap .btn {
     margin: 10vw auto;
   }
+  .report {
+    width: 100%;
+  }
+  .report h2 {
+    font-size: 1.4rem;
+  }
   .result .qna_wrap .qna_list .qna .que_title .title,
   .result .qna_wrap .qna_list .ans .profile .profile_box {
     gap: 3vw;
@@ -2529,6 +2534,8 @@ main .qna .inner .qna_view_title button:hover {
   main .faq .inner .title {
     margin-bottom: var(--padding-10);
   }
+  .myfaq .inner .contents .qna_list .ans b img,
+  .myfaq .inner .contents .qna_list .que .left b img,
   .result .qna_wrap .qna_list .qna .que_title .title img,
   main .qna .inner .qna_list .que .title b img,
   main .faq .inner .contents .qna_list .que b img,
@@ -2651,6 +2658,9 @@ main .qna .inner .qna_view_title button:hover {
   }
   .myfaq .inner .contents .qna_list .que .right {
     width: 30%;
+  }
+  .myfaq .inner .contents .qna_list .ans {
+    padding: var(--padding-30-0);
   }
 
   .qna_write {
