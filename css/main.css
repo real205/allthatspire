@@ -1611,8 +1611,9 @@ main .qna .inner .find_que .more .more_btn:hover {
 .qna .inner .serch_login button {
   width: var(--size-button-w);
   height: var(--size-button-h);
-  outline: none;
+  font-size: var(--font-small);
   border: 1px solid var(--gray);
+  outline: none;
   cursor: pointer;
 }
 .qna .inner .serch_login button:hover {
