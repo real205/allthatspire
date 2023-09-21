@@ -2289,6 +2289,7 @@ main .qna .inner .qna_view_title button:hover {
     transform: translate(0, 0);
   }
   header .alert_popup .read_all button {
+    font-size: var(--font-small);
     margin-left: var(--padding-30);
     transform: scale(1);
   }
@@ -2357,8 +2358,13 @@ main .qna .inner .qna_view_title button:hover {
     line-height: 4vh;
     padding: 0 5vw;
   }
+  footer .inner .contents address p i {
+    display: inline-block;
+    font-size: var(--font-large);
+    margin-right: 5px;
+  }
   footer .inner .contents address a i {
-    font-size: var(--font-x-large);
+    font-size: var(--font-medium);
   }
   footer .inner .sns ul {
     margin-top: var(--padding-30);
