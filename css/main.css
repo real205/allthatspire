@@ -523,7 +523,7 @@ footer .inner .contents address a {
 footer .inner .contents address a i {
   display: inline-block;
   color: var(--white);
-  font-size: 6px;
+  font-size: var(--font-copy);
   margin-left: 5px;
 }
 footer .inner .contents address .tel p {
@@ -665,6 +665,7 @@ footer .inner .sns .copy {
 }
 .paging ul {
   display: flex;
+  align-items: center;
   gap: 15px;
   margin: 0 10px;
 }
@@ -2137,7 +2138,7 @@ main .qna .inner .qna_view_title button:hover {
     top: 20px;
   }
   header .head_top .mobile_menu_btn i {
-    font-size: var(--font-x-large);
+    font-size: var(--font-xx-large);
   }
   header .head_top .logo {
     width: 40%;
@@ -2199,7 +2200,7 @@ main .qna .inner .qna_view_title button:hover {
     display: block;
   }
   header .head_top .mobile_alert i {
-    font-size: var(--font-x-large);
+    font-size: var(--font-xx-large);
     line-height: 1;
   }
   header .head_top .mobile_alert i:after {
@@ -2219,7 +2220,7 @@ main .qna .inner .qna_view_title button:hover {
     padding: 5px;
     background-color: var(--sky-blue);
     border-radius: 100%;
-    transform: scale(0.5);
+    transform: scale(0.7);
   }
   header .head_top .head_contents .lang {
     position: absolute;
@@ -2308,8 +2309,8 @@ main .qna .inner .qna_view_title button:hover {
     padding: 0 3vw;
   }
   footer .f_top ul li a {
-    font-size: var(--font-copy);
-    transform: scale(0.9);
+    font-size: var(--font-medium);
+    transform: scale(1);
   }
   footer .f_top ul li a .pc {
     display: none;
@@ -2339,7 +2340,8 @@ main .qna .inner .qna_view_title button:hover {
     flex-direction: row;
   }
   footer .inner .contents address p {
-    font-size: var(--font-medium);
+    font-size: var(--font-large);
+    font-weight: 500;
     line-height: 1.5;
   }
   footer .inner .contents address p:first-child {
@@ -2351,11 +2353,12 @@ main .qna .inner .qna_view_title button:hover {
   footer .inner .contents address a {
     display: inline-block;
     height: 4vh;
+    font-size: var(--font-large);
     line-height: 4vh;
     padding: 0 5vw;
   }
   footer .inner .contents address a i {
-    display: inline;
+    font-size: var(--font-x-large);
   }
   footer .inner .sns ul {
     margin-top: var(--padding-30);
@@ -2379,6 +2382,9 @@ main .qna .inner .qna_view_title button:hover {
   .view_paging {
     width: 90%;
     margin: 10vw auto;
+  }
+  .paging ul li a {
+    font-size: var(--font-medium);
   }
 
   /* MAIN */
@@ -2615,6 +2621,9 @@ main .qna .inner .qna_view_title button:hover {
 
   .notice table tbody td:first-child {
     width: 75%;
+  }
+  .notice table tbody tr td.date {
+    font-size: var(--font-medium);
   }
   .notice table tbody td:last-child {
     width: 25%;
