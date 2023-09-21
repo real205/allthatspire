@@ -929,6 +929,7 @@ main .faq .inner .contents .qna_list .ans p {
   display: inline-block;
   color: var(--gray);
   font-size: var(--font-medium);
+  font-weight: 500;
   line-height: 1.5;
   margin-left: 23px;
 }
@@ -1255,14 +1256,15 @@ main .partners .inner ul li img {
   justify-content: center;
   width: var(--size-button-w);
   height: var(--size-button-h);
-  color: var(--gray);
-  font-size: var(--font-medium);
-  border: 2px solid var(--gray);
+  color: var(--blue);
+  font-size: var(--font-large);
+  border: 1px solid var(--blue);
+  background-color: var(--white);
   cursor: pointer;
 }
 .myfaq .inner .title .tab li.active {
   color: var(--white);
-
+  font-weight: 700;
   border: 1px solid var(--sky-blue);
   background-color: var(--sky-blue);
 }
@@ -1305,7 +1307,7 @@ main .partners .inner ul li img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: var(--padding-30-0);
   padding: 0 30px;
   cursor: pointer;
 }
@@ -1314,17 +1316,17 @@ main .partners .inner ul li img {
   align-items: center;
   justify-content: flex-end;
   gap: var(--font-x-large);
-  width: 80%;
+  width: 85%;
 }
 .myfaq .inner .contents .qna_list .que .right {
-  width: 20%;
+  width: 15%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 12px;
 }
 .myfaq .inner .contents .qna_list .que .show_ans {
-  font-size: var(--font-icon);
+  font-size: var(--font-small);
   font-weight: 500;
 }
 
@@ -1350,6 +1352,7 @@ main .partners .inner ul li img {
 .myfaq .inner .contents .qna_list .que .left {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: var(--font-x-large);
   width: 80%;
 }
@@ -1376,6 +1379,9 @@ main .partners .inner ul li img {
   font-size: var(--font-x-large);
   font-weight: 900;
 }
+.myfaq .inner .contents .qna_list .que b img {
+  width: 3vw;
+}
 .myfaq .inner .contents .qna_list .que p {
   display: inline-block;
   color: var(--blue);
@@ -1395,12 +1401,16 @@ main .partners .inner ul li img {
   font-size: var(--font-x-large);
   font-weight: 900;
 }
+.myfaq .inner .contents .qna_list .ans b img {
+  width: 3vw;
+}
 .myfaq .inner .contents .qna_list .ans p {
   display: block;
   color: var(--gray);
   font-size: var(--font-medium);
   font-weight: 500;
-  margin: 10px 0 0 10px;
+  line-height: 1.5;
+  margin-left: 23px;
 }
 .myfaq .inner .more_btn {
   display: block;
@@ -2263,11 +2273,22 @@ main .qna .inner .qna_view_title button:hover {
     top: var(--padding-30);
     right: var(--padding-30);
   }
+  header .alert_popup .title {
+    font-size: var(--font-x-large);
+    margin: var(--padding-50-0);
+    padding-bottom: var(--padding-10);
+  }
   header .alert_popup .read_all {
-    top: 12vw;
+    top: 13vw;
     right: var(--padding-30);
+    transform: translate(0, 0);
   }
   header .alert_popup .read_all button {
+    margin-left: var(--padding-30);
+    transform: scale(1);
+  }
+  header .alert_popup .read_all button:first-child:after {
+    height: 10px;
   }
   header .head_search {
     position: relative;
@@ -2387,7 +2408,11 @@ main .qna .inner .qna_view_title button:hover {
   }
   main .faq .inner .tab li {
     display: inline-block;
+    height: 5vh;
+    line-height: 5vh;
+    font-size: var(--font-medium);
     margin-right: 2vw;
+    padding: 0 3vw;
   }
   main .faq .inner .contents .qna_list .que p {
     width: 70%;
@@ -2525,12 +2550,22 @@ main .qna .inner .qna_view_title button:hover {
   .qna .inner .find_que .chat {
     padding: var(--padding-30);
   }
+  .qna .inner .serch_login {
+    gap: var(--padding-10);
+  }
+  .qna .inner .serch_login button {
+    width: calc(50% - 1.5vw);
+    height: 5vh;
+    font-size: var(--font-small);
+    line-height: 5vh;
+  }
 
   /* FAQ */
   main .faq .inner .contents .qna_list .que {
     padding: var(--padding-30);
   }
   main .faq .inner .contents .qna_list .ans p {
+    font-size: var(--font-large);
     margin: 0 0 0 3vw;
   }
   main .faq .inner .contents .qna_list .ans.active {
@@ -2592,13 +2627,20 @@ main .qna .inner .qna_view_title button:hover {
   .contact .wrap .block label {
     width: 100%;
   }
-  .contact .wrap .block input,
+  .contact .wrap .block input {
+    width: 100%;
+    height: 5vh;
+    line-height: 5vh;
+    padding: 0 3vw;
+  }
   .contact .wrap .block textarea {
     width: 100%;
+    padding: 0 3vw;
   }
   .contact .wrap #formSubmit {
     width: 100%;
-    height: 40px;
+    height: 5vh;
+    line-height: 5vh;
     margin-top: 20vw;
     padding: 0;
   }
@@ -2626,17 +2668,28 @@ main .qna .inner .qna_view_title button:hover {
   .mypage .inner .block .confirm input[type='text'],
   .mypage .inner .block .number input {
     width: 70%;
-    height: 40px;
+    height: 5vh;
+    font-size: var(--font-medium);
+    line-height: 5vh;
+    padding: 0 3vw;
   }
   .mypage .inner .block button {
     width: 27%;
+    height: 5vh;
+    font-size: var(--font-medium);
+    line-height: 5vh;
+    padding: 0;
   }
   .mypage .inner .block.submit {
     flex-direction: row;
+    gap: var(--padding-10);
   }
   .mypage .inner .block.submit button {
-    width: 40%;
-    height: 40px;
+    width: calc(50% - 1.5vw);
+    height: 5vh;
+    font-size: var(--font-medium);
+    line-height: 5vh;
+    padding: 0;
   }
 
   /* MYFAQ */
@@ -2654,6 +2707,8 @@ main .qna .inner .qna_view_title button:hover {
   .myfaq .inner .title .tab li {
     width: 33%;
     height: 5vh;
+    font-size: var(--font-medium);
+    line-height: 5vh;
   }
   .myfaq .inner .contents .qna_list .que {
     padding: 0;
@@ -2668,9 +2723,9 @@ main .qna .inner .qna_view_title button:hover {
     padding: var(--padding-30-0);
   }
   .myfaq .inner .contents .qna_list .ans p {
-    margin: var(--padding-10);
+    font-size: var(--font-large);
+    margin: 0 0 0 3vw;
   }
-
   .qna_write {
     width: 90%;
     margin: var(--margin-center);
