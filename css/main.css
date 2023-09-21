@@ -517,8 +517,13 @@ footer .inner .contents address a {
   color: var(--white);
   font-size: var(--font-copy);
   font-style: normal;
-  padding: 5px 15px;
+  padding: 5px 30px 5px 15px;
   border: 1px solid var(--white);
+  background: url('../img/arrow_s.svg') no-repeat 93% center;
+}
+footer .inner .contents address a:hover {
+  color: var(--white);
+  background-color: var(--sky-blue);
 }
 footer .inner .contents address a i {
   display: inline-block;
@@ -1610,6 +1615,11 @@ main .qna .inner .find_que .more .more_btn:hover {
   border: 1px solid var(--gray);
   cursor: pointer;
 }
+.qna .inner .serch_login button:hover {
+  color: var(--white);
+  background-color: var(--sky-blue);
+  border-color: var(--sky-blue);
+}
 .qna .inner .find_que .title {
   color: var(--sky-blue);
   font-size: var(--font-large);
@@ -2353,15 +2363,10 @@ main .qna .inner .qna_view_title button:hover {
   }
   footer .inner .contents address a {
     display: inline-block;
-    height: 4vh;
+    height: 5vh;
     font-size: var(--font-large);
-    line-height: 4vh;
-    padding: 0 5vw;
-  }
-  footer .inner .contents address p i {
-    display: inline-block;
-    font-size: var(--font-large);
-    margin-right: 5px;
+    line-height: 4.5vh;
+    padding: 0 10vw 0 5vw;
   }
   footer .inner .contents address a i {
     font-size: var(--font-medium);
@@ -2414,10 +2419,11 @@ main .qna .inner .qna_view_title button:hover {
   main .search .input_wrap {
     width: 90%;
     margin: var(--margin-center);
-    padding: 0 3vw;
+    padding: 0;
   }
   main .search .input_wrap input {
     height: 40px;
+    padding: 0 3vw;
   }
   main .faq {
     padding: 15vw 0;
@@ -2474,9 +2480,10 @@ main .qna .inner .qna_view_title button:hover {
   }
   main .qna .inner .qna_view_title button {
     width: auto;
-    height: auto;
-    font-size: var(--font-copy);
-    padding: 2vw 5vw;
+    height: 5vh;
+    font-size: var(--font-medium);
+    line-height: 5vh;
+    padding: 0 5vw;
   }
   main .qna .inner .qna_list .que {
     position: relative;
@@ -2520,9 +2527,10 @@ main .qna .inner .qna_view_title button:hover {
   .qna .inner .recom_wrap .btn .qna_btn,
   .result .qna_view_title button {
     width: auto;
-    height: auto;
-    font-size: var(--font-copy);
-    padding: 2vw 5vw;
+    height: 5vh;
+    font-size: var(--font-medium);
+    line-height: 5vh;
+    padding: 0 5vw;
   }
   .result .qna_wrap .qna_list .qna .que_title .title b {
     font-size: var(--font-medium);
@@ -2552,7 +2560,6 @@ main .qna .inner .qna_view_title button:hover {
   .qna .inner .recom {
     width: auto;
     max-width: 90%;
-    font-size: var(--font-medium);
     padding: var(--padding-30);
   }
   .qna .inner .recom_wrap .btn {
@@ -2579,6 +2586,10 @@ main .qna .inner .qna_view_title button:hover {
   .result .qna_wrap .qna_list .ans .que_contents,
   .qna .inner .find_que .chat {
     padding: var(--padding-30);
+    font-size: var(--font-large);
+  }
+  .qna .inner .find_que .chat p {
+    font-size: var(--font-large);
   }
   .qna .inner .serch_login {
     gap: var(--padding-10);
@@ -2586,8 +2597,9 @@ main .qna .inner .qna_view_title button:hover {
   .qna .inner .serch_login button {
     width: calc(50% - 1.5vw);
     height: 5vh;
-    font-size: var(--font-small);
+    font-size: var(--font-medium);
     line-height: 5vh;
+    padding: 0;
   }
 
   /* FAQ */
@@ -2673,6 +2685,7 @@ main .qna .inner .qna_view_title button:hover {
   .contact .wrap #formSubmit {
     width: 100%;
     height: 5vh;
+    font-size: var(--font-medium);
     line-height: 5vh;
     margin-top: 20vw;
     padding: 0;
