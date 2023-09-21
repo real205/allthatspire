@@ -9,6 +9,7 @@
   --size-1024: 1024px;
   --size-button-w: 170px;
   --size-button-h: 50px;
+  --size-input-h: 70px;
   /* color */
   --black: #121212;
   --deep-gray: #3a3a3a;
@@ -41,6 +42,7 @@
   --padding-30: 30px;
   --padding-50: 50px;
   --padding-100: 100px;
+  --padding-0-10: 0 10px;
   --padding-0-30: 0 30px;
   --padding-30-0: 30px 0;
   --padding-50-0: 50px 0;
@@ -152,11 +154,12 @@ header .head_search .input_wrap {
 }
 header .head_search .input_wrap input {
   width: var(--size-100);
-  height: 60px;
+  height: var(--size-button-h);
+  line-height: var(--size-button-h);
   color: var(--black);
   font-size: var(--font-small);
   border: 2px solid var(--sky-blue);
-  padding: var(--padding-10);
+  padding: var(--padding-0-10);
   outline: none;
 }
 header .head_search .input_wrap input::placeholder {
@@ -625,7 +628,8 @@ footer .inner .sns .copy {
 .popup_term button,
 .popup_Privacy button {
   width: var(--size-100);
-  height: 70px;
+  height: var(--size-input-h);
+  line-height: var(--size-input-h);
   color: var(--white);
   font-size: var(--font-small);
   margin-top: var(--padding-50);
@@ -769,7 +773,8 @@ main .search .input_wrap {
 }
 main .search .input_wrap input {
   width: var(--size-100);
-  height: 70px;
+  height: var(--size-input-h);
+  line-height: var(--size-input-h);
   color: var(--blue);
   font-size: var(--font-large);
   font-weight: 500;
@@ -1009,20 +1014,24 @@ main .partners .inner ul li img {
   flex-direction: column;
   justify-content: space-between;
   width: var(--size-100);
-  margin-bottom: 20px;
+  margin-bottom: var(--padding-30);
 }
 .contact .wrap .block label {
   width: var(--size-100);
   font-size: var(--font-medium);
-  margin-bottom: 15px;
+  margin-bottom: var(--padding-10);
 }
 .contact .wrap .block label b {
   color: var(--sky-blue);
 }
+.contact .wrap .block input {
+  height: var(--size-button-h);
+  line-height: var(--size-button-h);
+}
 .contact .wrap .block input,
 .contact .wrap .block textarea {
   width: var(--size-100);
-  padding: 10px;
+  padding: var(--padding-0-10);
   border: 1px solid var(--gray);
 }
 .contact .wrap .block input::placeholder,
@@ -1035,10 +1044,12 @@ main .partners .inner ul li img {
   justify-content: center;
   align-items: center;
   width: 350px;
+  height: var(--size-button-h);
+  line-height: var(--size-button-h);
   color: var(--white);
   font-size: var(--font-small);
   margin: 50px auto 0;
-  padding: 15px 0;
+  padding: 0;
   background-color: var(--blue);
   border: 0;
   outline: none;
@@ -1095,8 +1106,11 @@ main .partners .inner ul li img {
   width: 10%;
 }
 .notice table tbody tr td {
-  padding: 20px 5px;
+  padding: 20px 30px;
   border-bottom: 1px solid var(--gray);
+}
+.notice table tbody tr td.date {
+  padding: 0 30px 0 0;
 }
 .notice table tbody tr td a {
   width: var(--size-100);
@@ -1266,6 +1280,7 @@ main .partners .inner ul li img {
   justify-content: center;
   width: var(--size-button-w);
   height: var(--size-button-h);
+  line-height: var(--size-button-h);
   color: var(--blue);
   font-size: var(--font-large);
   border: 1px solid var(--blue);
@@ -1481,10 +1496,11 @@ main .partners .inner ul li img {
 }
 .mypage .inner .block input[type='text'] {
   width: 85%;
-  height: 70px;
+  height: var(--size-input-h);
+  line-height: var(--size-input-h);
   color: var(--gray-opacity-10);
   font-size: var(--font-copy);
-  padding: var(--padding-10);
+  padding: var(--padding-0-10);
   border: 1px solid var(--gray-opacity-10);
 }
 .mypage .inner .block input[type='text']::placeholder {
@@ -1494,6 +1510,8 @@ main .partners .inner ul li img {
 }
 .mypage .inner .block button {
   width: 200px;
+  height: var(--size-input-h);
+  line-height: var(--size-input-h);
   color: var(--gray-opacity-10);
   font-size: var(--font-copy);
   border: 1px solid var(--gray-opacity-10);
@@ -1554,7 +1572,8 @@ main .partners .inner ul li img {
 .mypage .inner .submit button,
 .mypage .inner .block input[type='reset'] {
   width: 300px;
-  height: 70px;
+  height: var(--size-input-h);
+  line-height: var(--size-input-h);
   color: var(--gray-opacity-10);
   font-size: var(--font-medium);
   font-weight: 700;
@@ -2040,7 +2059,8 @@ main .qna .inner .qna_view_title button:hover {
 }
 .qna_write .block input[type='text'] {
   width: 100%;
-  height: 70px;
+  height: var(--size-input-h);
+  line-height: var(--size-input-h);
   color: var(--gray-opacity-10);
   font-size: var(--font-copy);
   padding: var(--padding-10);
@@ -2080,7 +2100,8 @@ main .qna .inner .qna_view_title button:hover {
 }
 .qna_write .submit input[type='submit'] {
   width: 300px;
-  height: 70px;
+  height: var(--size-input-h);
+  line-height: var(--size-input-h);
   color: var(--white);
   font-size: var(--font-medium);
   font-weight: 700;
@@ -2100,7 +2121,7 @@ main .qna .inner .qna_view_title button:hover {
     --size-700: 100%;
     --size-1024: 100%;
     --size-button-w: 100%;
-    --size-button-h: 40px;
+    --size-input-h: 50px;
     /* font size */
     --font-title: 2rem;
     --font-xx-large: 1.5rem;
@@ -2625,20 +2646,19 @@ main .qna .inner .qna_view_title button:hover {
   .notice table thead tr th:last-child {
     width: 30%;
   } */
-
-  .notice table tbody td:first-child {
-    width: 75%;
-  }
-  .notice table tbody tr td.date {
-  }
-  .notice table tbody td:last-child {
-    width: 25%;
-  }
   .notice table thead tr th {
     font-size: var(--font-copy);
   }
   .notice table tbody tr td {
     font-size: var(--font-copy);
+    padding: 5vw 0;
+  }
+  .notice table tbody td:first-child {
+    width: 70%;
+  }
+  .notice table tbody td:last-child {
+    width: 30%;
+    padding: 0 !important;
   }
   .notice .inner .write_btn {
     position: unset;
@@ -2664,16 +2684,12 @@ main .qna .inner .qna_view_title button:hover {
     width: 100%;
     height: var(--size-button-h);
     line-height: var(--size-button-h);
-    padding: 0 3vw;
   }
   .contact .wrap .block textarea {
     width: 100%;
-    padding: 0 3vw;
   }
   .contact .wrap #formSubmit {
     width: 100%;
-    height: var(--size-button-h);
-    line-height: var(--size-button-h);
     margin-top: 20vw;
     padding: 0;
   }
@@ -2696,7 +2712,6 @@ main .qna .inner .qna_view_title button:hover {
   .mypage .inner .block input[type='text'],
   .mypage .inner .block .number {
     width: var(--size-100);
-    height: var(--size-button-h);
     line-height: var(--size-button-h);
   }
   .mypage .inner .block .confirm input[type='text'],
@@ -2714,8 +2729,6 @@ main .qna .inner .qna_view_title button:hover {
   }
   .mypage .inner .block.submit button {
     width: calc(50% - 1.5vw);
-    height: var(--size-button-h);
-    line-height: var(--size-button-h);
     padding: 0;
   }
 
