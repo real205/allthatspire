@@ -71,7 +71,7 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  border: 1px solid var(--sky-blue) !important;
+  border-color: var(--sky-blue) !important;
   outline: 0;
 }
 input::-ms-clear,
@@ -1325,6 +1325,7 @@ main .partners .inner ul li img {
 }
 .myfaq .inner .contents .qna_list .que .show_ans {
   font-size: var(--font-icon);
+  font-weight: 500;
 }
 
 .myfaq .inner .contents .qna_list .que .show_ans.no {
@@ -1379,7 +1380,7 @@ main .partners .inner ul li img {
   display: inline-block;
   color: var(--blue);
   font-size: var(--font-large);
-  font-weight: 500;
+  font-weight: 900;
 }
 .myfaq .inner .contents .qna_list .ans {
   display: none;
@@ -1397,7 +1398,7 @@ main .partners .inner ul li img {
 .myfaq .inner .contents .qna_list .ans p {
   display: block;
   color: var(--gray);
-  font-size: var(--font-small);
+  font-size: var(--font-medium);
   font-weight: 500;
   margin: 10px 0 0 10px;
 }
@@ -2661,6 +2662,9 @@ main .qna .inner .qna_view_title button:hover {
   }
   .myfaq .inner .contents .qna_list .ans {
     padding: var(--padding-30-0);
+  }
+  .myfaq .inner .contents .qna_list .ans p {
+    margin: var(--padding-10);
   }
 
   .qna_write {
