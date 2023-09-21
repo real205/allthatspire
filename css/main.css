@@ -523,7 +523,7 @@ footer .inner .contents address a {
 footer .inner .contents address a i {
   display: inline-block;
   color: var(--white);
-  font-size: 6px;
+  font-size: var(--font-copy);
   margin-left: 5px;
 }
 footer .inner .contents address .tel p {
@@ -2355,9 +2355,6 @@ main .qna .inner .qna_view_title button:hover {
     font-size: var(--font-large);
     line-height: 4vh;
     padding: 0 5vw;
-  }
-  footer .inner .contents address a i {
-    display: inline;
   }
   footer .inner .sns ul {
     margin-top: var(--padding-30);
