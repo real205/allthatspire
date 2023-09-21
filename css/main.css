@@ -504,6 +504,7 @@ footer .inner .contents .flogo img {
 footer .inner .contents address {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 footer .inner .contents address p {
   color: var(--gray-opacity-80);
@@ -543,6 +544,9 @@ footer .inner .contents address > div {
   display: flex;
   flex-direction: row;
   margin-bottom: var(--padding-10);
+}
+footer .inner .contents address .contact {
+  display: block;
 }
 footer .inner .contents address p:first-child {
   margin-right: var(--padding-10);
@@ -2334,6 +2338,10 @@ main .qna .inner .qna_view_title button:hover {
   footer .inner .contents address > div.contact {
     flex-direction: row;
   }
+  footer .inner .contents address p {
+    font-size: var(--font-medium);
+    line-height: 1.5;
+  }
   footer .inner .contents address p:first-child {
     margin-right: 0;
     margin-bottom: 2vw;
@@ -2342,6 +2350,12 @@ main .qna .inner .qna_view_title button:hover {
   }
   footer .inner .contents address a {
     display: inline-block;
+    height: 4vh;
+    line-height: 4vh;
+    padding: 0 5vw;
+  }
+  footer .inner .contents address a i {
+    display: inline;
   }
   footer .inner .sns ul {
     margin-top: var(--padding-30);
