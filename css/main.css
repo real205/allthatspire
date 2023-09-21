@@ -2359,7 +2359,7 @@ main .qna .inner .qna_view_title button:hover {
     padding: 0 5vw;
   }
   footer .inner .contents address a i {
-    font-size: var(--font-x-large);
+    font-size: var(--font-large);
   }
   footer .inner .sns ul {
     margin-top: var(--padding-30);
