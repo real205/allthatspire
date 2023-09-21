@@ -41,6 +41,7 @@
   --padding-30: 30px;
   --padding-50: 50px;
   --padding-100: 100px;
+  --padding-0-30: 0 30px;
   --padding-30-0: 30px 0;
   --padding-50-0: 50px 0;
   --padding-100-0: 100px 0;
@@ -865,12 +866,12 @@ main .faq .inner .tab {
   margin: 40px 0;
 }
 main .faq .inner .tab li {
-  height: 50px;
+  height: var(--size-button-h);
   color: var(--blue);
   font-size: var(--font-large);
   text-align: center;
-  line-height: 50px;
-  padding: 0 20px;
+  line-height: var(--size-button-h);
+  padding: var(--padding-0-30);
   border: 1px solid var(--blue);
   background-color: var(--white);
   cursor: pointer;
@@ -1222,7 +1223,6 @@ main .partners .inner ul li img {
   outline: none;
   background-color: var(--gray);
   border: 0;
-  border-radius: var(--button-square);
   cursor: pointer;
 }
 .notice_write .wrap input[type='submit']:hover {
@@ -1318,7 +1318,7 @@ main .partners .inner ul li img {
   align-items: center;
   justify-content: space-between;
   margin: var(--padding-30-0);
-  padding: 0 30px;
+  padding: var(--padding-0-30);
   cursor: pointer;
 }
 .myfaq .inner .contents .qna_list .que .left {
@@ -1496,7 +1496,6 @@ main .partners .inner ul li img {
   width: 200px;
   color: var(--gray-opacity-10);
   font-size: var(--font-copy);
-  padding: var(--padding-10);
   border: 1px solid var(--gray-opacity-10);
   cursor: pointer;
 }
@@ -2118,6 +2117,7 @@ main .qna .inner .qna_view_title button:hover {
     --padding-30: 5vw;
     --padding-50: 8vw;
     --padding-100: 10vw;
+    --padding-0-30: 0 5vw;
     --padding-30-0: 5vw 0;
     --padding-50-0: 8vw 0;
     --padding-100-0: 10vw 0;
@@ -2312,8 +2312,9 @@ main .qna .inner .qna_view_title button:hover {
   }
   header .head_search .input_wrap input {
     position: unset;
-    height: auto;
-    padding: 10px;
+    height: var(--size-button-h);
+    line-height: var(--size-button-h);
+    padding: 0 3vw;
   }
 
   /* FOOTER */
@@ -2321,7 +2322,7 @@ main .qna .inner .qna_view_title button:hover {
     padding: 0 3vw;
   }
   footer .f_top ul li a {
-    transform: scale(1);
+    font-size: var(--font-icon);
   }
   footer .f_top ul li a .pc {
     display: none;
@@ -2363,9 +2364,9 @@ main .qna .inner .qna_view_title button:hover {
   }
   footer .inner .contents address a {
     display: inline-block;
-    height: 5vh;
+    height: var(--size-button-h);
     font-size: var(--font-large);
-    line-height: 4.5vh;
+    line-height: var(--size-button-h);
     padding: 0 10vw 0 5vw;
   }
   footer .inner .sns ul {
@@ -2441,9 +2442,6 @@ main .qna .inner .qna_view_title button:hover {
   }
   main .faq .inner .tab li {
     display: inline-block;
-    height: 5vh;
-    line-height: 5vh;
-
     margin-right: 2vw;
     padding: 0 3vw;
   }
@@ -2477,9 +2475,6 @@ main .qna .inner .qna_view_title button:hover {
   }
   main .qna .inner .qna_view_title button {
     width: auto;
-    height: 5vh;
-
-    line-height: 5vh;
     padding: 0 5vw;
   }
   main .qna .inner .qna_list .que {
@@ -2526,9 +2521,6 @@ main .qna .inner .qna_view_title button:hover {
   .qna .inner .recom_wrap .btn .qna_btn,
   .result .qna_view_title button {
     width: auto;
-    height: 5vh;
-
-    line-height: 5vh;
     padding: 0 5vw;
   }
   .result .qna_wrap .qna_list .qna .que_title .title b {
@@ -2591,9 +2583,6 @@ main .qna .inner .qna_view_title button:hover {
   }
   .qna .inner .serch_login button {
     width: calc(50% - 1.5vw);
-    height: 5vh;
-
-    line-height: 5vh;
     padding: 0;
   }
 
@@ -2624,6 +2613,11 @@ main .qna .inner .qna_view_title button:hover {
   .notice .inner {
     width: 90%;
     margin: var(--margin-center);
+  }
+  .view_paging button {
+    width: 100%;
+    height: var(--size-button-h);
+    line-height: var(--size-button-h);
   }
   /* .notice table thead tr th:first-child {
     width: 70%;
@@ -2668,8 +2662,8 @@ main .qna .inner .qna_view_title button:hover {
   }
   .contact .wrap .block input {
     width: 100%;
-    height: 5vh;
-    line-height: 5vh;
+    height: var(--size-button-h);
+    line-height: var(--size-button-h);
     padding: 0 3vw;
   }
   .contact .wrap .block textarea {
@@ -2678,9 +2672,8 @@ main .qna .inner .qna_view_title button:hover {
   }
   .contact .wrap #formSubmit {
     width: 100%;
-    height: 5vh;
-
-    line-height: 5vh;
+    height: var(--size-button-h);
+    line-height: var(--size-button-h);
     margin-top: 20vw;
     padding: 0;
   }
@@ -2703,21 +2696,16 @@ main .qna .inner .qna_view_title button:hover {
   .mypage .inner .block input[type='text'],
   .mypage .inner .block .number {
     width: var(--size-100);
-    height: 40px;
+    height: var(--size-button-h);
+    line-height: var(--size-button-h);
   }
   .mypage .inner .block .confirm input[type='text'],
   .mypage .inner .block .number input {
     width: 70%;
-    height: 5vh;
-
-    line-height: 5vh;
     padding: 0 3vw;
   }
   .mypage .inner .block button {
     width: 27%;
-    height: 5vh;
-
-    line-height: 5vh;
     padding: 0;
   }
   .mypage .inner .block.submit {
@@ -2726,9 +2714,8 @@ main .qna .inner .qna_view_title button:hover {
   }
   .mypage .inner .block.submit button {
     width: calc(50% - 1.5vw);
-    height: 5vh;
-
-    line-height: 5vh;
+    height: var(--size-button-h);
+    line-height: var(--size-button-h);
     padding: 0;
   }
 
@@ -2746,9 +2733,6 @@ main .qna .inner .qna_view_title button:hover {
   }
   .myfaq .inner .title .tab li {
     width: 33%;
-    height: 5vh;
-
-    line-height: 5vh;
   }
   .myfaq .inner .contents .qna_list .que {
     padding: 0;
