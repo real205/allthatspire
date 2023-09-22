@@ -2167,14 +2167,14 @@ main .qna .inner .qna_view_title button:hover {
   header .head_top .mobile_menu_btn {
     position: absolute;
     left: 20px;
-    top: 15px;
+    top: 20px;
   }
   header .head_top .mobile_menu_btn i {
     font-size: var(--font-xx-large);
   }
   header .head_top .logo {
     width: 40%;
-    height: 60px;
+    height: 70px;
     margin: var(--margin-center);
   }
   header .head_search {
@@ -2228,7 +2228,7 @@ main .qna .inner .qna_view_title button:hover {
   header .head_top .mobile_alert {
     position: absolute;
     right: 20px;
-    top: 15px;
+    top: 20px;
     display: block;
   }
   header .head_top .mobile_alert i {
