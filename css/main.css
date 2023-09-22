@@ -71,6 +71,7 @@ body {
 input,
 textarea {
   background-color: var(--white);
+  border-radius: 0;
 }
 input:focus,
 textarea:focus {
