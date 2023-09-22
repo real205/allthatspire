@@ -367,7 +367,7 @@ header .alert_popup .alert_popup_close {
   padding: 0;
 }
 header .alert_popup .alert_popup_close i {
-  font-size: var(--font-x-large);
+  font-size: var(--font-xx-large);
 }
 header .alert_popup .read_all {
   position: absolute;
@@ -2310,11 +2310,11 @@ main .qna .inner .qna_view_title button:hover {
   }
   header .alert_popup .title {
     font-size: var(--font-x-large);
-    margin: var(--padding-50-0);
+    margin: var(--padding-100-0);
     padding-bottom: var(--padding-10);
   }
   header .alert_popup .read_all {
-    top: 13vw;
+    top: 16vw;
     right: var(--padding-30);
     transform: translate(0, 0);
   }
