@@ -2439,7 +2439,6 @@ main .qna .inner .qna_view_title button:hover {
     padding: 0;
   }
   main .search .input_wrap input {
-    height: 40px;
     padding: 0 3vw;
   }
   main .faq {
