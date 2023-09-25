@@ -636,7 +636,7 @@ footer .inner .sns .copy {
   color: var(--white);
   font-size: var(--font-small);
   margin-top: var(--padding-50);
-  padding: var(--button-padding);
+  padding: var(--padding-0-10);
   background-color: var(--gray);
   outline: none;
   border: 0;
