@@ -100,6 +100,11 @@ $(document).ready(function () {
     $(this).siblings('ul').toggleClass('active');
   });
 
+  //로그인 페이지
+  $('.login_close').click(function () {
+    $('#loginId').val('');
+  });
+
   //모바일
   //헤더 모바일메뉴
   $('.mobile_menu_btn').click(function () {

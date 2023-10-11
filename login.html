@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- META TAG -->
+    <meta charset="utf-8" />
+    <meta name="Description" content="All That Spine" />
+    <meta name="Keywords" content="All That Spine" />
+    <meta name="author" content="All That Spine" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- CDN -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- JS -->
+    <script src="js/slick.js"></script>
+    <script src="js/main.js"></script>
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- TITLE -->
+    <title>All That Spine</title>
+  </head>
+  <body>
+    <header>
+      <div class="head_top">
+        <div class="mobile_menu_btn"><i class="fa-solid fa-bars"></i></div>
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/logo.svg" alt="" />
+          </a>
+        </div>
+        <div class="mobile_alert">
+          <i class="fa-regular fa-bell"></i>
+        </div>
+        <!-- head_search => index 비노출 -->
+        <div class="head_search">
+          <div class="input_wrap">
+            <input type="search" name="mainSearch" id="mainSearch" placeholder="궁금한 것은 무엇이든 물어보세요!" />
+            <button onclick="location.href='qna.html'"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <div class="head_contents">
+          <div class="alert">
+            <i class="fa-regular fa-bell"></i>
+          </div>
+          <div class="login">
+            <button class="login">ifree 로그인 | 회원가입</button>
+            <ul>
+              <li><a href="myfaq.html">활동관리</a></li>
+              <li><a href="mypage.html">개인정보 관리</a></li>
+              <li><a href="">로그아웃</a></li>
+            </ul>
+          </div>
+          <div class="lang">
+            <div class="lang_btn on">
+              <p>KOR</p>
+              <img src="img/language_on.svg" alt="" />
+            </div>
+            <div class="lang_btn off">
+              <p>ENG</p>
+              <img src="img/language_off.svg" alt="" />
+            </div>
+          </div>
+          <div class="close_mobile_btn">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="mobile_menu">
+            <ul class="mobile_nav">
+              <li><a href="service.html">서비스 소개</a></li>
+              <li><a href="qna.html">전문가 답변</a></li>
+              <li><a href="faq.html">자주묻는 질문</a></li>
+              <li><a href="notice.html">공지사항</a></li>
+              <li><a href="contact.html">문의하기</a></li>
+            </ul>
+            <ul class="mobile_login">
+              <li><a href="">로그인</a></li>
+              <li><a href="myfaq.html">활동관리</a></li>
+              <li><a href="mypage.html">개인정보 관리</a></li>
+              <li><a href="">로그아웃</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="alert_popup">
+        <h2 class="title">알림</h2>
+        <button class="alert_popup_close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="read_all">
+          <button>모두읽음</button>
+          <button>읽은 알림 삭제</button>
+        </div>
+        <ul>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li class="new">
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+              <span class="new">NEW</span>
+            </div>
+          </li>
+          <li>
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
+          </li>
+          <li>
+            <p><a href="myfaq.html">질문에 답변이 작성되었습니다.</a></p>
+            <div>
+              <span class="date">2023.08.28</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <style></style>
+    <main>
+      <section class="login_container">
+        <article>
+          <h2 class="title">Login</h2>
+          <form action="">
+            <div class="block">
+              <input id="loginId" type="text" placeholder="아이디" onkeyup="checkReg(event)" required />
+              <label for="loginId">아이디</label>
+              <i class="fa-solid fa-xmark login_close"></i>
+            </div>
+            <div class="block">
+              <input id="loginPass" type="password" placeholder="비밀번호" required />
+              <label for="loginPass">비밀번호</label>
+              <div class="link">
+                <a href="#none">회원가입</a>
+                <a href="#none">비밀번호 찾기</a>
+              </div>
+            </div>
+            <button type="submit">로그인</button>
+          </form>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="f_top">
+        <ul>
+          <li><a href="service.html">서비스 소개</a></li>
+          <li>
+            <a href="faq.html"><span class="mo">FAQ</span><span class="pc">자주묻는 질문 (FAQ)</span></a>
+          </li>
+          <li><a href="notice.html">공지사항</a></li>
+          <li><a href="#none" class="term">이용약관</a></li>
+          <li>
+            <a href="#none" class="privacy">개인정보 <span class="br"></span>처리방침</a>
+          </li>
+        </ul>
+      </div>
+      <div class="inner">
+        <div class="contents">
+          <div class="flogo">
+            <img src="img/logo.svg" alt="" />
+          </div>
+          <address>
+            <div>
+              <p>ALL THAT SPIRE</p>
+              <p>대표 : 김스파</p>
+            </div>
+            <div>
+              <p>사업자 등록번호 : 123-12-12345</p>
+              <p>주소 : 경상북도 포항시 북구 포스코대로 256</p>
+            </div>
+            <div class="contact">
+              <a href="contact.html">Contact All That Spine</a>
+            </div>
+            <div class="tel">
+              <p><i class="fa-solid fa-phone"></i> 82-11-2222-3333</p>
+            </div>
+          </address>
+        </div>
+        <div class="sns">
+          <ul>
+            <li>
+              <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+          </ul>
+          <p class="copy">© ALL THAT SPIRE. All Rights Reserved.</p>
+        </div>
+      </div>
+      <div class="popup_term">
+        <h2>이용약관</h2>
+
+        <p>
+          이용약관이란 특정 서비스의 이용조건과 절차 등에 관한 사항을 규정하고 이를 명시한 문서를 말한다. 이용약관은
+          서비스 이용자에게 공시함으로써 효력이 발생하며, 영업상 중요 사유가 있을 시 변경할 수 있다. <br /><br />
+
+          이용약관에는 이용계약의 체결, 서비스 이용, 이용자의 의무 등에 관한 조항을 상세히 명시해야 한다. 또 이용 요금
+          납부, 계약 해지 등의 사항을 구체적으로 기재하도록 한다.<br /><br />
+
+          그 밖에 면책조항을 기재하여 차후 발생할 수 있는 고객과의 갈등 상황을 사전에 방지하도록 한다.<br />
+          [네이버 지식백과] 이용약관 [利用約款, access terms] (예스폼 서식사전)<br />
+        </p>
+        <button>닫기</button>
+      </div>
+      <div class="popup_Privacy">
+        <h2>개인정보 처리방침</h2>
+
+        <p>
+          앞으로 개인정보 동의를 받을 때 국민이 실질적으로 선택이 가능하도록 개선될 전망이다. <br /><br />
+
+          개인정보보호위원회는 이와 같은 내용의 ‘개인정보 보호법’ 시행령 개정안을 오는 19일부터 다음 달 28일까지
+          입법예고한다고 18일 밝혔다.<br />
+          이번 시행령 개정안은 지난 3월 14일 공포한 개인정보 보호법 전면 개정에 따른 후속 조치다.<br /><br />
+
+          이에 정보주체인 국민의 권리를 실질적으로 보장하고 공공분야에서의 안전조치를 강화하면서, 온라인과 오프라인으로
+          구분해 이원화되어 있는 개인정보 보호 기준을 일원화한다. <br />
+          한편 개인정보위는 내년 3월 15일 이후 시행 예정인 개인정보 전송요구권 관련 규정, 자동화된 결정에 대한
+          정보주체의 권리, 공공기관 개인정보 보호수준 평가 등에 관한 사항은 다양한 의견 수렴을 거친 뒤 법 시행 시기에
+          맞추어 하반기 중 추가로 입법예고할 예정이다.<br />
+        </p>
+        <button>닫기</button>
+      </div>
+      <div class="popup_bg"></div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  function checkReg(event) {
+    const regExp = /[^0-9a-zA-Z]/g; // 숫자와 영문자만 허용
+    const del = event.target;
+    if (regExp.test(del.value)) {
+      del.value = del.value.replace(regExp, '');
+    }
+  }
+</script>
